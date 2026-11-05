@@ -1,0 +1,171 @@
+{
+  "schema": "https://magnamath.app/schema/tile-profile-collection/v1",
+  "schemaVersion": 1,
+  "exportedAt": "2026-08-08T12:00:00.000Z",
+  "profiles": [
+    {
+      "schema": "https://magnamath.app/schema/tile-profile/v2",
+      "schemaVersion": 2,
+      "id": "square",
+      "label": "Square — example local batch",
+      "systemId": "magna-tiles",
+      "family": "standard",
+      "sideRatios": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "anglesDegrees": [
+        90,
+        90,
+        90,
+        90
+      ],
+      "dimensionsMm": [
+        74.93,
+        74.93,
+        74.93,
+        74.93
+      ],
+      "thicknessMm": 6.46,
+      "cornerRadiusMm": 5.109999999999999,
+      "connector": {
+        "type": "rotating-edge-magnet",
+        "compatibilityGroup": "magna-tiles-edge",
+        "coverage": "edge"
+      },
+      "hingeRangeDegrees": {
+        "minInterior": 80,
+        "maxInterior": 110
+      },
+      "confidence": "calibrated",
+      "scaleConfidence": "calibrated",
+      "source": {
+        "kind": "user-calibration",
+        "title": "Example three-piece caliper calibration",
+        "note": "Synthetic documentation example; replace with measurements from owned pieces.",
+        "measuredAt": "2026-08-08T12:00:00.000Z",
+        "device": "digital caliper, 0.01 mm resolution",
+        "sessionId": "cal-square-example-batch-a",
+        "setOrBatch": "Synthetic documentation batch A"
+      },
+      "builtin": false,
+      "calibration": {
+        "method": "calipers",
+        "sampleCount": 3,
+        "samples": [
+          {
+            "edgeLengthsMm": [
+              74.92,
+              74.94,
+              74.93,
+              74.92
+            ],
+            "anglesDegrees": null,
+            "thicknessMm": 6.46,
+            "cornerRadiusMm": 5.12
+          },
+          {
+            "edgeLengthsMm": [
+              74.94,
+              74.93,
+              74.92,
+              74.94
+            ],
+            "anglesDegrees": null,
+            "thicknessMm": 6.45,
+            "cornerRadiusMm": 5.1
+          },
+          {
+            "edgeLengthsMm": [
+              74.93,
+              74.92,
+              74.94,
+              74.93
+            ],
+            "anglesDegrees": null,
+            "thicknessMm": 6.47,
+            "cornerRadiusMm": 5.11
+          }
+        ],
+        "dimensionStats": [
+          {
+            "edgeIndex": 0,
+            "meanMm": 74.93,
+            "standardDeviationMm": 0.00999999999999801,
+            "minimumMm": 74.92,
+            "maximumMm": 74.94
+          },
+          {
+            "edgeIndex": 1,
+            "meanMm": 74.93,
+            "standardDeviationMm": 0.00999999999999801,
+            "minimumMm": 74.92,
+            "maximumMm": 74.94
+          },
+          {
+            "edgeIndex": 2,
+            "meanMm": 74.93,
+            "standardDeviationMm": 0.00999999999999801,
+            "minimumMm": 74.92,
+            "maximumMm": 74.94
+          },
+          {
+            "edgeIndex": 3,
+            "meanMm": 74.93,
+            "standardDeviationMm": 0.00999999999999801,
+            "minimumMm": 74.92,
+            "maximumMm": 74.94
+          }
+        ],
+        "relativeRepeatability": 0.00013345789403440558,
+        "measuredAt": "2026-08-08T12:00:00.000Z",
+        "sessionId": "cal-square-example-batch-a",
+        "uncertainty": [
+          {
+            "edgeIndex": 0,
+            "meanMm": 74.93,
+            "standardDeviationMm": 0.00999999999999801,
+            "standardErrorMm": 0.00577350269189511,
+            "repeatabilityCi95HalfWidthMm": 0.024843382083224657,
+            "estimatedExpandedUncertaintyMm": 0.012909944487356002,
+            "instrumentResolutionMm": 0.01,
+            "caveat": "Statistical repeatability plus instrument quantization only; systematic bias, temperature, alignment, and operator effects are excluded."
+          },
+          {
+            "edgeIndex": 1,
+            "meanMm": 74.93,
+            "standardDeviationMm": 0.00999999999999801,
+            "standardErrorMm": 0.00577350269189511,
+            "repeatabilityCi95HalfWidthMm": 0.024843382083224657,
+            "estimatedExpandedUncertaintyMm": 0.012909944487356002,
+            "instrumentResolutionMm": 0.01,
+            "caveat": "Statistical repeatability plus instrument quantization only; systematic bias, temperature, alignment, and operator effects are excluded."
+          },
+          {
+            "edgeIndex": 2,
+            "meanMm": 74.93,
+            "standardDeviationMm": 0.00999999999999801,
+            "standardErrorMm": 0.00577350269189511,
+            "repeatabilityCi95HalfWidthMm": 0.024843382083224657,
+            "estimatedExpandedUncertaintyMm": 0.012909944487356002,
+            "instrumentResolutionMm": 0.01,
+            "caveat": "Statistical repeatability plus instrument quantization only; systematic bias, temperature, alignment, and operator effects are excluded."
+          },
+          {
+            "edgeIndex": 3,
+            "meanMm": 74.93,
+            "standardDeviationMm": 0.00999999999999801,
+            "standardErrorMm": 0.00577350269189511,
+            "repeatabilityCi95HalfWidthMm": 0.024843382083224657,
+            "estimatedExpandedUncertaintyMm": 0.012909944487356002,
+            "instrumentResolutionMm": 0.01,
+            "caveat": "Statistical repeatability plus instrument quantization only; systematic bias, temperature, alignment, and operator effects are excluded."
+          }
+        ],
+        "instrumentResolutionMm": 0.01
+      }
+    }
+  ]
+}

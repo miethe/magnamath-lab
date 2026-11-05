@@ -1,0 +1,6 @@
+{
+  top: 1973,
+  overflow: false,
+  compound: '8 exact / unverified',
+  clearance: '0/36 · insufficient data'
+}

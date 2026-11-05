@@ -1,0 +1,89 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://magnamath.app/schema/compound-face-recipe/v1",
+  "title": "MagnaMath Exact Compound Face Recipe v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema",
+    "schemaVersion",
+    "id",
+    "label",
+    "faceIndex",
+    "faceKind",
+    "pieceCount",
+    "pieces",
+    "required",
+    "boundary",
+    "scaleError",
+    "exactGeometry",
+    "mechanicalStatus",
+    "confidence",
+    "note"
+  ],
+  "properties": {
+    "schema": {
+      "const": "https://magnamath.app/schema/compound-face-recipe/v1"
+    },
+    "schemaVersion": {
+      "const": 1
+    },
+    "id": {
+      "type": "string"
+    },
+    "label": {
+      "type": "string"
+    },
+    "faceIndex": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "faceKind": {
+      "type": "string"
+    },
+    "pieceCount": {
+      "type": "integer",
+      "minimum": 2
+    },
+    "pieces": {
+      "type": "array",
+      "minItems": 2,
+      "items": {
+        "type": "object"
+      }
+    },
+    "required": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "integer",
+        "minimum": 1
+      }
+    },
+    "boundary": {
+      "type": "array",
+      "minItems": 3,
+      "items": {
+        "type": "object"
+      }
+    },
+    "tile": {
+      "type": "object"
+    },
+    "scaleError": {
+      "type": "number",
+      "minimum": 0
+    },
+    "exactGeometry": {
+      "const": true
+    },
+    "mechanicalStatus": {
+      "type": "string"
+    },
+    "confidence": {
+      "type": "string"
+    },
+    "note": {
+      "type": "string"
+    }
+  }
+}

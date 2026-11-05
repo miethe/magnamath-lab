@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10.1282 5.7" width="758.90627mm" height="427.101mm" role="img" aria-labelledby="title description">
+  <title id="title">Truncated octahedron net</title>
+  <description id="description">A two-dimensional net with solid cut lines, dashed fold lines, and overlap diagnostics.</description>
+  <metadata>{&quot;generator&quot;:&quot;MagnaMath Rebuilt&quot;,&quot;appVersion&quot;:&quot;0.4.0&quot;,&quot;coreVersion&quot;:&quot;0.4.0&quot;,&quot;shape&quot;:&quot;truncated-octahedron&quot;,&quot;netSeed&quot;:23,&quot;objective&quot;:&quot;buildable&quot;,&quot;overlapFree&quot;:true,&quot;overlapArea&quot;:0,&quot;modelUnitMm&quot;:74.93,&quot;foldEdgeKeys&quot;:[&quot;2:3&quot;,&quot;6:16&quot;,&quot;1:2&quot;,&quot;4:5&quot;,&quot;0:5&quot;,&quot;6:7&quot;,&quot;7:20&quot;,&quot;19:21&quot;,&quot;1:17&quot;,&quot;12:14&quot;,&quot;11:12&quot;,&quot;11:22&quot;,&quot;22:23&quot;],&quot;compoundFaceCount&quot;:8}</metadata>
+  <style>
+    .cut { stroke: #13233a; stroke-width: 0.025; stroke-linecap: round; }
+    .fold { stroke: #596b84; stroke-width: 0.018; stroke-dasharray: 0.09 0.07; stroke-linecap: round; }
+    .cut.is-locked, .fold.is-locked { stroke: #8b5cf6; stroke-width: 0.032; }
+    .net-face.has-overlap { fill: #ff5578 !important; fill-opacity: 0.62; }
+    .compound-seam { stroke: #34506f; stroke-width: 0.012; stroke-dasharray: 0.035 0.025; pointer-events: none; }
+    .edge-hit { stroke: transparent; stroke-width: 0.18; pointer-events: stroke; cursor: pointer; }
+    .face-label { fill: #13233a; font: 600 0.2px ui-sans-serif, system-ui, sans-serif; text-anchor: middle; dominant-baseline: central; pointer-events: none; }
+    @media print { .cut { stroke-width: 0.2mm; } .fold { stroke-width: 0.16mm; } .edge-hit { display: none; } }
+  </style>
+  <rect width="100%" height="100%" fill="#ffffff"/>
+<polygon data-face="0" class="net-face" points="5.3141,2.35 4.44808,1.85 3.58205,2.35 3.58205,3.35 4.44808,3.85 5.3141,3.35" fill="#7fd9ff" fill-opacity="0.42" stroke="none"/><text x="4.44808" y="2.85" class="face-label">1</text>
+<polygon data-face="1" class="net-face" points="3.44808,3.85 2.58205,3.35 1.71603,3.85 1.71603,4.85 2.58205,5.35 3.44808,4.85" fill="#7fd9ff" fill-opacity="0.42" stroke="none"/><text x="2.58205" y="4.35" class="face-label">2</text>
+<polygon data-face="2" class="net-face" points="8.04615,5.08205 8.54615,4.21603 8.04615,3.35 7.04615,3.35 6.54615,4.21603 7.04615,5.08205" fill="#7fd9ff" fill-opacity="0.42" stroke="none"/><text x="7.54615" y="4.21603" class="face-label">3</text>
+<polygon data-face="3" class="net-face" points="7.04615,3.35 7.04615,2.35 6.18013,1.85 5.3141,2.35 5.3141,3.35 6.18013,3.85" fill="#7fd9ff" fill-opacity="0.42" stroke="none"/><text x="6.18013" y="2.85" class="face-label">4</text>
+<polygon data-face="4" class="net-face" points="2.71603,1.85 3.58205,2.35 4.44808,1.85 4.44808,0.85 3.58205,0.35 2.71603,0.85" fill="#7fd9ff" fill-opacity="0.42" stroke="none"/><text x="3.58205" y="1.35" class="face-label">5</text>
+<polygon data-face="5" class="net-face" points="0.85,3.35 1.71603,3.85 2.58205,3.35 2.58205,2.35 1.71603,1.85 0.85,2.35" fill="#7fd9ff" fill-opacity="0.42" stroke="none"/><text x="1.71603" y="2.85" class="face-label">6</text>
+<polygon data-face="6" class="net-face" points="8.04615,2.35 8.04615,3.35 8.91218,3.85 9.7782,3.35 9.7782,2.35 8.91218,1.85" fill="#7fd9ff" fill-opacity="0.42" stroke="none"/><text x="8.91218" y="2.85" class="face-label">7</text>
+<polygon data-face="7" class="net-face" points="8.04615,0.35 7.18013,0.85 7.18013,1.85 8.04615,2.35 8.91218,1.85 8.91218,0.85" fill="#7fd9ff" fill-opacity="0.42" stroke="none"/><text x="8.04615" y="1.35" class="face-label">8</text>
+<polygon data-face="8" class="net-face" points="5.44808,1.85 5.44808,0.85 4.44808,0.85 4.44808,1.85" fill="#4dddc2" fill-opacity="0.42" stroke="none"/><text x="4.94808" y="1.35" class="face-label">9</text>
+<polygon data-face="9" class="net-face" points="0.35,4.21603 1.21603,4.71603 1.71603,3.85 0.85,3.35" fill="#4dddc2" fill-opacity="0.42" stroke="none"/><text x="1.03301" y="4.03301" class="face-label">10</text>
+<polygon data-face="10" class="net-face" points="2.58205,3.35 3.58205,3.35 3.58205,2.35 2.58205,2.35" fill="#4dddc2" fill-opacity="0.42" stroke="none"/><text x="3.08205" y="2.85" class="face-label">11</text>
+<polygon data-face="11" class="net-face" points="7.04615,2.35 7.04615,3.35 8.04615,3.35 8.04615,2.35" fill="#4dddc2" fill-opacity="0.42" stroke="none"/><text x="7.54615" y="2.85" class="face-label">12</text>
+<polygon data-face="12" class="net-face" points="4.44808,3.85 4.94808,4.71603 5.8141,4.21603 5.3141,3.35" fill="#4dddc2" fill-opacity="0.42" stroke="none"/><text x="5.13109" y="4.03301" class="face-label">13</text>
+<polygon data-face="13" class="net-face" points="0.85,2.35 1.71603,1.85 1.21603,0.98397 0.35,1.48397" fill="#4dddc2" fill-opacity="0.42" stroke="none"/><text x="1.03301" y="1.66699" class="face-label">14</text>
+<line data-compound-face="0" data-compound-seam="0" x1="4.44808" y1="2.85" x2="5.3141" y2="2.35" class="compound-seam"/><line data-compound-face="0" data-compound-seam="1" x1="4.44808" y1="1.85" x2="4.44808" y2="2.85" class="compound-seam"/><line data-compound-face="0" data-compound-seam="2" x1="3.58205" y1="2.35" x2="4.44808" y2="2.85" class="compound-seam"/><line data-compound-face="0" data-compound-seam="3" x1="3.58205" y1="3.35" x2="4.44808" y2="2.85" class="compound-seam"/><line data-compound-face="0" data-compound-seam="4" x1="4.44808" y1="3.85" x2="4.44808" y2="2.85" class="compound-seam"/><line data-compound-face="0" data-compound-seam="5" x1="5.3141" y1="3.35" x2="4.44808" y2="2.85" class="compound-seam"/>
+<line data-compound-face="1" data-compound-seam="0" x1="2.58205" y1="4.35" x2="3.44808" y2="3.85" class="compound-seam"/><line data-compound-face="1" data-compound-seam="1" x1="2.58205" y1="3.35" x2="2.58205" y2="4.35" class="compound-seam"/><line data-compound-face="1" data-compound-seam="2" x1="1.71603" y1="3.85" x2="2.58205" y2="4.35" class="compound-seam"/><line data-compound-face="1" data-compound-seam="3" x1="1.71603" y1="4.85" x2="2.58205" y2="4.35" class="compound-seam"/><line data-compound-face="1" data-compound-seam="4" x1="2.58205" y1="5.35" x2="2.58205" y2="4.35" class="compound-seam"/><line data-compound-face="1" data-compound-seam="5" x1="3.44808" y1="4.85" x2="2.58205" y2="4.35" class="compound-seam"/>
+<line data-compound-face="2" data-compound-seam="0" x1="7.54615" y1="4.21603" x2="8.04615" y2="5.08205" class="compound-seam"/><line data-compound-face="2" data-compound-seam="1" x1="8.54615" y1="4.21603" x2="7.54615" y2="4.21603" class="compound-seam"/><line data-compound-face="2" data-compound-seam="2" x1="8.04615" y1="3.35" x2="7.54615" y2="4.21603" class="compound-seam"/><line data-compound-face="2" data-compound-seam="3" x1="7.04615" y1="3.35" x2="7.54615" y2="4.21603" class="compound-seam"/><line data-compound-face="2" data-compound-seam="4" x1="6.54615" y1="4.21603" x2="7.54615" y2="4.21603" class="compound-seam"/><line data-compound-face="2" data-compound-seam="5" x1="7.04615" y1="5.08205" x2="7.54615" y2="4.21603" class="compound-seam"/>
+<line data-compound-face="3" data-compound-seam="0" x1="6.18013" y1="2.85" x2="7.04615" y2="3.35" class="compound-seam"/><line data-compound-face="3" data-compound-seam="1" x1="7.04615" y1="2.35" x2="6.18013" y2="2.85" class="compound-seam"/><line data-compound-face="3" data-compound-seam="2" x1="6.18013" y1="1.85" x2="6.18013" y2="2.85" class="compound-seam"/><line data-compound-face="3" data-compound-seam="3" x1="5.3141" y1="2.35" x2="6.18013" y2="2.85" class="compound-seam"/><line data-compound-face="3" data-compound-seam="4" x1="5.3141" y1="3.35" x2="6.18013" y2="2.85" class="compound-seam"/><line data-compound-face="3" data-compound-seam="5" x1="6.18013" y1="3.85" x2="6.18013" y2="2.85" class="compound-seam"/>
+<line data-compound-face="4" data-compound-seam="0" x1="3.58205" y1="1.35" x2="2.71603" y2="1.85" class="compound-seam"/><line data-compound-face="4" data-compound-seam="1" x1="3.58205" y1="2.35" x2="3.58205" y2="1.35" class="compound-seam"/><line data-compound-face="4" data-compound-seam="2" x1="4.44808" y1="1.85" x2="3.58205" y2="1.35" class="compound-seam"/><line data-compound-face="4" data-compound-seam="3" x1="4.44808" y1="0.85" x2="3.58205" y2="1.35" class="compound-seam"/><line data-compound-face="4" data-compound-seam="4" x1="3.58205" y1="0.35" x2="3.58205" y2="1.35" class="compound-seam"/><line data-compound-face="4" data-compound-seam="5" x1="2.71603" y1="0.85" x2="3.58205" y2="1.35" class="compound-seam"/>
+<line data-compound-face="5" data-compound-seam="0" x1="1.71603" y1="2.85" x2="0.85" y2="3.35" class="compound-seam"/><line data-compound-face="5" data-compound-seam="1" x1="1.71603" y1="3.85" x2="1.71603" y2="2.85" class="compound-seam"/><line data-compound-face="5" data-compound-seam="2" x1="2.58205" y1="3.35" x2="1.71603" y2="2.85" class="compound-seam"/><line data-compound-face="5" data-compound-seam="3" x1="2.58205" y1="2.35" x2="1.71603" y2="2.85" class="compound-seam"/><line data-compound-face="5" data-compound-seam="4" x1="1.71603" y1="1.85" x2="1.71603" y2="2.85" class="compound-seam"/><line data-compound-face="5" data-compound-seam="5" x1="0.85" y1="2.35" x2="1.71603" y2="2.85" class="compound-seam"/>
+<line data-compound-face="6" data-compound-seam="0" x1="8.91218" y1="2.85" x2="8.04615" y2="2.35" class="compound-seam"/><line data-compound-face="6" data-compound-seam="1" x1="8.04615" y1="3.35" x2="8.91218" y2="2.85" class="compound-seam"/><line data-compound-face="6" data-compound-seam="2" x1="8.91218" y1="3.85" x2="8.91218" y2="2.85" class="compound-seam"/><line data-compound-face="6" data-compound-seam="3" x1="9.7782" y1="3.35" x2="8.91218" y2="2.85" class="compound-seam"/><line data-compound-face="6" data-compound-seam="4" x1="9.7782" y1="2.35" x2="8.91218" y2="2.85" class="compound-seam"/><line data-compound-face="6" data-compound-seam="5" x1="8.91218" y1="1.85" x2="8.91218" y2="2.85" class="compound-seam"/>
+<line data-compound-face="7" data-compound-seam="0" x1="8.04615" y1="1.35" x2="8.04615" y2="0.35" class="compound-seam"/><line data-compound-face="7" data-compound-seam="1" x1="7.18013" y1="0.85" x2="8.04615" y2="1.35" class="compound-seam"/><line data-compound-face="7" data-compound-seam="2" x1="7.18013" y1="1.85" x2="8.04615" y2="1.35" class="compound-seam"/><line data-compound-face="7" data-compound-seam="3" x1="8.04615" y1="2.35" x2="8.04615" y2="1.35" class="compound-seam"/><line data-compound-face="7" data-compound-seam="4" x1="8.91218" y1="1.85" x2="8.04615" y2="1.35" class="compound-seam"/><line data-compound-face="7" data-compound-seam="5" x1="8.91218" y1="0.85" x2="8.04615" y2="1.35" class="compound-seam"/>
+
+
+
+
+
+
+<line x1="5.3141" y1="2.35" x2="4.44808" y2="1.85" class="cut" data-edge-key="0:1" data-edge-state="cut" data-face="0" data-local-edge="0"/>
+<line x1="3.58205" y1="3.35" x2="4.44808" y2="3.85" class="cut" data-edge-key="3:4" data-edge-state="cut" data-face="0" data-local-edge="3"/>
+<line x1="3.44808" y1="3.85" x2="2.58205" y2="3.35" class="cut" data-edge-key="3:6" data-edge-state="cut" data-face="1" data-local-edge="0"/>
+<line x1="1.71603" y1="3.85" x2="1.71603" y2="4.85" class="cut" data-edge-key="7:8" data-edge-state="cut" data-face="1" data-local-edge="2"/>
+<line x1="1.71603" y1="4.85" x2="2.58205" y2="5.35" class="cut" data-edge-key="8:9" data-edge-state="cut" data-face="1" data-local-edge="3"/>
+<line x1="2.58205" y1="5.35" x2="3.44808" y2="4.85" class="cut" data-edge-key="4:9" data-edge-state="cut" data-face="1" data-local-edge="4"/>
+<line x1="3.44808" y1="4.85" x2="3.44808" y2="3.85" class="cut" data-edge-key="3:4" data-edge-state="cut" data-face="1" data-local-edge="5"/>
+<line x1="8.04615" y1="5.08205" x2="8.54615" y2="4.21603" class="cut" data-edge-key="8:10" data-edge-state="cut" data-face="2" data-local-edge="0"/>
+<line x1="8.54615" y1="4.21603" x2="8.04615" y2="3.35" class="cut" data-edge-key="10:11" data-edge-state="cut" data-face="2" data-local-edge="1"/>
+<line x1="7.04615" y1="3.35" x2="6.54615" y2="4.21603" class="cut" data-edge-key="12:13" data-edge-state="cut" data-face="2" data-local-edge="3"/>
+<line x1="6.54615" y1="4.21603" x2="7.04615" y2="5.08205" class="cut" data-edge-key="9:13" data-edge-state="cut" data-face="2" data-local-edge="4"/>
+<line x1="7.04615" y1="5.08205" x2="8.04615" y2="5.08205" class="cut" data-edge-key="8:9" data-edge-state="cut" data-face="2" data-local-edge="5"/>
+<line x1="7.04615" y1="2.35" x2="6.18013" y2="1.85" class="cut" data-edge-key="14:15" data-edge-state="cut" data-face="3" data-local-edge="1"/>
+<line x1="6.18013" y1="1.85" x2="5.3141" y2="2.35" class="cut" data-edge-key="0:15" data-edge-state="cut" data-face="3" data-local-edge="2"/>
+<line x1="5.3141" y1="3.35" x2="6.18013" y2="3.85" class="cut" data-edge-key="5:13" data-edge-state="cut" data-face="3" data-local-edge="4"/>
+<line x1="6.18013" y1="3.85" x2="7.04615" y2="3.35" class="cut" data-edge-key="12:13" data-edge-state="cut" data-face="3" data-local-edge="5"/>
+<line x1="2.71603" y1="1.85" x2="3.58205" y2="2.35" class="cut" data-edge-key="2:16" data-edge-state="cut" data-face="4" data-local-edge="0"/>
+<line x1="4.44808" y1="0.85" x2="3.58205" y2="0.35" class="cut" data-edge-key="17:18" data-edge-state="cut" data-face="4" data-local-edge="3"/>
+<line x1="3.58205" y1="0.35" x2="2.71603" y2="0.85" class="cut" data-edge-key="18:19" data-edge-state="cut" data-face="4" data-local-edge="4"/>
+<line x1="2.71603" y1="0.85" x2="2.71603" y2="1.85" class="cut" data-edge-key="16:19" data-edge-state="cut" data-face="4" data-local-edge="5"/>
+<line x1="2.58205" y1="2.35" x2="1.71603" y2="1.85" class="cut" data-edge-key="16:19" data-edge-state="cut" data-face="5" data-local-edge="3"/>
+<line x1="0.85" y1="2.35" x2="0.85" y2="3.35" class="cut" data-edge-key="20:21" data-edge-state="cut" data-face="5" data-local-edge="5"/>
+<line x1="8.04615" y1="3.35" x2="8.91218" y2="3.85" class="cut" data-edge-key="10:11" data-edge-state="cut" data-face="6" data-local-edge="1"/>
+<line x1="8.91218" y1="3.85" x2="9.7782" y2="3.35" class="cut" data-edge-key="10:20" data-edge-state="cut" data-face="6" data-local-edge="2"/>
+<line x1="9.7782" y1="3.35" x2="9.7782" y2="2.35" class="cut" data-edge-key="20:21" data-edge-state="cut" data-face="6" data-local-edge="3"/>
+<line x1="9.7782" y1="2.35" x2="8.91218" y2="1.85" class="cut" data-edge-key="21:23" data-edge-state="cut" data-face="6" data-local-edge="4"/>
+<line x1="8.04615" y1="0.35" x2="7.18013" y2="0.85" class="cut" data-edge-key="15:17" data-edge-state="cut" data-face="7" data-local-edge="0"/>
+<line x1="7.18013" y1="0.85" x2="7.18013" y2="1.85" class="cut" data-edge-key="14:15" data-edge-state="cut" data-face="7" data-local-edge="1"/>
+<line x1="7.18013" y1="1.85" x2="8.04615" y2="2.35" class="cut" data-edge-key="14:22" data-edge-state="cut" data-face="7" data-local-edge="2"/>
+<line x1="8.91218" y1="1.85" x2="8.91218" y2="0.85" class="cut" data-edge-key="18:23" data-edge-state="cut" data-face="7" data-local-edge="4"/>
+<line x1="8.91218" y1="0.85" x2="8.04615" y2="0.35" class="cut" data-edge-key="17:18" data-edge-state="cut" data-face="7" data-local-edge="5"/>
+<line x1="5.44808" y1="1.85" x2="5.44808" y2="0.85" class="cut" data-edge-key="0:15" data-edge-state="cut" data-face="8" data-local-edge="0"/>
+<line x1="5.44808" y1="0.85" x2="4.44808" y2="0.85" class="cut" data-edge-key="15:17" data-edge-state="cut" data-face="8" data-local-edge="1"/>
+<line x1="4.44808" y1="1.85" x2="5.44808" y2="1.85" class="cut" data-edge-key="0:1" data-edge-state="cut" data-face="8" data-local-edge="3"/>
+<line x1="0.35" y1="4.21603" x2="1.21603" y2="4.71603" class="cut" data-edge-key="8:10" data-edge-state="cut" data-face="9" data-local-edge="0"/>
+<line x1="1.21603" y1="4.71603" x2="1.71603" y2="3.85" class="cut" data-edge-key="7:8" data-edge-state="cut" data-face="9" data-local-edge="1"/>
+<line x1="0.85" y1="3.35" x2="0.35" y2="4.21603" class="cut" data-edge-key="10:20" data-edge-state="cut" data-face="9" data-local-edge="3"/>
+<line x1="2.58205" y1="3.35" x2="3.58205" y2="3.35" class="cut" data-edge-key="3:6" data-edge-state="cut" data-face="10" data-local-edge="0"/>
+<line x1="3.58205" y1="2.35" x2="2.58205" y2="2.35" class="cut" data-edge-key="2:16" data-edge-state="cut" data-face="10" data-local-edge="2"/>
+<line x1="8.04615" y1="2.35" x2="7.04615" y2="2.35" class="cut" data-edge-key="14:22" data-edge-state="cut" data-face="11" data-local-edge="3"/>
+<line x1="4.44808" y1="3.85" x2="4.94808" y2="4.71603" class="cut" data-edge-key="4:9" data-edge-state="cut" data-face="12" data-local-edge="0"/>
+<line x1="4.94808" y1="4.71603" x2="5.8141" y2="4.21603" class="cut" data-edge-key="9:13" data-edge-state="cut" data-face="12" data-local-edge="1"/>
+<line x1="5.8141" y1="4.21603" x2="5.3141" y2="3.35" class="cut" data-edge-key="5:13" data-edge-state="cut" data-face="12" data-local-edge="2"/>
+<line x1="1.71603" y1="1.85" x2="1.21603" y2="0.98397" class="cut" data-edge-key="18:19" data-edge-state="cut" data-face="13" data-local-edge="1"/>
+<line x1="1.21603" y1="0.98397" x2="0.35" y2="1.48397" class="cut" data-edge-key="18:23" data-edge-state="cut" data-face="13" data-local-edge="2"/>
+<line x1="0.35" y1="1.48397" x2="0.85" y2="2.35" class="cut" data-edge-key="21:23" data-edge-state="cut" data-face="13" data-local-edge="3"/>
+<line x1="4.44808" y1="1.85" x2="3.58205" y2="2.35" class="fold" data-edge-key="1:2" data-edge-state="fold" data-face="0" data-local-edge="1"/>
+<line x1="3.58205" y1="2.35" x2="3.58205" y2="3.35" class="fold" data-edge-key="2:3" data-edge-state="fold" data-face="0" data-local-edge="2"/>
+<line x1="4.44808" y1="3.85" x2="5.3141" y2="3.35" class="fold" data-edge-key="4:5" data-edge-state="fold" data-face="0" data-local-edge="4"/>
+<line x1="5.3141" y1="3.35" x2="5.3141" y2="2.35" class="fold" data-edge-key="0:5" data-edge-state="fold" data-face="0" data-local-edge="5"/>
+<line x1="2.58205" y1="3.35" x2="1.71603" y2="3.85" class="fold" data-edge-key="6:7" data-edge-state="fold" data-face="1" data-local-edge="1"/>
+<line x1="8.04615" y1="3.35" x2="7.04615" y2="3.35" class="fold" data-edge-key="11:12" data-edge-state="fold" data-face="2" data-local-edge="2"/>
+<line x1="7.04615" y1="3.35" x2="7.04615" y2="2.35" class="fold" data-edge-key="12:14" data-edge-state="fold" data-face="3" data-local-edge="0"/>
+<line x1="4.44808" y1="1.85" x2="4.44808" y2="0.85" class="fold" data-edge-key="1:17" data-edge-state="fold" data-face="4" data-local-edge="2"/>
+<line x1="0.85" y1="3.35" x2="1.71603" y2="3.85" class="fold" data-edge-key="7:20" data-edge-state="fold" data-face="5" data-local-edge="0"/>
+<line x1="2.58205" y1="3.35" x2="2.58205" y2="2.35" class="fold" data-edge-key="6:16" data-edge-state="fold" data-face="5" data-local-edge="2"/>
+<line x1="1.71603" y1="1.85" x2="0.85" y2="2.35" class="fold" data-edge-key="19:21" data-edge-state="fold" data-face="5" data-local-edge="4"/>
+<line x1="8.04615" y1="2.35" x2="8.04615" y2="3.35" class="fold" data-edge-key="11:22" data-edge-state="fold" data-face="6" data-local-edge="0"/>
+<line x1="8.91218" y1="1.85" x2="8.04615" y2="2.35" class="fold" data-edge-key="22:23" data-edge-state="fold" data-face="6" data-local-edge="5"/>
+</svg>

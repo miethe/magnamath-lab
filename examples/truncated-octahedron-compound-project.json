@@ -1,0 +1,1672 @@
+{
+  "schema": "https://magnamath.app/schema/snapshot/v4",
+  "schemaVersion": 4,
+  "appVersion": "0.4.0",
+  "coreVersion": "0.4.0",
+  "generatedAt": "2026-08-08T12:00:00.000Z",
+  "polyhedron": {
+    "id": "truncated-octahedron",
+    "name": "Truncated octahedron",
+    "family": "Archimedean solid",
+    "vertices": [
+      [
+        1.414213562373095,
+        6.938893903907228e-18,
+        0.7071067811865475
+      ],
+      [
+        1.414213562373095,
+        0.7071067811865475,
+        2.7755575615628914e-17
+      ],
+      [
+        0.7071067811865475,
+        1.414213562373095,
+        2.7755575615628914e-17
+      ],
+      [
+        -1.9949319973733282e-17,
+        1.414213562373095,
+        0.7071067811865475
+      ],
+      [
+        -1.9949319973733282e-17,
+        0.7071067811865475,
+        1.414213562373095
+      ],
+      [
+        0.7071067811865475,
+        6.938893903907228e-18,
+        1.414213562373095
+      ],
+      [
+        -0.7071067811865475,
+        1.414213562373095,
+        2.7755575615628914e-17
+      ],
+      [
+        -1.414213562373095,
+        0.7071067811865475,
+        2.7755575615628914e-17
+      ],
+      [
+        -1.414213562373095,
+        6.938893903907228e-18,
+        0.7071067811865475
+      ],
+      [
+        -0.7071067811865475,
+        6.938893903907228e-18,
+        1.414213562373095
+      ],
+      [
+        -1.414213562373095,
+        -0.7071067811865475,
+        2.7755575615628914e-17
+      ],
+      [
+        -0.7071067811865475,
+        -1.414213562373095,
+        2.7755575615628914e-17
+      ],
+      [
+        -1.9949319973733282e-17,
+        -1.414213562373095,
+        0.7071067811865475
+      ],
+      [
+        -1.9949319973733282e-17,
+        -0.7071067811865475,
+        1.414213562373095
+      ],
+      [
+        0.7071067811865475,
+        -1.414213562373095,
+        2.7755575615628914e-17
+      ],
+      [
+        1.414213562373095,
+        -0.7071067811865475,
+        2.7755575615628914e-17
+      ],
+      [
+        -1.9949319973733282e-17,
+        1.414213562373095,
+        -0.7071067811865475
+      ],
+      [
+        1.414213562373095,
+        6.938893903907228e-18,
+        -0.7071067811865475
+      ],
+      [
+        0.7071067811865475,
+        6.938893903907228e-18,
+        -1.414213562373095
+      ],
+      [
+        -1.9949319973733282e-17,
+        0.7071067811865475,
+        -1.414213562373095
+      ],
+      [
+        -1.414213562373095,
+        6.938893903907228e-18,
+        -0.7071067811865475
+      ],
+      [
+        -0.7071067811865475,
+        6.938893903907228e-18,
+        -1.414213562373095
+      ],
+      [
+        -1.9949319973733282e-17,
+        -1.414213562373095,
+        -0.7071067811865475
+      ],
+      [
+        -1.9949319973733282e-17,
+        -0.7071067811865475,
+        -1.414213562373095
+      ]
+    ],
+    "faces": [
+      [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      [
+        3,
+        6,
+        7,
+        8,
+        9,
+        4
+      ],
+      [
+        8,
+        10,
+        11,
+        12,
+        13,
+        9
+      ],
+      [
+        12,
+        14,
+        15,
+        0,
+        5,
+        13
+      ],
+      [
+        16,
+        2,
+        1,
+        17,
+        18,
+        19
+      ],
+      [
+        20,
+        7,
+        6,
+        16,
+        19,
+        21
+      ],
+      [
+        22,
+        11,
+        10,
+        20,
+        21,
+        23
+      ],
+      [
+        17,
+        15,
+        14,
+        22,
+        23,
+        18
+      ],
+      [
+        0,
+        15,
+        17,
+        1
+      ],
+      [
+        10,
+        8,
+        7,
+        20
+      ],
+      [
+        6,
+        3,
+        2,
+        16
+      ],
+      [
+        14,
+        12,
+        11,
+        22
+      ],
+      [
+        4,
+        9,
+        13,
+        5
+      ],
+      [
+        21,
+        19,
+        18,
+        23
+      ]
+    ],
+    "metadata": {
+      "generatedBy": "uniform-truncation",
+      "sourceSolid": "octahedron",
+      "truncationFraction": 0.3333333333333333,
+      "exactTopology": true
+    }
+  },
+  "analysis": {
+    "counts": {
+      "vertices": 24,
+      "edges": 36,
+      "faces": 14,
+      "byFaceKind": {
+        "regular-6-gon": 8,
+        "square": 6
+      }
+    },
+    "eulerCharacteristic": 2,
+    "genus": 0,
+    "surfaceArea": 26.784609690826525,
+    "volume": 11.313708498984756,
+    "edgeStats": {
+      "minimum": 1,
+      "maximum": 1,
+      "average": 1,
+      "relativeSpread": 0
+    },
+    "validation": {
+      "valid": true,
+      "issues": [],
+      "warnings": [],
+      "closed": true,
+      "connected": true,
+      "orientable": true,
+      "manifold": true
+    },
+    "faceKinds": [
+      {
+        "faceIndex": 0,
+        "kind": "regular-6-gon",
+        "label": "Regular hexagon"
+      },
+      {
+        "faceIndex": 1,
+        "kind": "regular-6-gon",
+        "label": "Regular hexagon"
+      },
+      {
+        "faceIndex": 2,
+        "kind": "regular-6-gon",
+        "label": "Regular hexagon"
+      },
+      {
+        "faceIndex": 3,
+        "kind": "regular-6-gon",
+        "label": "Regular hexagon"
+      },
+      {
+        "faceIndex": 4,
+        "kind": "regular-6-gon",
+        "label": "Regular hexagon"
+      },
+      {
+        "faceIndex": 5,
+        "kind": "regular-6-gon",
+        "label": "Regular hexagon"
+      },
+      {
+        "faceIndex": 6,
+        "kind": "regular-6-gon",
+        "label": "Regular hexagon"
+      },
+      {
+        "faceIndex": 7,
+        "kind": "regular-6-gon",
+        "label": "Regular hexagon"
+      },
+      {
+        "faceIndex": 8,
+        "kind": "square",
+        "label": "Square"
+      },
+      {
+        "faceIndex": 9,
+        "kind": "square",
+        "label": "Square"
+      },
+      {
+        "faceIndex": 10,
+        "kind": "square",
+        "label": "Square"
+      },
+      {
+        "faceIndex": 11,
+        "kind": "square",
+        "label": "Square"
+      },
+      {
+        "faceIndex": 12,
+        "kind": "square",
+        "label": "Square"
+      },
+      {
+        "faceIndex": 13,
+        "kind": "square",
+        "label": "Square"
+      }
+    ]
+  },
+  "net": {
+    "seed": 23,
+    "source": "search",
+    "objective": "buildable",
+    "valid": true,
+    "overlapArea": 0,
+    "overlapPairs": [],
+    "score": 35.18081149959397,
+    "scoreBreakdown": {
+      "overlapArea": 0,
+      "overlapPairs": 0,
+      "boundingArea": 33.94153162899181,
+      "perimeter": 0.828,
+      "compactness": -0.03409083453545008,
+      "aspect": 0.025370705137602926,
+      "depth": 0.7000000000000001,
+      "leaves": -0.28
+    },
+    "rootFace": 10,
+    "parentByFace": [
+      10,
+      5,
+      11,
+      0,
+      0,
+      10,
+      11,
+      6,
+      4,
+      5,
+      -1,
+      3,
+      0,
+      5
+    ],
+    "transforms": [
+      [
+        -0.8660254037844383,
+        0.4999999999999999,
+        -0.4999999999999999,
+        -0.8660254037844383,
+        -0.6160254037844393,
+        3.3306690738754696e-16
+      ],
+      [
+        -0.8660254037844382,
+        0.49999999999999983,
+        -0.49999999999999983,
+        -0.8660254037844382,
+        -2.4820508075688776,
+        -1.4999999999999993
+      ],
+      [
+        0.5000000000000002,
+        0.8660254037844383,
+        -0.8660254037844383,
+        0.5000000000000002,
+        2.4820508075688763,
+        -1.366025403784439
+      ],
+      [
+        7.044813998280221e-16,
+        0.9999999999999999,
+        -0.9999999999999999,
+        7.044813998280221e-16,
+        1.1160254037844375,
+        -2.220446049250313e-16
+      ],
+      [
+        0.8660254037844383,
+        -0.49999999999999956,
+        0.49999999999999956,
+        0.8660254037844383,
+        -1.4820508075688772,
+        1.4999999999999993
+      ],
+      [
+        0.8660254037844382,
+        -0.5,
+        0.5,
+        0.8660254037844382,
+        -3.348076211353315,
+        2.220446049250313e-16
+      ],
+      [
+        6.123233995736765e-17,
+        -0.9999999999999999,
+        0.9999999999999999,
+        6.123233995736765e-17,
+        3.8480762113533147,
+        -1.1102230246251565e-15
+      ],
+      [
+        -0.8660254037844385,
+        -0.5000000000000003,
+        0.5000000000000003,
+        -0.8660254037844385,
+        2.9820508075688754,
+        1.4999999999999987
+      ],
+      [
+        6.123233995736764e-17,
+        0.9999999999999997,
+        -0.9999999999999997,
+        6.123233995736764e-17,
+        -0.11602540378443926,
+        1.4999999999999996
+      ],
+      [
+        0.8660254037844382,
+        -0.5,
+        0.5,
+        0.8660254037844382,
+        -4.031088913245535,
+        -1.1830127018922183
+      ],
+      [
+        1,
+        0,
+        0,
+        1,
+        -1.9820508075688772,
+        2.220446049250313e-16
+      ],
+      [
+        -3.828568698926949e-16,
+        -0.9999999999999999,
+        0.9999999999999999,
+        -3.828568698926949e-16,
+        2.4820508075688763,
+        -9.992007221626409e-16
+      ],
+      [
+        0.5000000000000002,
+        -0.8660254037844383,
+        0.8660254037844383,
+        0.5000000000000002,
+        0.06698729810777948,
+        -1.1830127018922183
+      ],
+      [
+        0.8660254037844387,
+        0.4999999999999996,
+        -0.4999999999999996,
+        0.8660254037844387,
+        -4.031088913245533,
+        1.1830127018922192
+      ]
+    ],
+    "foldEdgeKeys": [
+      "2:3",
+      "6:16",
+      "1:2",
+      "4:5",
+      "0:5",
+      "6:7",
+      "7:20",
+      "19:21",
+      "1:17",
+      "12:14",
+      "11:12",
+      "11:22",
+      "22:23"
+    ],
+    "cutEdgeKeys": [
+      "0:1",
+      "3:4",
+      "3:6",
+      "7:8",
+      "8:9",
+      "4:9",
+      "8:10",
+      "10:11",
+      "12:13",
+      "9:13",
+      "14:15",
+      "0:15",
+      "5:13",
+      "2:16",
+      "17:18",
+      "18:19",
+      "16:19",
+      "20:21",
+      "10:20",
+      "21:23",
+      "15:17",
+      "14:22",
+      "18:23"
+    ],
+    "lockedFoldEdgeKeys": [],
+    "lockedCutEdgeKeys": []
+  },
+  "physicalBuild": {
+    "modelUnitMm": 74.93,
+    "confidence": 0.92,
+    "confidenceLabel": "good",
+    "profileSchema": "https://magnamath.app/schema/tile-profile/v2",
+    "profileIds": [
+      "equilateral-triangle",
+      "square"
+    ],
+    "required": {
+      "square": 6,
+      "large-square": 0,
+      "equilateral-triangle": 48,
+      "right-triangle": 0,
+      "isosceles-triangle": 0
+    },
+    "shortages": [],
+    "unsupportedFaces": [],
+    "compoundFaces": [
+      {
+        "faceIndex": 0,
+        "recipeId": "regular-hexagon-six-equilateral-triangle",
+        "tileId": "equilateral-triangle",
+        "pieceCount": 6,
+        "scaleError": 1.8965507427201392e-16,
+        "mechanicalStatus": "unverified-panel"
+      },
+      {
+        "faceIndex": 1,
+        "recipeId": "regular-hexagon-six-equilateral-triangle",
+        "tileId": "equilateral-triangle",
+        "pieceCount": 6,
+        "scaleError": 1.8965507427201392e-16,
+        "mechanicalStatus": "unverified-panel"
+      },
+      {
+        "faceIndex": 2,
+        "recipeId": "regular-hexagon-six-equilateral-triangle",
+        "tileId": "equilateral-triangle",
+        "pieceCount": 6,
+        "scaleError": 1.8965507427201392e-16,
+        "mechanicalStatus": "unverified-panel"
+      },
+      {
+        "faceIndex": 3,
+        "recipeId": "regular-hexagon-six-equilateral-triangle",
+        "tileId": "equilateral-triangle",
+        "pieceCount": 6,
+        "scaleError": 1.8965507427201392e-16,
+        "mechanicalStatus": "unverified-panel"
+      },
+      {
+        "faceIndex": 4,
+        "recipeId": "regular-hexagon-six-equilateral-triangle",
+        "tileId": "equilateral-triangle",
+        "pieceCount": 6,
+        "scaleError": 1.8965507427201392e-16,
+        "mechanicalStatus": "unverified-panel"
+      },
+      {
+        "faceIndex": 5,
+        "recipeId": "regular-hexagon-six-equilateral-triangle",
+        "tileId": "equilateral-triangle",
+        "pieceCount": 6,
+        "scaleError": 1.8965507427201392e-16,
+        "mechanicalStatus": "unverified-panel"
+      },
+      {
+        "faceIndex": 6,
+        "recipeId": "regular-hexagon-six-equilateral-triangle",
+        "tileId": "equilateral-triangle",
+        "pieceCount": 6,
+        "scaleError": 1.8965507427201392e-16,
+        "mechanicalStatus": "unverified-panel"
+      },
+      {
+        "faceIndex": 7,
+        "recipeId": "regular-hexagon-six-equilateral-triangle",
+        "tileId": "equilateral-triangle",
+        "pieceCount": 6,
+        "scaleError": 1.8965507427201392e-16,
+        "mechanicalStatus": "unverified-panel"
+      }
+    ],
+    "faceAssignments": [
+      {
+        "faceIndex": 0,
+        "assignmentKind": "compound",
+        "tileId": "equilateral-triangle",
+        "recipeId": "regular-hexagon-six-equilateral-triangle",
+        "pieceCount": 6,
+        "scaleError": 1.8965507427201392e-16,
+        "sideError": null,
+        "angleErrorDegrees": null
+      },
+      {
+        "faceIndex": 1,
+        "assignmentKind": "compound",
+        "tileId": "equilateral-triangle",
+        "recipeId": "regular-hexagon-six-equilateral-triangle",
+        "pieceCount": 6,
+        "scaleError": 1.8965507427201392e-16,
+        "sideError": null,
+        "angleErrorDegrees": null
+      },
+      {
+        "faceIndex": 2,
+        "assignmentKind": "compound",
+        "tileId": "equilateral-triangle",
+        "recipeId": "regular-hexagon-six-equilateral-triangle",
+        "pieceCount": 6,
+        "scaleError": 1.8965507427201392e-16,
+        "sideError": null,
+        "angleErrorDegrees": null
+      },
+      {
+        "faceIndex": 3,
+        "assignmentKind": "compound",
+        "tileId": "equilateral-triangle",
+        "recipeId": "regular-hexagon-six-equilateral-triangle",
+        "pieceCount": 6,
+        "scaleError": 1.8965507427201392e-16,
+        "sideError": null,
+        "angleErrorDegrees": null
+      },
+      {
+        "faceIndex": 4,
+        "assignmentKind": "compound",
+        "tileId": "equilateral-triangle",
+        "recipeId": "regular-hexagon-six-equilateral-triangle",
+        "pieceCount": 6,
+        "scaleError": 1.8965507427201392e-16,
+        "sideError": null,
+        "angleErrorDegrees": null
+      },
+      {
+        "faceIndex": 5,
+        "assignmentKind": "compound",
+        "tileId": "equilateral-triangle",
+        "recipeId": "regular-hexagon-six-equilateral-triangle",
+        "pieceCount": 6,
+        "scaleError": 1.8965507427201392e-16,
+        "sideError": null,
+        "angleErrorDegrees": null
+      },
+      {
+        "faceIndex": 6,
+        "assignmentKind": "compound",
+        "tileId": "equilateral-triangle",
+        "recipeId": "regular-hexagon-six-equilateral-triangle",
+        "pieceCount": 6,
+        "scaleError": 1.8965507427201392e-16,
+        "sideError": null,
+        "angleErrorDegrees": null
+      },
+      {
+        "faceIndex": 7,
+        "assignmentKind": "compound",
+        "tileId": "equilateral-triangle",
+        "recipeId": "regular-hexagon-six-equilateral-triangle",
+        "pieceCount": 6,
+        "scaleError": 1.8965507427201392e-16,
+        "sideError": null,
+        "angleErrorDegrees": null
+      },
+      {
+        "faceIndex": 8,
+        "assignmentKind": "direct",
+        "tileId": "square",
+        "recipeId": null,
+        "pieceCount": 1,
+        "scaleError": 1.8965507427201392e-16,
+        "sideError": 0,
+        "angleErrorDegrees": 0
+      },
+      {
+        "faceIndex": 9,
+        "assignmentKind": "direct",
+        "tileId": "square",
+        "recipeId": null,
+        "pieceCount": 1,
+        "scaleError": 1.8965507427201392e-16,
+        "sideError": 0,
+        "angleErrorDegrees": 0
+      },
+      {
+        "faceIndex": 10,
+        "assignmentKind": "direct",
+        "tileId": "square",
+        "recipeId": null,
+        "pieceCount": 1,
+        "scaleError": 1.8965507427201392e-16,
+        "sideError": 0,
+        "angleErrorDegrees": 0
+      },
+      {
+        "faceIndex": 11,
+        "assignmentKind": "direct",
+        "tileId": "square",
+        "recipeId": null,
+        "pieceCount": 1,
+        "scaleError": 1.8965507427201392e-16,
+        "sideError": 0,
+        "angleErrorDegrees": 0
+      },
+      {
+        "faceIndex": 12,
+        "assignmentKind": "direct",
+        "tileId": "square",
+        "recipeId": null,
+        "pieceCount": 1,
+        "scaleError": 1.8965507427201392e-16,
+        "sideError": 0,
+        "angleErrorDegrees": 0
+      },
+      {
+        "faceIndex": 13,
+        "assignmentKind": "direct",
+        "tileId": "square",
+        "recipeId": null,
+        "pieceCount": 1,
+        "scaleError": 1.8965507427201392e-16,
+        "sideError": 0,
+        "angleErrorDegrees": 0
+      }
+    ],
+    "hingeCounts": {
+      "unverified": 36
+    },
+    "thicknessClearance": {
+      "model": "finite-slab-cross-section-v1",
+      "assumption": "measured-only",
+      "entries": [
+        {
+          "edgeKey": "0:1",
+          "faces": [
+            0,
+            8
+          ],
+          "angleDegrees": 125.26438968275465,
+          "status": "unmodeled",
+          "reason": "One or both tile profiles lack measured thickness.",
+          "intersectionAreaMm2": null,
+          "model": null
+        },
+        {
+          "edgeKey": "1:2",
+          "faces": [
+            0,
+            4
+          ],
+          "angleDegrees": 109.47122063449069,
+          "status": "unmodeled",
+          "reason": "One or both tile profiles lack measured thickness.",
+          "intersectionAreaMm2": null,
+          "model": null
+        },
+        {
+          "edgeKey": "2:3",
+          "faces": [
+            0,
+            10
+          ],
+          "angleDegrees": 125.26438968275465,
+          "status": "unmodeled",
+          "reason": "One or both tile profiles lack measured thickness.",
+          "intersectionAreaMm2": null,
+          "model": null
+        },
+        {
+          "edgeKey": "3:4",
+          "faces": [
+            0,
+            1
+          ],
+          "angleDegrees": 109.47122063449069,
+          "status": "unmodeled",
+          "reason": "One or both tile profiles lack measured thickness.",
+          "intersectionAreaMm2": null,
+          "model": null
+        },
+        {
+          "edgeKey": "4:5",
+          "faces": [
+            0,
+            12
+          ],
+          "angleDegrees": 125.26438968275465,
+          "status": "unmodeled",
+          "reason": "One or both tile profiles lack measured thickness.",
+          "intersectionAreaMm2": null,
+          "model": null
+        },
+        {
+          "edgeKey": "0:5",
+          "faces": [
+            0,
+            3
+          ],
+          "angleDegrees": 109.47122063449069,
+          "status": "unmodeled",
+          "reason": "One or both tile profiles lack measured thickness.",
+          "intersectionAreaMm2": null,
+          "model": null
+        },
+        {
+          "edgeKey": "3:6",
+          "faces": [
+            1,
+            10
+          ],
+          "angleDegrees": 125.26438968275465,
+          "status": "unmodeled",
+          "reason": "One or both tile profiles lack measured thickness.",
+          "intersectionAreaMm2": null,
+          "model": null
+        },
+        {
+          "edgeKey": "6:7",
+          "faces": [
+            1,
+            5
+          ],
+          "angleDegrees": 109.47122063449069,
+          "status": "unmodeled",
+          "reason": "One or both tile profiles lack measured thickness.",
+          "intersectionAreaMm2": null,
+          "model": null
+        },
+        {
+          "edgeKey": "7:8",
+          "faces": [
+            1,
+            9
+          ],
+          "angleDegrees": 125.26438968275465,
+          "status": "unmodeled",
+          "reason": "One or both tile profiles lack measured thickness.",
+          "intersectionAreaMm2": null,
+          "model": null
+        },
+        {
+          "edgeKey": "8:9",
+          "faces": [
+            1,
+            2
+          ],
+          "angleDegrees": 109.47122063449069,
+          "status": "unmodeled",
+          "reason": "One or both tile profiles lack measured thickness.",
+          "intersectionAreaMm2": null,
+          "model": null
+        },
+        {
+          "edgeKey": "4:9",
+          "faces": [
+            1,
+            12
+          ],
+          "angleDegrees": 125.26438968275465,
+          "status": "unmodeled",
+          "reason": "One or both tile profiles lack measured thickness.",
+          "intersectionAreaMm2": null,
+          "model": null
+        },
+        {
+          "edgeKey": "8:10",
+          "faces": [
+            2,
+            9
+          ],
+          "angleDegrees": 125.26438968275465,
+          "status": "unmodeled",
+          "reason": "One or both tile profiles lack measured thickness.",
+          "intersectionAreaMm2": null,
+          "model": null
+        },
+        {
+          "edgeKey": "10:11",
+          "faces": [
+            2,
+            6
+          ],
+          "angleDegrees": 109.47122063449069,
+          "status": "unmodeled",
+          "reason": "One or both tile profiles lack measured thickness.",
+          "intersectionAreaMm2": null,
+          "model": null
+        },
+        {
+          "edgeKey": "11:12",
+          "faces": [
+            2,
+            11
+          ],
+          "angleDegrees": 125.26438968275465,
+          "status": "unmodeled",
+          "reason": "One or both tile profiles lack measured thickness.",
+          "intersectionAreaMm2": null,
+          "model": null
+        },
+        {
+          "edgeKey": "12:13",
+          "faces": [
+            2,
+            3
+          ],
+          "angleDegrees": 109.47122063449069,
+          "status": "unmodeled",
+          "reason": "One or both tile profiles lack measured thickness.",
+          "intersectionAreaMm2": null,
+          "model": null
+        },
+        {
+          "edgeKey": "9:13",
+          "faces": [
+            2,
+            12
+          ],
+          "angleDegrees": 125.26438968275465,
+          "status": "unmodeled",
+          "reason": "One or both tile profiles lack measured thickness.",
+          "intersectionAreaMm2": null,
+          "model": null
+        },
+        {
+          "edgeKey": "12:14",
+          "faces": [
+            3,
+            11
+          ],
+          "angleDegrees": 125.26438968275465,
+          "status": "unmodeled",
+          "reason": "One or both tile profiles lack measured thickness.",
+          "intersectionAreaMm2": null,
+          "model": null
+        },
+        {
+          "edgeKey": "14:15",
+          "faces": [
+            3,
+            7
+          ],
+          "angleDegrees": 109.47122063449069,
+          "status": "unmodeled",
+          "reason": "One or both tile profiles lack measured thickness.",
+          "intersectionAreaMm2": null,
+          "model": null
+        },
+        {
+          "edgeKey": "0:15",
+          "faces": [
+            3,
+            8
+          ],
+          "angleDegrees": 125.26438968275465,
+          "status": "unmodeled",
+          "reason": "One or both tile profiles lack measured thickness.",
+          "intersectionAreaMm2": null,
+          "model": null
+        },
+        {
+          "edgeKey": "5:13",
+          "faces": [
+            3,
+            12
+          ],
+          "angleDegrees": 125.26438968275465,
+          "status": "unmodeled",
+          "reason": "One or both tile profiles lack measured thickness.",
+          "intersectionAreaMm2": null,
+          "model": null
+        },
+        {
+          "edgeKey": "2:16",
+          "faces": [
+            4,
+            10
+          ],
+          "angleDegrees": 125.26438968275465,
+          "status": "unmodeled",
+          "reason": "One or both tile profiles lack measured thickness.",
+          "intersectionAreaMm2": null,
+          "model": null
+        },
+        {
+          "edgeKey": "1:17",
+          "faces": [
+            4,
+            8
+          ],
+          "angleDegrees": 125.26438968275465,
+          "status": "unmodeled",
+          "reason": "One or both tile profiles lack measured thickness.",
+          "intersectionAreaMm2": null,
+          "model": null
+        },
+        {
+          "edgeKey": "17:18",
+          "faces": [
+            4,
+            7
+          ],
+          "angleDegrees": 109.47122063449069,
+          "status": "unmodeled",
+          "reason": "One or both tile profiles lack measured thickness.",
+          "intersectionAreaMm2": null,
+          "model": null
+        },
+        {
+          "edgeKey": "18:19",
+          "faces": [
+            4,
+            13
+          ],
+          "angleDegrees": 125.26438968275465,
+          "status": "unmodeled",
+          "reason": "One or both tile profiles lack measured thickness.",
+          "intersectionAreaMm2": null,
+          "model": null
+        },
+        {
+          "edgeKey": "16:19",
+          "faces": [
+            4,
+            5
+          ],
+          "angleDegrees": 109.47122063449069,
+          "status": "unmodeled",
+          "reason": "One or both tile profiles lack measured thickness.",
+          "intersectionAreaMm2": null,
+          "model": null
+        },
+        {
+          "edgeKey": "7:20",
+          "faces": [
+            5,
+            9
+          ],
+          "angleDegrees": 125.26438968275465,
+          "status": "unmodeled",
+          "reason": "One or both tile profiles lack measured thickness.",
+          "intersectionAreaMm2": null,
+          "model": null
+        },
+        {
+          "edgeKey": "6:16",
+          "faces": [
+            5,
+            10
+          ],
+          "angleDegrees": 125.26438968275465,
+          "status": "unmodeled",
+          "reason": "One or both tile profiles lack measured thickness.",
+          "intersectionAreaMm2": null,
+          "model": null
+        },
+        {
+          "edgeKey": "19:21",
+          "faces": [
+            5,
+            13
+          ],
+          "angleDegrees": 125.26438968275465,
+          "status": "unmodeled",
+          "reason": "One or both tile profiles lack measured thickness.",
+          "intersectionAreaMm2": null,
+          "model": null
+        },
+        {
+          "edgeKey": "20:21",
+          "faces": [
+            5,
+            6
+          ],
+          "angleDegrees": 109.47122063449069,
+          "status": "unmodeled",
+          "reason": "One or both tile profiles lack measured thickness.",
+          "intersectionAreaMm2": null,
+          "model": null
+        },
+        {
+          "edgeKey": "11:22",
+          "faces": [
+            6,
+            11
+          ],
+          "angleDegrees": 125.26438968275465,
+          "status": "unmodeled",
+          "reason": "One or both tile profiles lack measured thickness.",
+          "intersectionAreaMm2": null,
+          "model": null
+        },
+        {
+          "edgeKey": "10:20",
+          "faces": [
+            6,
+            9
+          ],
+          "angleDegrees": 125.26438968275465,
+          "status": "unmodeled",
+          "reason": "One or both tile profiles lack measured thickness.",
+          "intersectionAreaMm2": null,
+          "model": null
+        },
+        {
+          "edgeKey": "21:23",
+          "faces": [
+            6,
+            13
+          ],
+          "angleDegrees": 125.26438968275465,
+          "status": "unmodeled",
+          "reason": "One or both tile profiles lack measured thickness.",
+          "intersectionAreaMm2": null,
+          "model": null
+        },
+        {
+          "edgeKey": "22:23",
+          "faces": [
+            6,
+            7
+          ],
+          "angleDegrees": 109.47122063449069,
+          "status": "unmodeled",
+          "reason": "One or both tile profiles lack measured thickness.",
+          "intersectionAreaMm2": null,
+          "model": null
+        },
+        {
+          "edgeKey": "15:17",
+          "faces": [
+            7,
+            8
+          ],
+          "angleDegrees": 125.26438968275465,
+          "status": "unmodeled",
+          "reason": "One or both tile profiles lack measured thickness.",
+          "intersectionAreaMm2": null,
+          "model": null
+        },
+        {
+          "edgeKey": "14:22",
+          "faces": [
+            7,
+            11
+          ],
+          "angleDegrees": 125.26438968275465,
+          "status": "unmodeled",
+          "reason": "One or both tile profiles lack measured thickness.",
+          "intersectionAreaMm2": null,
+          "model": null
+        },
+        {
+          "edgeKey": "18:23",
+          "faces": [
+            7,
+            13
+          ],
+          "angleDegrees": 125.26438968275465,
+          "status": "unmodeled",
+          "reason": "One or both tile profiles lack measured thickness.",
+          "intersectionAreaMm2": null,
+          "model": null
+        }
+      ],
+      "byEdgeKey": {
+        "0:1": {
+          "edgeKey": "0:1",
+          "faces": [
+            0,
+            8
+          ],
+          "angleDegrees": 125.26438968275465,
+          "status": "unmodeled",
+          "reason": "One or both tile profiles lack measured thickness.",
+          "intersectionAreaMm2": null,
+          "model": null
+        },
+        "1:2": {
+          "edgeKey": "1:2",
+          "faces": [
+            0,
+            4
+          ],
+          "angleDegrees": 109.47122063449069,
+          "status": "unmodeled",
+          "reason": "One or both tile profiles lack measured thickness.",
+          "intersectionAreaMm2": null,
+          "model": null
+        },
+        "2:3": {
+          "edgeKey": "2:3",
+          "faces": [
+            0,
+            10
+          ],
+          "angleDegrees": 125.26438968275465,
+          "status": "unmodeled",
+          "reason": "One or both tile profiles lack measured thickness.",
+          "intersectionAreaMm2": null,
+          "model": null
+        },
+        "3:4": {
+          "edgeKey": "3:4",
+          "faces": [
+            0,
+            1
+          ],
+          "angleDegrees": 109.47122063449069,
+          "status": "unmodeled",
+          "reason": "One or both tile profiles lack measured thickness.",
+          "intersectionAreaMm2": null,
+          "model": null
+        },
+        "4:5": {
+          "edgeKey": "4:5",
+          "faces": [
+            0,
+            12
+          ],
+          "angleDegrees": 125.26438968275465,
+          "status": "unmodeled",
+          "reason": "One or both tile profiles lack measured thickness.",
+          "intersectionAreaMm2": null,
+          "model": null
+        },
+        "0:5": {
+          "edgeKey": "0:5",
+          "faces": [
+            0,
+            3
+          ],
+          "angleDegrees": 109.47122063449069,
+          "status": "unmodeled",
+          "reason": "One or both tile profiles lack measured thickness.",
+          "intersectionAreaMm2": null,
+          "model": null
+        },
+        "3:6": {
+          "edgeKey": "3:6",
+          "faces": [
+            1,
+            10
+          ],
+          "angleDegrees": 125.26438968275465,
+          "status": "unmodeled",
+          "reason": "One or both tile profiles lack measured thickness.",
+          "intersectionAreaMm2": null,
+          "model": null
+        },
+        "6:7": {
+          "edgeKey": "6:7",
+          "faces": [
+            1,
+            5
+          ],
+          "angleDegrees": 109.47122063449069,
+          "status": "unmodeled",
+          "reason": "One or both tile profiles lack measured thickness.",
+          "intersectionAreaMm2": null,
+          "model": null
+        },
+        "7:8": {
+          "edgeKey": "7:8",
+          "faces": [
+            1,
+            9
+          ],
+          "angleDegrees": 125.26438968275465,
+          "status": "unmodeled",
+          "reason": "One or both tile profiles lack measured thickness.",
+          "intersectionAreaMm2": null,
+          "model": null
+        },
+        "8:9": {
+          "edgeKey": "8:9",
+          "faces": [
+            1,
+            2
+          ],
+          "angleDegrees": 109.47122063449069,
+          "status": "unmodeled",
+          "reason": "One or both tile profiles lack measured thickness.",
+          "intersectionAreaMm2": null,
+          "model": null
+        },
+        "4:9": {
+          "edgeKey": "4:9",
+          "faces": [
+            1,
+            12
+          ],
+          "angleDegrees": 125.26438968275465,
+          "status": "unmodeled",
+          "reason": "One or both tile profiles lack measured thickness.",
+          "intersectionAreaMm2": null,
+          "model": null
+        },
+        "8:10": {
+          "edgeKey": "8:10",
+          "faces": [
+            2,
+            9
+          ],
+          "angleDegrees": 125.26438968275465,
+          "status": "unmodeled",
+          "reason": "One or both tile profiles lack measured thickness.",
+          "intersectionAreaMm2": null,
+          "model": null
+        },
+        "10:11": {
+          "edgeKey": "10:11",
+          "faces": [
+            2,
+            6
+          ],
+          "angleDegrees": 109.47122063449069,
+          "status": "unmodeled",
+          "reason": "One or both tile profiles lack measured thickness.",
+          "intersectionAreaMm2": null,
+          "model": null
+        },
+        "11:12": {
+          "edgeKey": "11:12",
+          "faces": [
+            2,
+            11
+          ],
+          "angleDegrees": 125.26438968275465,
+          "status": "unmodeled",
+          "reason": "One or both tile profiles lack measured thickness.",
+          "intersectionAreaMm2": null,
+          "model": null
+        },
+        "12:13": {
+          "edgeKey": "12:13",
+          "faces": [
+            2,
+            3
+          ],
+          "angleDegrees": 109.47122063449069,
+          "status": "unmodeled",
+          "reason": "One or both tile profiles lack measured thickness.",
+          "intersectionAreaMm2": null,
+          "model": null
+        },
+        "9:13": {
+          "edgeKey": "9:13",
+          "faces": [
+            2,
+            12
+          ],
+          "angleDegrees": 125.26438968275465,
+          "status": "unmodeled",
+          "reason": "One or both tile profiles lack measured thickness.",
+          "intersectionAreaMm2": null,
+          "model": null
+        },
+        "12:14": {
+          "edgeKey": "12:14",
+          "faces": [
+            3,
+            11
+          ],
+          "angleDegrees": 125.26438968275465,
+          "status": "unmodeled",
+          "reason": "One or both tile profiles lack measured thickness.",
+          "intersectionAreaMm2": null,
+          "model": null
+        },
+        "14:15": {
+          "edgeKey": "14:15",
+          "faces": [
+            3,
+            7
+          ],
+          "angleDegrees": 109.47122063449069,
+          "status": "unmodeled",
+          "reason": "One or both tile profiles lack measured thickness.",
+          "intersectionAreaMm2": null,
+          "model": null
+        },
+        "0:15": {
+          "edgeKey": "0:15",
+          "faces": [
+            3,
+            8
+          ],
+          "angleDegrees": 125.26438968275465,
+          "status": "unmodeled",
+          "reason": "One or both tile profiles lack measured thickness.",
+          "intersectionAreaMm2": null,
+          "model": null
+        },
+        "5:13": {
+          "edgeKey": "5:13",
+          "faces": [
+            3,
+            12
+          ],
+          "angleDegrees": 125.26438968275465,
+          "status": "unmodeled",
+          "reason": "One or both tile profiles lack measured thickness.",
+          "intersectionAreaMm2": null,
+          "model": null
+        },
+        "2:16": {
+          "edgeKey": "2:16",
+          "faces": [
+            4,
+            10
+          ],
+          "angleDegrees": 125.26438968275465,
+          "status": "unmodeled",
+          "reason": "One or both tile profiles lack measured thickness.",
+          "intersectionAreaMm2": null,
+          "model": null
+        },
+        "1:17": {
+          "edgeKey": "1:17",
+          "faces": [
+            4,
+            8
+          ],
+          "angleDegrees": 125.26438968275465,
+          "status": "unmodeled",
+          "reason": "One or both tile profiles lack measured thickness.",
+          "intersectionAreaMm2": null,
+          "model": null
+        },
+        "17:18": {
+          "edgeKey": "17:18",
+          "faces": [
+            4,
+            7
+          ],
+          "angleDegrees": 109.47122063449069,
+          "status": "unmodeled",
+          "reason": "One or both tile profiles lack measured thickness.",
+          "intersectionAreaMm2": null,
+          "model": null
+        },
+        "18:19": {
+          "edgeKey": "18:19",
+          "faces": [
+            4,
+            13
+          ],
+          "angleDegrees": 125.26438968275465,
+          "status": "unmodeled",
+          "reason": "One or both tile profiles lack measured thickness.",
+          "intersectionAreaMm2": null,
+          "model": null
+        },
+        "16:19": {
+          "edgeKey": "16:19",
+          "faces": [
+            4,
+            5
+          ],
+          "angleDegrees": 109.47122063449069,
+          "status": "unmodeled",
+          "reason": "One or both tile profiles lack measured thickness.",
+          "intersectionAreaMm2": null,
+          "model": null
+        },
+        "7:20": {
+          "edgeKey": "7:20",
+          "faces": [
+            5,
+            9
+          ],
+          "angleDegrees": 125.26438968275465,
+          "status": "unmodeled",
+          "reason": "One or both tile profiles lack measured thickness.",
+          "intersectionAreaMm2": null,
+          "model": null
+        },
+        "6:16": {
+          "edgeKey": "6:16",
+          "faces": [
+            5,
+            10
+          ],
+          "angleDegrees": 125.26438968275465,
+          "status": "unmodeled",
+          "reason": "One or both tile profiles lack measured thickness.",
+          "intersectionAreaMm2": null,
+          "model": null
+        },
+        "19:21": {
+          "edgeKey": "19:21",
+          "faces": [
+            5,
+            13
+          ],
+          "angleDegrees": 125.26438968275465,
+          "status": "unmodeled",
+          "reason": "One or both tile profiles lack measured thickness.",
+          "intersectionAreaMm2": null,
+          "model": null
+        },
+        "20:21": {
+          "edgeKey": "20:21",
+          "faces": [
+            5,
+            6
+          ],
+          "angleDegrees": 109.47122063449069,
+          "status": "unmodeled",
+          "reason": "One or both tile profiles lack measured thickness.",
+          "intersectionAreaMm2": null,
+          "model": null
+        },
+        "11:22": {
+          "edgeKey": "11:22",
+          "faces": [
+            6,
+            11
+          ],
+          "angleDegrees": 125.26438968275465,
+          "status": "unmodeled",
+          "reason": "One or both tile profiles lack measured thickness.",
+          "intersectionAreaMm2": null,
+          "model": null
+        },
+        "10:20": {
+          "edgeKey": "10:20",
+          "faces": [
+            6,
+            9
+          ],
+          "angleDegrees": 125.26438968275465,
+          "status": "unmodeled",
+          "reason": "One or both tile profiles lack measured thickness.",
+          "intersectionAreaMm2": null,
+          "model": null
+        },
+        "21:23": {
+          "edgeKey": "21:23",
+          "faces": [
+            6,
+            13
+          ],
+          "angleDegrees": 125.26438968275465,
+          "status": "unmodeled",
+          "reason": "One or both tile profiles lack measured thickness.",
+          "intersectionAreaMm2": null,
+          "model": null
+        },
+        "22:23": {
+          "edgeKey": "22:23",
+          "faces": [
+            6,
+            7
+          ],
+          "angleDegrees": 109.47122063449069,
+          "status": "unmodeled",
+          "reason": "One or both tile profiles lack measured thickness.",
+          "intersectionAreaMm2": null,
+          "model": null
+        },
+        "15:17": {
+          "edgeKey": "15:17",
+          "faces": [
+            7,
+            8
+          ],
+          "angleDegrees": 125.26438968275465,
+          "status": "unmodeled",
+          "reason": "One or both tile profiles lack measured thickness.",
+          "intersectionAreaMm2": null,
+          "model": null
+        },
+        "14:22": {
+          "edgeKey": "14:22",
+          "faces": [
+            7,
+            11
+          ],
+          "angleDegrees": 125.26438968275465,
+          "status": "unmodeled",
+          "reason": "One or both tile profiles lack measured thickness.",
+          "intersectionAreaMm2": null,
+          "model": null
+        },
+        "18:23": {
+          "edgeKey": "18:23",
+          "faces": [
+            7,
+            13
+          ],
+          "angleDegrees": 125.26438968275465,
+          "status": "unmodeled",
+          "reason": "One or both tile profiles lack measured thickness.",
+          "intersectionAreaMm2": null,
+          "model": null
+        }
+      },
+      "counts": {
+        "unmodeled": 36
+      },
+      "modeledRatio": 0,
+      "collisionCount": 0,
+      "caveat": "This is a local two-panel thickness screen only. It excludes connector deformation, bevels unless encoded in the hinge-axis offset, whole-model collisions, gravity, and magnetic forces."
+    },
+    "summary": "Your inventory can represent this solid at 74.93 mm per model unit. 8 faces use exact six-triangle panels whose mechanics remain unverified."
+  },
+  "project": {
+    "title": "Truncated octahedron workshop",
+    "notes": "",
+    "parameter": null,
+    "inventoryPreset": "custom",
+    "inventory": {
+      "square": 999,
+      "equilateral-triangle": 999,
+      "right-triangle": 999,
+      "isosceles-triangle": 999
+    },
+    "tileFamilies": [
+      "standard"
+    ],
+    "scaleMode": "auto",
+    "customScale": 74.93,
+    "calibrationProfileIds": [],
+    "calibrationProfiles": [],
+    "calibrationSessions": [],
+    "compoundMode": "exact",
+    "clearanceAssumption": "measured-only",
+    "printSettings": null,
+    "localProjectId": null,
+    "folding": null,
+    "motionClips": [],
+    "activeMotionClipId": null
+  }
+}

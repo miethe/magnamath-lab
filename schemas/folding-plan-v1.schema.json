@@ -1,0 +1,59 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://magnamath.app/schema/folding-plan/v1",
+  "title": "MagnaMath Folding Plan State v1",
+  "description": "Stable user-controlled state for a tree-hinge folding simulation. Derived matrices and diagnostics are recomputed from exact geometry and the current net.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema", "netSignature", "rootFace", "progress", "sequenceMode",
+    "hingeDuration", "schedule", "hingeOverrides", "selectedHingeEdgeKey",
+    "showHinges", "collisionScreen", "rootPose"
+  ],
+  "properties": {
+    "schema": { "const": "https://magnamath.app/schema/folding-plan/v1" },
+    "netSignature": { "type": "string" },
+    "rootFace": { "type": "integer", "minimum": 0 },
+    "progress": { "type": "number", "minimum": 0, "maximum": 1 },
+    "sequenceMode": { "enum": ["simultaneous", "root-out", "leaves-in", "assembly", "custom"] },
+    "hingeDuration": { "type": "number", "exclusiveMinimum": 0, "maximum": 1 },
+    "schedule": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["edgeKey", "start", "end", "easing"],
+        "properties": {
+          "edgeKey": { "$ref": "#/$defs/edgeKey" },
+          "start": { "type": "number", "minimum": 0, "maximum": 1 },
+          "end": { "type": "number", "minimum": 0, "maximum": 1 },
+          "easing": { "enum": ["linear", "smoothstep", "smootherstep", "ease-in-out-cubic", "custom"] }
+        }
+      }
+    },
+    "hingeOverrides": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["edgeKey", "angleRadians"],
+        "properties": {
+          "edgeKey": { "$ref": "#/$defs/edgeKey" },
+          "angleRadians": { "type": "number" }
+        }
+      }
+    },
+    "selectedHingeEdgeKey": { "oneOf": [{ "$ref": "#/$defs/edgeKey" }, { "type": "null" }] },
+    "showHinges": { "type": "boolean" },
+    "collisionScreen": { "type": "boolean" },
+    "rootPose": {
+      "type": "array",
+      "minItems": 16,
+      "maxItems": 16,
+      "items": { "type": "number" }
+    }
+  },
+  "$defs": {
+    "edgeKey": { "type": "string", "pattern": "^[0-9]+:[0-9]+$" }
+  }
+}

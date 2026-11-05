@@ -1,0 +1,75 @@
+{
+  "schema": "https://magnamath.app/schema/print-package/v1",
+  "schemaVersion": 1,
+  "generatedAt": "2026-08-08T12:00:00.000Z",
+  "appVersion": "0.4.0",
+  "coreVersion": "0.4.0",
+  "polyhedron": {
+    "id": "cube",
+    "name": "Cube"
+  },
+  "layout": {
+    "page": {
+      "id": "letter",
+      "label": "US Letter",
+      "widthMm": 215.9,
+      "heightMm": 279.4,
+      "orientation": "portrait"
+    },
+    "orientation": "portrait",
+    "mode": "poster",
+    "requestedMode": "actual",
+    "modelUnitMm": 74.93,
+    "printScale": 1,
+    "effectiveModelUnitMm": 74.93,
+    "trueScale": true,
+    "marginMm": 10,
+    "overlapMm": 8,
+    "usableWidthMm": 195.9,
+    "usableHeightMm": 259.4,
+    "geometryBounds": {
+      "minX": -2.5,
+      "minY": -1.1067663152275458,
+      "maxX": 2.6067663152275458,
+      "maxY": 1,
+      "width": 5.106766315227546,
+      "height": 2.1067663152275458
+    },
+    "geometryWidthMm": 382.65000000000003,
+    "geometryHeightMm": 157.86,
+    "scaledWidthMm": 382.65000000000003,
+    "scaledHeightMm": 157.86,
+    "columns": 2,
+    "rows": 1,
+    "pages": [
+      {
+        "index": 0,
+        "row": 0,
+        "column": 0,
+        "cropXmm": 0,
+        "cropYmm": 0,
+        "cropWidthMm": 195.9,
+        "cropHeightMm": 259.4
+      },
+      {
+        "index": 1,
+        "row": 0,
+        "column": 1,
+        "cropXmm": 187.9,
+        "cropYmm": 0,
+        "cropWidthMm": 195.9,
+        "cropHeightMm": 259.4
+      }
+    ]
+  },
+  "tabs": {
+    "count": 7,
+    "collisions": [],
+    "omitted": []
+  },
+  "warnings": [],
+  "files": [
+    "cube-net-page-01.svg",
+    "cube-net-page-02.svg"
+  ]
+}

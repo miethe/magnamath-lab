@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://magnamath.app/schema/calibration-session-collection/v1",
+  "title": "MagnaMath Calibration Session Collection v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema",
+    "schemaVersion",
+    "exportedAt",
+    "sessions"
+  ],
+  "properties": {
+    "schema": {
+      "const": "https://magnamath.app/schema/calibration-session-collection/v1"
+    },
+    "schemaVersion": {
+      "const": 1
+    },
+    "exportedAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "sessions": {
+      "type": "array",
+      "items": {
+        "$ref": "https://magnamath.app/schema/calibration-session/v2"
+      }
+    }
+  }
+}

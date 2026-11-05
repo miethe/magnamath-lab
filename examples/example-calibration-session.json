@@ -1,0 +1,149 @@
+{
+  "schema": "https://magnamath.app/schema/calibration-session-collection/v1",
+  "schemaVersion": 1,
+  "exportedAt": "2026-08-08T12:00:00.000Z",
+  "sessions": [
+    {
+      "schema": "https://magnamath.app/schema/calibration-session/v2",
+      "schemaVersion": 2,
+      "id": "cal-square-example-batch-a",
+      "baseProfileId": "square",
+      "outputProfileId": "square",
+      "title": "Example three-piece caliper calibration",
+      "label": "Square — example local batch",
+      "measuredAt": "2026-08-08T12:00:00.000Z",
+      "method": "calipers",
+      "device": "digital caliper, 0.01 mm resolution",
+      "instrumentResolutionMm": 0.01,
+      "setOrBatch": "Synthetic documentation batch A",
+      "environment": {
+        "temperatureC": 22,
+        "humidityPercent": 45
+      },
+      "anglesDegrees": null,
+      "samples": [
+        {
+          "edgeLengthsMm": [
+            74.92,
+            74.94,
+            74.93,
+            74.92
+          ],
+          "anglesDegrees": null,
+          "thicknessMm": 6.46,
+          "cornerRadiusMm": 5.12
+        },
+        {
+          "edgeLengthsMm": [
+            74.94,
+            74.93,
+            74.92,
+            74.94
+          ],
+          "anglesDegrees": null,
+          "thicknessMm": 6.45,
+          "cornerRadiusMm": 5.1
+        },
+        {
+          "edgeLengthsMm": [
+            74.93,
+            74.92,
+            74.94,
+            74.93
+          ],
+          "anglesDegrees": null,
+          "thicknessMm": 6.47,
+          "cornerRadiusMm": 5.11
+        }
+      ],
+      "hingeRangeDegrees": {
+        "minInterior": 80,
+        "maxInterior": 110
+      },
+      "notes": "Synthetic documentation example; replace with measurements from owned pieces.",
+      "derived": {
+        "confidence": "calibrated",
+        "scaleConfidence": "calibrated",
+        "dimensionsMm": [
+          74.93,
+          74.93,
+          74.93,
+          74.93
+        ],
+        "dimensionStats": [
+          {
+            "edgeIndex": 0,
+            "meanMm": 74.93,
+            "standardDeviationMm": 0.00999999999999801,
+            "minimumMm": 74.92,
+            "maximumMm": 74.94
+          },
+          {
+            "edgeIndex": 1,
+            "meanMm": 74.93,
+            "standardDeviationMm": 0.00999999999999801,
+            "minimumMm": 74.92,
+            "maximumMm": 74.94
+          },
+          {
+            "edgeIndex": 2,
+            "meanMm": 74.93,
+            "standardDeviationMm": 0.00999999999999801,
+            "minimumMm": 74.92,
+            "maximumMm": 74.94
+          },
+          {
+            "edgeIndex": 3,
+            "meanMm": 74.93,
+            "standardDeviationMm": 0.00999999999999801,
+            "minimumMm": 74.92,
+            "maximumMm": 74.94
+          }
+        ],
+        "relativeRepeatability": 0.00013345789403440558,
+        "uncertainty": [
+          {
+            "edgeIndex": 0,
+            "meanMm": 74.93,
+            "standardDeviationMm": 0.00999999999999801,
+            "standardErrorMm": 0.00577350269189511,
+            "repeatabilityCi95HalfWidthMm": 0.024843382083224657,
+            "estimatedExpandedUncertaintyMm": 0.012909944487356002,
+            "instrumentResolutionMm": 0.01,
+            "caveat": "Statistical repeatability plus instrument quantization only; systematic bias, temperature, alignment, and operator effects are excluded."
+          },
+          {
+            "edgeIndex": 1,
+            "meanMm": 74.93,
+            "standardDeviationMm": 0.00999999999999801,
+            "standardErrorMm": 0.00577350269189511,
+            "repeatabilityCi95HalfWidthMm": 0.024843382083224657,
+            "estimatedExpandedUncertaintyMm": 0.012909944487356002,
+            "instrumentResolutionMm": 0.01,
+            "caveat": "Statistical repeatability plus instrument quantization only; systematic bias, temperature, alignment, and operator effects are excluded."
+          },
+          {
+            "edgeIndex": 2,
+            "meanMm": 74.93,
+            "standardDeviationMm": 0.00999999999999801,
+            "standardErrorMm": 0.00577350269189511,
+            "repeatabilityCi95HalfWidthMm": 0.024843382083224657,
+            "estimatedExpandedUncertaintyMm": 0.012909944487356002,
+            "instrumentResolutionMm": 0.01,
+            "caveat": "Statistical repeatability plus instrument quantization only; systematic bias, temperature, alignment, and operator effects are excluded."
+          },
+          {
+            "edgeIndex": 3,
+            "meanMm": 74.93,
+            "standardDeviationMm": 0.00999999999999801,
+            "standardErrorMm": 0.00577350269189511,
+            "repeatabilityCi95HalfWidthMm": 0.024843382083224657,
+            "estimatedExpandedUncertaintyMm": 0.012909944487356002,
+            "instrumentResolutionMm": 0.01,
+            "caveat": "Statistical repeatability plus instrument quantization only; systematic bias, temperature, alignment, and operator effects are excluded."
+          }
+        ]
+      }
+    }
+  ]
+}

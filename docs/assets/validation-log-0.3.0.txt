@@ -1,0 +1,321 @@
+MagnaMath 0.3.0 final release validation
+Validation date: 2026-08-08
+
+
+> magnamath-rebuilt@0.3.0 generate:examples
+> node scripts/generate-examples.mjs
+
+Generated snapshot v3 examples, raw calibration session, 2-page print package, and exact compound-panel artifacts.
+
+> magnamath-rebuilt@0.3.0 validate:all
+> npm test && npm run validate && npm run validate:nets && npm run validate:workshop && npm run validate:tiles && npm run validate:advanced && npm run validate:json && npm run validate:examples
+
+
+> magnamath-rebuilt@0.3.0 test
+> node --test
+
+TAP version 13
+# Subtest: exact compound matching resolves regular hexagons without coercing pentagons
+ok 1 - exact compound matching resolves regular hexagons without coercing pentagons
+  ---
+  duration_ms: 13.281618
+  type: 'test'
+  ...
+# Subtest: portfolio search returns diverse valid spanning trees and honors locks
+ok 2 - portfolio search returns diverse valid spanning trees and honors locks
+  ---
+  duration_ms: 117.023331
+  type: 'test'
+  ...
+# Subtest: print packages paginate at actual size and add one tab per cut edge
+ok 3 - print packages paginate at actual size and add one tab per cut edge
+  ---
+  duration_ms: 11.921845
+  type: 'test'
+  ...
+# Subtest: raw calibration sessions preserve samples and re-derive profiles
+ok 4 - raw calibration sessions preserve samples and re-derive profiles
+  ---
+  duration_ms: 1.81713
+  type: 'test'
+  ...
+# Subtest: print ZIP packages pass an independent unzip integrity check
+ok 5 - print ZIP packages pass an independent unzip integrity check
+  ---
+  duration_ms: 12.247206
+  type: 'test'
+  ...
+# Subtest: thickness clearance stays unmodeled without hinge-axis evidence and models explicit scenarios
+ok 6 - thickness clearance stays unmodeled without hinge-axis evidence and models explicit scenarios
+  ---
+  duration_ms: 2.010645
+  type: 'test'
+  ...
+# Subtest: compound panel seams are preserved in SVG and paginated print output
+ok 7 - compound panel seams are preserved in SVG and paginated print output
+  ---
+  duration_ms: 35.447168
+  type: 'test'
+  ...
+# Subtest: snapshot v3 includes compound profile IDs and bounded clearance provenance
+ok 8 - snapshot v3 includes compound profile IDs and bounded clearance provenance
+  ---
+  duration_ms: 27.740447
+  type: 'test'
+  ...
+# Subtest: SVG and print exports XML-escape imported display metadata
+ok 9 - SVG and print exports XML-escape imported display metadata
+  ---
+  duration_ms: 4.115852
+  type: 'test'
+  ...
+# Subtest: generated examples can pin export timestamps for reproducible artifacts
+ok 10 - generated examples can pin export timestamps for reproducible artifacts
+  ---
+  duration_ms: 4.147579
+  type: 'test'
+  ...
+# Subtest: Platonic solids have their canonical topology
+ok 11 - Platonic solids have their canonical topology
+  ---
+  duration_ms: 9.447583
+  type: 'test'
+  ...
+# Subtest: every starter catalog entry is a valid closed sphere-like manifold
+ok 12 - every starter catalog entry is a valid closed sphere-like manifold
+  ---
+  duration_ms: 11.564345
+  type: 'test'
+  ...
+# Subtest: uniform transforms produce canonical Archimedean counts
+ok 13 - uniform transforms produce canonical Archimedean counts
+  ---
+  duration_ms: 2.206316
+  type: 'test'
+  ...
+# Subtest: net planner finds overlap-free layouts for simple and complex solids
+ok 14 - net planner finds overlap-free layouts for simple and complex solids
+  ---
+  duration_ms: 172.034086
+  type: 'test'
+  ...
+# Subtest: physical tile matching uses dimensions, angles, and inventory counts
+ok 15 - physical tile matching uses dimensions, angles, and inventory counts
+  ---
+  duration_ms: 6.098757
+  type: 'test'
+  ...
+# Subtest: SVG and JSON exports preserve scale and structure
+ok 16 - SVG and JSON exports preserve scale and structure
+  ---
+  duration_ms: 5.368255
+  type: 'test'
+  ...
+# Subtest: one global physical scale prevents mixed-size face assignments
+ok 17 - one global physical scale prevents mixed-size face assignments
+  ---
+  duration_ms: 18.269725
+  type: 'test'
+  ...
+# Subtest: repeat-sample calibration computes means, repeatability, and hinge verification
+ok 18 - repeat-sample calibration computes means, repeatability, and hinge verification
+  ---
+  duration_ms: 2.884909
+  type: 'test'
+  ...
+# Subtest: unsupported polygons remain explicit rather than being coerced to a tile
+ok 19 - unsupported polygons remain explicit rather than being coerced to a tile
+  ---
+  duration_ms: 1.868686
+  type: 'test'
+  ...
+# Subtest: calibrated profile collections round-trip through the v2 contract
+ok 20 - calibrated profile collections round-trip through the v2 contract
+  ---
+  duration_ms: 0.4323
+  type: 'test'
+  ...
+# Subtest: inventory presets preserve published totals while flagging unmodeled pieces
+ok 21 - inventory presets preserve published totals while flagging unmodeled pieces
+  ---
+  duration_ms: 0.157863
+  type: 'test'
+  ...
+# Subtest: manual edge surgery preserves one connected acyclic hinge tree
+ok 22 - manual edge surgery preserves one connected acyclic hinge tree
+  ---
+  duration_ms: 21.063756
+  type: 'test'
+  ...
+# Subtest: locked constraints survive automatic optimization and block illegal edits
+ok 23 - locked constraints survive automatic optimization and block illegal edits
+  ---
+  duration_ms: 78.15234
+  type: 'test'
+  ...
+# Subtest: re-rooting changes assembly order without changing physical cuts
+ok 24 - re-rooting changes assembly order without changing physical cuts
+  ---
+  duration_ms: 19.438871
+  type: 'test'
+  ...
+# Subtest: serialized manual fold-edge sets reconstruct deterministically
+ok 25 - serialized manual fold-edge sets reconstruct deterministically
+  ---
+  duration_ms: 3.330459
+  type: 'test'
+  ...
+1..25
+# tests 25
+# suites 0
+# pass 25
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 301.902758
+
+> magnamath-rebuilt@0.3.0 validate
+> node scripts/validate-catalog.mjs
+
+┌─────────┬──────────────────────────┬────┬────┬────┬─────┬────────────┬────────────────┬────────┐
+│ (index) │ shape                    │ V  │ E  │ F  │ chi │ edgeSpread │ net            │ status │
+├─────────┼──────────────────────────┼────┼────┼────┼─────┼────────────┼────────────────┼────────┤
+│ 0       │ 'Tetrahedron'            │ 4  │ 6  │ 4  │ 2   │ '0.00e+0'  │ 'overlap-free' │ 'PASS' │
+│ 1       │ 'Cube'                   │ 8  │ 12 │ 6  │ 2   │ '0.00e+0'  │ 'overlap-free' │ 'PASS' │
+│ 2       │ 'Octahedron'             │ 6  │ 12 │ 8  │ 2   │ '0.00e+0'  │ 'overlap-free' │ 'PASS' │
+│ 3       │ 'Dodecahedron'           │ 20 │ 30 │ 12 │ 2   │ '4.44e-16' │ 'overlap-free' │ 'PASS' │
+│ 4       │ 'Icosahedron'            │ 12 │ 30 │ 20 │ 2   │ '1.11e-16' │ 'overlap-free' │ 'PASS' │
+│ 5       │ 'Cuboctahedron'          │ 12 │ 24 │ 14 │ 2   │ '0.00e+0'  │ 'overlap-free' │ 'PASS' │
+│ 6       │ 'Icosidodecahedron'      │ 30 │ 60 │ 32 │ 2   │ '5.55e-16' │ 'overlap-free' │ 'PASS' │
+│ 7       │ 'Truncated tetrahedron'  │ 12 │ 18 │ 8  │ 2   │ '4.44e-16' │ 'overlap-free' │ 'PASS' │
+│ 8       │ 'Truncated cube'         │ 24 │ 36 │ 14 │ 2   │ '4.44e-16' │ 'overlap-free' │ 'PASS' │
+│ 9       │ 'Truncated octahedron'   │ 24 │ 36 │ 14 │ 2   │ '0.00e+0'  │ 'overlap-free' │ 'PASS' │
+│ 10      │ 'Truncated dodecahedron' │ 60 │ 90 │ 32 │ 2   │ '7.77e-16' │ 'overlap-free' │ 'PASS' │
+│ 11      │ 'Truncated icosahedron'  │ 60 │ 90 │ 32 │ 2   │ '6.66e-16' │ 'overlap-free' │ 'PASS' │
+│ 12      │ 'Pentagonal prism'       │ 10 │ 15 │ 7  │ 2   │ '4.44e-16' │ 'overlap-free' │ 'PASS' │
+│ 13      │ '5-antiprism'            │ 10 │ 20 │ 12 │ 2   │ '4.44e-16' │ 'overlap-free' │ 'PASS' │
+│ 14      │ 'Square pyramid'         │ 5  │ 8  │ 5  │ 2   │ '2.22e-16' │ 'overlap-free' │ 'PASS' │
+│ 15      │ 'Pentagonal bipyramid'   │ 7  │ 15 │ 10 │ 2   │ '4.44e-16' │ 'overlap-free' │ 'PASS' │
+└─────────┴──────────────────────────┴────┴────┴────┴─────┴────────────┴────────────────┴────────┘
+Validated 16 exact catalog entries.
+
+> magnamath-rebuilt@0.3.0 validate:nets
+> node scripts/validate-nets.mjs 20
+
+┌─────────┬──────────────────────────┬──────────┬─────────────────┬──────────────┐
+│ (index) │ shape                    │ variants │ maximumOverlaps │ milliseconds │
+├─────────┼──────────────────────────┼──────────┼─────────────────┼──────────────┤
+│ 0       │ 'Tetrahedron'            │ '20/20'  │ 0               │ 33.6         │
+│ 1       │ 'Cube'                   │ '20/20'  │ 0               │ 70           │
+│ 2       │ 'Octahedron'             │ '20/20'  │ 0               │ 40.9         │
+│ 3       │ 'Dodecahedron'           │ '20/20'  │ 0               │ 132.3        │
+│ 4       │ 'Icosahedron'            │ '20/20'  │ 0               │ 250.1        │
+│ 5       │ 'Cuboctahedron'          │ '20/20'  │ 0               │ 116.6        │
+│ 6       │ 'Icosidodecahedron'      │ '20/20'  │ 0               │ 880.5        │
+│ 7       │ 'Truncated tetrahedron'  │ '20/20'  │ 0               │ 42.3         │
+│ 8       │ 'Truncated cube'         │ '20/20'  │ 0               │ 156.6        │
+│ 9       │ 'Truncated octahedron'   │ '20/20'  │ 0               │ 156.9        │
+│ 10      │ 'Truncated dodecahedron' │ '20/20'  │ 0               │ 1218.7       │
+│ 11      │ 'Truncated icosahedron'  │ '20/20'  │ 0               │ 1119.7       │
+│ 12      │ 'Pentagonal prism'       │ '20/20'  │ 0               │ 41.5         │
+│ 13      │ '5-antiprism'            │ '20/20'  │ 0               │ 88.3         │
+│ 14      │ 'Square pyramid'         │ '20/20'  │ 0               │ 13.2         │
+│ 15      │ 'Pentagonal bipyramid'   │ '20/20'  │ 0               │ 51.1         │
+└─────────┴──────────────────────────┴──────────┴─────────────────┴──────────────┘
+320/320 overlap-free nets in 4430.7 ms.
+
+> magnamath-rebuilt@0.3.0 validate:workshop
+> node scripts/validate-workshop.mjs
+
+┌─────────┬──────────────────────────┬───────┬───────────────┬──────────────────┬────────────────┐
+│ (index) │ shape                    │ faces │ editableEdges │ overlapFreeEdits │ constrainedNet │
+├─────────┼──────────────────────────┼───────┼───────────────┼──────────────────┼────────────────┤
+│ 0       │ 'Tetrahedron'            │ 4     │ 6             │ '6/6'            │ 'overlap-free' │
+│ 1       │ 'Cube'                   │ 6     │ 12            │ '12/12'          │ 'overlap-free' │
+│ 2       │ 'Octahedron'             │ 8     │ 12            │ '12/12'          │ 'overlap-free' │
+│ 3       │ 'Dodecahedron'           │ 12    │ 30            │ '30/30'          │ 'overlap-free' │
+│ 4       │ 'Icosahedron'            │ 20    │ 30            │ '30/30'          │ 'overlap-free' │
+│ 5       │ 'Cuboctahedron'          │ 14    │ 24            │ '24/24'          │ 'overlap-free' │
+│ 6       │ 'Icosidodecahedron'      │ 32    │ 60            │ '60/60'          │ 'overlap-free' │
+│ 7       │ 'Truncated tetrahedron'  │ 8     │ 18            │ '18/18'          │ 'overlap-free' │
+│ 8       │ 'Truncated cube'         │ 14    │ 36            │ '36/36'          │ 'overlap-free' │
+│ 9       │ 'Truncated octahedron'   │ 14    │ 36            │ '36/36'          │ 'overlap-free' │
+│ 10      │ 'Truncated dodecahedron' │ 32    │ 90            │ '80/90'          │ 'overlap-free' │
+│ 11      │ 'Truncated icosahedron'  │ 32    │ 90            │ '90/90'          │ 'overlap-free' │
+│ 12      │ 'Pentagonal prism'       │ 7     │ 15            │ '15/15'          │ 'overlap-free' │
+│ 13      │ '5-antiprism'            │ 12    │ 20            │ '20/20'          │ 'overlap-free' │
+│ 14      │ 'Square pyramid'         │ 5     │ 8             │ '8/8'            │ 'overlap-free' │
+│ 15      │ 'Pentagonal bipyramid'   │ 10    │ 15            │ '15/15'          │ 'overlap-free' │
+└─────────┴──────────────────────────┴───────┴───────────────┴──────────────────┴────────────────┘
+502 manual edge exchanges preserved the spanning-tree invariant; 492/502 were also overlap-free.
+Workshop validation completed in 924.1 ms.
+
+> magnamath-rebuilt@0.3.0 validate:tiles
+> node scripts/validate-tiles.mjs
+
+┌─────────┬───────────────────────┬───────────────────┬───────┬───────────────────┐
+│ (index) │ scenario              │ scaleMmPerUnit    │ ready │ confidence        │
+├─────────┼───────────────────────┼───────────────────┼───────┼───────────────────┤
+│ 0       │ 'Classic cube'        │ 74.93             │ true  │ 'published/high'  │
+│ 1       │ 'microMAGS cube'      │ 37.465            │ true  │ 'published/high'  │
+│ 2       │ 'Classic tetrahedron' │ 74.92999999999999 │ true  │ 'published/high'  │
+│ 3       │ 'Calibrated cube'     │ 74.90333333333334 │ true  │ 'user-calibrated' │
+└─────────┴───────────────────────┴───────────────────┴───────┴───────────────────┘
+9 profiles, 5 published inventories, global scale fitting, and hinge calibration validated in 15.5 ms.
+
+> magnamath-rebuilt@0.3.0 validate:advanced
+> node scripts/validate-advanced.mjs
+
+┌─────────┬──────────────────────────┬────────────┬────────────────┬────────┬─────────────┐
+│ (index) │ shape                    │ candidates │ uniqueExplored │ pareto │ overlapFree │
+├─────────┼──────────────────────────┼────────────┼────────────────┼────────┼─────────────┤
+│ 0       │ 'Tetrahedron'            │ 1          │ 5              │ 1      │ 5           │
+│ 1       │ 'Cube'                   │ 4          │ 55             │ 4      │ 55          │
+│ 2       │ 'Octahedron'             │ 1          │ 47             │ 1      │ 47          │
+│ 3       │ 'Dodecahedron'           │ 5          │ 244            │ 25     │ 244         │
+│ 4       │ 'Icosahedron'            │ 5          │ 245            │ 11     │ 245         │
+│ 5       │ 'Cuboctahedron'          │ 5          │ 203            │ 28     │ 203         │
+│ 6       │ 'Icosidodecahedron'      │ 5          │ 410            │ 62     │ 410         │
+│ 7       │ 'Truncated tetrahedron'  │ 5          │ 83             │ 6      │ 83          │
+│ 8       │ 'Truncated cube'         │ 5          │ 274            │ 20     │ 274         │
+│ 9       │ 'Truncated octahedron'   │ 5          │ 294            │ 36     │ 294         │
+│ 10      │ 'Truncated dodecahedron' │ 5          │ 414            │ 21     │ 305         │
+│ 11      │ 'Truncated icosahedron'  │ 5          │ 415            │ 42     │ 415         │
+│ 12      │ 'Pentagonal prism'       │ 5          │ 97             │ 18     │ 97          │
+│ 13      │ '5-antiprism'            │ 5          │ 148            │ 19     │ 148         │
+│ 14      │ 'Square pyramid'         │ 5          │ 12             │ 5      │ 12          │
+│ 15      │ 'Pentagonal bipyramid'   │ 5          │ 101            │ 8      │ 101         │
+└─────────┴──────────────────────────┴────────────┴────────────────┴────────┴─────────────┘
+┌─────────┬──────────────────────────────────┬─────────────────────────────────────┐
+│ (index) │ gate                             │ result                              │
+├─────────┼──────────────────────────────────┼─────────────────────────────────────┤
+│ 0       │ 'Exact compound panels'          │ '8 faces / 48 triangles'            │
+│ 1       │ 'Calibration session round-trip' │ '3 samples / 4 edge estimates'      │
+│ 2       │ 'Thickness screen'               │ '12 hinges / 100% modeled scenario' │
+│ 3       │ 'Print package'                  │ '2 pages / 7 tabs / 33490 bytes'    │
+│ 4       │ 'Schema documents'               │ '12 parsed / unique IDs'            │
+└─────────┴──────────────────────────────────┴─────────────────────────────────────┘
+Advanced workflow validation passed in 852.6 ms.
+
+> magnamath-rebuilt@0.3.0 validate:json
+> node scripts/validate-json.mjs
+
+Parsed 18 JSON documents, 12 unique schema IDs, and 47 resolvable internal references.
+
+> magnamath-rebuilt@0.3.0 validate:examples
+> node scripts/validate-example-reproducibility.mjs
+
+Reproduced 14 example files byte-for-byte across two generation runs.
+
+> python3 scripts/validate-schemas.py
+Compiled 12 schemas and validated 6 example artifacts.
+
+> JavaScript syntax sweep
+Checked 32 JavaScript modules/scripts.
+
+> tracked-text trailing-whitespace sweep
+No trailing whitespace in text artifacts.
+
+> git diff --check
+No diff whitespace errors.

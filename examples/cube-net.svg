@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5.7 2.7" width="427.101mm" height="202.311mm" role="img" aria-labelledby="title description">
+  <title id="title">Cube net</title>
+  <description id="description">A two-dimensional net with solid cut lines, dashed fold lines, and overlap diagnostics.</description>
+  <metadata>{&quot;generator&quot;:&quot;MagnaMath Rebuilt&quot;,&quot;appVersion&quot;:&quot;0.4.0&quot;,&quot;coreVersion&quot;:&quot;0.4.0&quot;,&quot;shape&quot;:&quot;cube&quot;,&quot;netSeed&quot;:11,&quot;objective&quot;:&quot;compact&quot;,&quot;overlapFree&quot;:true,&quot;overlapArea&quot;:0,&quot;modelUnitMm&quot;:74.93,&quot;foldEdgeKeys&quot;:[&quot;0:3&quot;,&quot;3:7&quot;,&quot;0:1&quot;,&quot;2:6&quot;,&quot;4:5&quot;],&quot;compoundFaceCount&quot;:0}</metadata>
+  <style>
+    .cut { stroke: #13233a; stroke-width: 0.025; stroke-linecap: round; }
+    .fold { stroke: #596b84; stroke-width: 0.018; stroke-dasharray: 0.09 0.07; stroke-linecap: round; }
+    .cut.is-locked, .fold.is-locked { stroke: #8b5cf6; stroke-width: 0.032; }
+    .net-face.has-overlap { fill: #ff5578 !important; fill-opacity: 0.62; }
+    .compound-seam { stroke: #34506f; stroke-width: 0.012; stroke-dasharray: 0.035 0.025; pointer-events: none; }
+    .edge-hit { stroke: transparent; stroke-width: 0.18; pointer-events: stroke; cursor: pointer; }
+    .face-label { fill: #13233a; font: 600 0.2px ui-sans-serif, system-ui, sans-serif; text-anchor: middle; dominant-baseline: central; pointer-events: none; }
+    @media print { .cut { stroke-width: 0.2mm; } .fold { stroke-width: 0.16mm; } .edge-hit { display: none; } }
+  </style>
+  <rect width="100%" height="100%" fill="#ffffff"/>
+<polygon data-face="0" class="net-face" points="3.35,1.35 2.35,1.35 2.35,2.35 3.35,2.35" fill="#4dddc2" fill-opacity="0.42" stroke="none"/><text x="2.85" y="1.85" class="face-label">1</text>
+<polygon data-face="1" class="net-face" points="4.35,1.35 4.35,2.35 5.35,2.35 5.35,1.35" fill="#4dddc2" fill-opacity="0.42" stroke="none"/><text x="4.85" y="1.85" class="face-label">2</text>
+<polygon data-face="2" class="net-face" points="3.35,1.35 3.35,2.35 4.35,2.35 4.35,1.35" fill="#4dddc2" fill-opacity="0.42" stroke="none"/><text x="3.85" y="1.85" class="face-label">3</text>
+<polygon data-face="3" class="net-face" points="0.35,1.35 1.35,1.35 1.35,0.35 0.35,0.35" fill="#4dddc2" fill-opacity="0.42" stroke="none"/><text x="0.85" y="0.85" class="face-label">4</text>
+<polygon data-face="4" class="net-face" points="1.35,1.35 2.35,1.35 2.35,0.35 1.35,0.35" fill="#4dddc2" fill-opacity="0.42" stroke="none"/><text x="1.85" y="0.85" class="face-label">5</text>
+<polygon data-face="5" class="net-face" points="2.35,1.35 3.35,1.35 3.35,0.35 2.35,0.35" fill="#4dddc2" fill-opacity="0.42" stroke="none"/><text x="2.85" y="0.85" class="face-label">6</text>
+
+
+
+
+
+
+<line x1="2.35" y1="1.35" x2="2.35" y2="2.35" class="cut" data-edge-key="2:3" data-edge-state="cut" data-face="0" data-local-edge="1"/>
+<line x1="2.35" y1="2.35" x2="3.35" y2="2.35" class="cut" data-edge-key="1:2" data-edge-state="cut" data-face="0" data-local-edge="2"/>
+<line x1="4.35" y1="2.35" x2="5.35" y2="2.35" class="cut" data-edge-key="5:6" data-edge-state="cut" data-face="1" data-local-edge="1"/>
+<line x1="5.35" y1="2.35" x2="5.35" y2="1.35" class="cut" data-edge-key="6:7" data-edge-state="cut" data-face="1" data-local-edge="2"/>
+<line x1="5.35" y1="1.35" x2="4.35" y2="1.35" class="cut" data-edge-key="4:7" data-edge-state="cut" data-face="1" data-local-edge="3"/>
+<line x1="3.35" y1="2.35" x2="4.35" y2="2.35" class="cut" data-edge-key="1:5" data-edge-state="cut" data-face="2" data-local-edge="1"/>
+<line x1="4.35" y1="1.35" x2="3.35" y2="1.35" class="cut" data-edge-key="0:4" data-edge-state="cut" data-face="2" data-local-edge="3"/>
+<line x1="0.35" y1="1.35" x2="1.35" y2="1.35" class="cut" data-edge-key="1:2" data-edge-state="cut" data-face="3" data-local-edge="0"/>
+<line x1="1.35" y1="0.35" x2="0.35" y2="0.35" class="cut" data-edge-key="5:6" data-edge-state="cut" data-face="3" data-local-edge="2"/>
+<line x1="0.35" y1="0.35" x2="0.35" y2="1.35" class="cut" data-edge-key="1:5" data-edge-state="cut" data-face="3" data-local-edge="3"/>
+<line x1="1.35" y1="1.35" x2="2.35" y2="1.35" class="cut" data-edge-key="2:3" data-edge-state="cut" data-face="4" data-local-edge="0"/>
+<line x1="2.35" y1="0.35" x2="1.35" y2="0.35" class="cut" data-edge-key="6:7" data-edge-state="cut" data-face="4" data-local-edge="2"/>
+<line x1="3.35" y1="1.35" x2="3.35" y2="0.35" class="cut" data-edge-key="0:4" data-edge-state="cut" data-face="5" data-local-edge="1"/>
+<line x1="3.35" y1="0.35" x2="2.35" y2="0.35" class="cut" data-edge-key="4:7" data-edge-state="cut" data-face="5" data-local-edge="2"/>
+<line x1="3.35" y1="1.35" x2="2.35" y2="1.35" class="fold" data-edge-key="0:3" data-edge-state="fold" data-face="0" data-local-edge="0"/>
+<line x1="3.35" y1="2.35" x2="3.35" y2="1.35" class="fold" data-edge-key="0:1" data-edge-state="fold" data-face="0" data-local-edge="3"/>
+<line x1="4.35" y1="1.35" x2="4.35" y2="2.35" class="fold" data-edge-key="4:5" data-edge-state="fold" data-face="1" data-local-edge="0"/>
+<line x1="1.35" y1="1.35" x2="1.35" y2="0.35" class="fold" data-edge-key="2:6" data-edge-state="fold" data-face="3" data-local-edge="1"/>
+<line x1="2.35" y1="1.35" x2="2.35" y2="0.35" class="fold" data-edge-key="3:7" data-edge-state="fold" data-face="4" data-local-edge="1"/>
+</svg>

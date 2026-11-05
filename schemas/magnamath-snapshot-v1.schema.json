@@ -1,0 +1,159 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://magnamath.app/schema/snapshot/v1",
+  "title": "MagnaMath Snapshot v1",
+  "description": "A portable, renderer-independent MagnaMath geometry, net, and physical-build snapshot.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema",
+    "schemaVersion",
+    "appVersion",
+    "coreVersion",
+    "generatedAt",
+    "polyhedron",
+    "analysis",
+    "net",
+    "buildability"
+  ],
+  "properties": {
+    "schema": { "const": "https://magnamath.app/schema/snapshot/v1" },
+    "schemaVersion": { "const": 1 },
+    "appVersion": { "type": "string", "minLength": 1 },
+    "coreVersion": { "type": "string", "minLength": 1 },
+    "generatedAt": { "type": "string", "format": "date-time" },
+    "polyhedron": { "$ref": "#/$defs/polyhedron" },
+    "analysis": { "$ref": "#/$defs/analysis" },
+    "net": { "$ref": "#/$defs/net" },
+    "buildability": { "$ref": "#/$defs/buildability" }
+  },
+  "$defs": {
+    "vec2": {
+      "type": "array",
+      "prefixItems": [{ "type": "number" }, { "type": "number" }],
+      "items": false
+    },
+    "vec3": {
+      "type": "array",
+      "prefixItems": [{ "type": "number" }, { "type": "number" }, { "type": "number" }],
+      "items": false
+    },
+    "mat2d": {
+      "type": "array",
+      "prefixItems": [
+        { "type": "number" }, { "type": "number" }, { "type": "number" },
+        { "type": "number" }, { "type": "number" }, { "type": "number" }
+      ],
+      "items": false
+    },
+    "polyhedron": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "name", "family", "vertices", "faces", "metadata"],
+      "properties": {
+        "id": { "type": "string", "minLength": 1 },
+        "name": { "type": "string", "minLength": 1 },
+        "family": { "type": "string", "minLength": 1 },
+        "vertices": { "type": "array", "minItems": 4, "items": { "$ref": "#/$defs/vec3" } },
+        "faces": {
+          "type": "array",
+          "minItems": 4,
+          "items": {
+            "type": "array",
+            "minItems": 3,
+            "items": { "type": "integer", "minimum": 0 }
+          }
+        },
+        "metadata": { "type": "object" }
+      }
+    },
+    "analysis": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "counts", "eulerCharacteristic", "genus", "surfaceArea", "volume",
+        "edgeStats", "validation", "faceKinds"
+      ],
+      "properties": {
+        "counts": {
+          "type": "object",
+          "required": ["vertices", "edges", "faces", "byFaceKind"],
+          "properties": {
+            "vertices": { "type": "integer", "minimum": 0 },
+            "edges": { "type": "integer", "minimum": 0 },
+            "faces": { "type": "integer", "minimum": 0 },
+            "byFaceKind": { "type": "object", "additionalProperties": { "type": "integer", "minimum": 0 } }
+          }
+        },
+        "eulerCharacteristic": { "type": "number" },
+        "genus": { "type": ["number", "null"] },
+        "surfaceArea": { "type": "number", "minimum": 0 },
+        "volume": { "type": "number", "minimum": 0 },
+        "edgeStats": {
+          "type": "object",
+          "required": ["minimum", "maximum", "average", "relativeSpread"],
+          "properties": {
+            "minimum": { "type": "number", "minimum": 0 },
+            "maximum": { "type": "number", "minimum": 0 },
+            "average": { "type": "number", "minimum": 0 },
+            "relativeSpread": { "type": "number", "minimum": 0 }
+          }
+        },
+        "validation": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["valid", "issues", "warnings", "closed", "connected", "orientable", "manifold"],
+          "properties": {
+            "valid": { "type": "boolean" },
+            "issues": { "type": "array", "items": { "type": "string" } },
+            "warnings": { "type": "array", "items": { "type": "string" } },
+            "closed": { "type": "boolean" },
+            "connected": { "type": "boolean" },
+            "orientable": { "type": "boolean" },
+            "manifold": { "type": "boolean" }
+          }
+        },
+        "faceKinds": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["faceIndex", "kind", "label"],
+            "properties": {
+              "faceIndex": { "type": "integer", "minimum": 0 },
+              "kind": { "type": "string" },
+              "label": { "type": "string" }
+            }
+          }
+        }
+      }
+    },
+    "net": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "seed", "valid", "rootFace", "parentByFace", "transforms",
+        "foldEdgeKeys", "cutEdgeKeys"
+      ],
+      "properties": {
+        "seed": { "type": "number" },
+        "valid": { "type": "boolean" },
+        "rootFace": { "type": "integer", "minimum": 0 },
+        "parentByFace": { "type": "array", "items": { "type": "integer" } },
+        "transforms": { "type": "array", "items": { "$ref": "#/$defs/mat2d" } },
+        "foldEdgeKeys": { "type": "array", "items": { "type": "string" }, "uniqueItems": true },
+        "cutEdgeKeys": { "type": "array", "items": { "type": "string" }, "uniqueItems": true }
+      }
+    },
+    "buildability": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["required", "unsupportedFaces", "summary"],
+      "properties": {
+        "required": { "type": "object", "additionalProperties": { "type": "integer", "minimum": 0 } },
+        "unsupportedFaces": { "type": "array", "items": { "type": "integer", "minimum": 0 }, "uniqueItems": true },
+        "summary": { "type": "string" }
+      }
+    }
+  }
+}

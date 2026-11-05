@@ -1,0 +1,39 @@
+{
+  "$schema": "https://magnamath.app/schema/release/v1",
+  "product": "MagnaMath Rebuilt",
+  "version": "0.4.0",
+  "codename": "Fold Through Space",
+  "releaseDate": "2026-08-10",
+  "handoffType": "complete-source-specification-design-research-validation",
+  "capabilities": {
+    "exactTreeHingeFolding": true,
+    "continuousGlobalProgress": true,
+    "perHingeOverrides": true,
+    "sequenceScheduling": true,
+    "rootSixDegreeOfFreedomPose": true,
+    "spatialMotionClipSchema": true,
+    "cameraTracks": true,
+    "manualNetWorkshop": true,
+    "calibratedTilePlanning": true,
+    "printProduction": true,
+    "finalProductMockups": 7,
+    "deepResearchBriefs": 12
+  },
+  "validation": {
+    "behavioralTestsPassed": 39,
+    "catalogEntries": 16,
+    "netSeedSweepPassed": 320,
+    "foldingPosesSampled": 448,
+    "maximumHingeGap": 5.043883840194739e-15,
+    "maximumRigidityError": 8.548717289613705e-15,
+    "maximumTargetClosureGap": 2.608905996363235e-14,
+    "maximumTargetMatrixError": 2.042810365310288e-14,
+    "schemasCompiled": 15,
+    "examplesValidated": 7,
+    "javascriptFilesSyntaxChecked": 40,
+    "browserConsoleErrors": 0,
+    "mobileHorizontalOverflow": false
+  },
+  "knownExternalGate": "Run npm install, npm run build, and the Three.js browser matrix in a registry-enabled environment; the sandbox mirror returned 404 for three@0.185.1.",
+  "entryPoint": "FULL-HANDOFF-INDEX.md"
+}

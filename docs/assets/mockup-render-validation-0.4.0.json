@@ -1,0 +1,82 @@
+{
+  "release": "0.4.0",
+  "generated": "2026-08-10",
+  "renderer": "Playwright Chromium for seven local dependency-free HTML/CSS views; PIL contact sheet assembled from those renders",
+  "viewMockupCount": 7,
+  "overviewCount": 1,
+  "assetCount": 8,
+  "assets": [
+    {
+      "file": "design/mockups/png/00-ui-atlas-overview.png",
+      "width": 2200,
+      "height": 1660,
+      "mode": "RGB",
+      "sha256": "b0b2084862676b40c2a31925a51bdc622540ff8c380e23381cc0459c9dd76cc7",
+      "bytes": 1050362,
+      "role": "overview"
+    },
+    {
+      "file": "design/mockups/png/01-fold-studio.png",
+      "width": 1440,
+      "height": 900,
+      "mode": "RGB",
+      "sha256": "6033caeb735fc68459bb76873eba13b735fa1c5c110ad249eff2f0b6deab2d3d",
+      "bytes": 509824,
+      "role": "view-mockup"
+    },
+    {
+      "file": "design/mockups/png/02-explorer.png",
+      "width": 1440,
+      "height": 900,
+      "mode": "RGB",
+      "sha256": "d8d5d6aa43ecb9694f86c918b5ce2f079fbd56ec6f166beba1740bd88fa5156e",
+      "bytes": 481286,
+      "role": "view-mockup"
+    },
+    {
+      "file": "design/mockups/png/03-net-workshop.png",
+      "width": 1440,
+      "height": 900,
+      "mode": "RGB",
+      "sha256": "7b96b6a221a759ef2b1c66c8e75762934aba73f86ceb0be513fbff474c64035a",
+      "bytes": 453191,
+      "role": "view-mockup"
+    },
+    {
+      "file": "design/mockups/png/04-build-along.png",
+      "width": 1440,
+      "height": 900,
+      "mode": "RGB",
+      "sha256": "7b3b41b81d91de965ec91a2098f14d89fd2103222065cfa7ffa2f1178dd92fe7",
+      "bytes": 365086,
+      "role": "view-mockup"
+    },
+    {
+      "file": "design/mockups/png/05-learning-lab.png",
+      "width": 1440,
+      "height": 900,
+      "mode": "RGB",
+      "sha256": "2015eca08406c92a3377dc6523f4e36ade63163a71f7e12a2cf459985a8dc700",
+      "bytes": 346656,
+      "role": "view-mockup"
+    },
+    {
+      "file": "design/mockups/png/06-spatial-motion-lab.png",
+      "width": 1440,
+      "height": 900,
+      "mode": "RGB",
+      "sha256": "53e2689ca3d1911c3b9cdab710a7a1f94d5df6a5e35c8b1ea07d450088841e99",
+      "bytes": 465831,
+      "role": "view-mockup"
+    },
+    {
+      "file": "design/mockups/png/07-mobile-build.png",
+      "width": 390,
+      "height": 844,
+      "mode": "RGB",
+      "sha256": "a7422ae6dc619e3758918688ad10f72dd72254bc2e1e4b190adc1eda3a180fab",
+      "bytes": 139105,
+      "role": "view-mockup"
+    }
+  ]
+}

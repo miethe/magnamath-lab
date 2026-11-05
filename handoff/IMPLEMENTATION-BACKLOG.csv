@@ -1,0 +1,23 @@
+ID,Priority,Epic,Deliverable,Acceptance Summary,Research Dependency
+MM-401,P0,Build,Resolve dependencies and commit lockfile,Clean install/build/preview in CI,None
+MM-402,P0,CI,Add release pipeline,Tests schemas examples build browser smoke all gated,None
+MM-403,P0,Renderer,Validate exact Three.js folding,Canvas/core checkpoint parity across browsers,None
+MM-404,P0,Interaction,Complete semantic hinge drag,Selected subtree rotates with exact continuity,None
+MM-405,P0,Interaction,Complete root 6DOF controls,Translate/rotate numeric snap undo snapshot,None
+MM-406,P0,Accessibility,Keyboard and scene outline,All core fold operations non-pointer accessible,DR-10 helpful not blocking
+MM-407,P0,Responsive,Production mobile Fold and Build,390px no overflow large targets and sheets,None
+MM-408,P1,Motion,Motion clip playback,Root fold hinge camera tracks deterministic,None
+MM-409,P1,Motion,Timeline authoring,Record/edit/delete/trim keyframes with undo,None
+MM-410,P1,Camera,Arcball and saved views,Focus pan zoom roll state restore,DR-10
+MM-411,P1,Collision,Continuous path validator,First contact time and replayable evidence,DR-07
+MM-412,P1,Collision,Path search and schedule repair,Cancellable seeded planner with benchmarks,DR-07
+MM-413,P1,Kinematics,Closed-loop projection,Residual/Jacobian solver with branch continuity,DR-08
+MM-414,P1,Physical,Thick-panel geometry,Hinge offsets uncertainty closure/collision,DR-09 and DR-01
+MM-415,P1,Performance,Worker/WASM performance plan,Measured thresholds and adaptive quality,DR-12
+MM-416,P1,Learning,Lesson schema and authoring,Reusable interactions markers assessments,DR-11
+MM-417,P2,Physics,Rigid-body/joint adapter,Explicit fidelity tier and calibrated inputs,DR-04 and DR-12
+MM-418,P2,AR,Camera recognition prototype,Measured precision and graceful fallback,DR-05
+MM-419,P2,XR,WebXR inspection prototype,Semantic grabbing comfort accessibility,DR-10
+MM-420,P2,Native,Swift/RealityKit companion decision,Proceed only with validated AR/tabletop value,DR-05 and DR-10
+MM-421,P0,Governance,Select license and dependency review,License files and attribution complete,None
+MM-422,P0,Security,Import and child-privacy review,Threat model schema limits and telemetry policy,None

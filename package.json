@@ -1,0 +1,38 @@
+{
+  "name": "magnamath-rebuilt",
+  "version": "0.4.0",
+  "private": true,
+  "type": "module",
+  "description": "An exact interactive polyhedron laboratory with tree-hinge 2D-to-3D folding, net workshops, production print packages, and calibrated magnetic-tile guidance.",
+  "scripts": {
+    "dev": "vite --host 0.0.0.0",
+    "build": "vite build",
+    "preview": "vite preview --host 0.0.0.0",
+    "serve:fallback": "node scripts/serve.mjs",
+    "serve:dist": "MAGNAMATH_SERVE_ROOT=dist node scripts/serve.mjs",
+    "test": "node --test test/*.test.js",
+    "validate": "node scripts/validate-catalog.mjs",
+    "validate:nets": "node scripts/validate-nets.mjs 20",
+    "generate:examples": "node scripts/generate-examples.mjs",
+    "render:mockups": "python3 scripts/render-mockups.py",
+    "validate:workshop": "node scripts/validate-workshop.mjs",
+    "validate:tiles": "node scripts/validate-tiles.mjs",
+    "validate:all": "npm test && npm run validate && npm run validate:nets && npm run validate:workshop && npm run validate:tiles && npm run validate:advanced && npm run validate:folding && npm run validate:json && npm run validate:examples",
+    "validate:advanced": "node scripts/validate-advanced.mjs",
+    "validate:json": "node scripts/validate-json.mjs",
+    "validate:schemas:python": "python3 scripts/validate-schemas.py",
+    "validate:examples": "node scripts/validate-example-reproducibility.mjs",
+    "validate:folding": "node scripts/validate-folding.mjs"
+  },
+  "dependencies": {
+    "three": "0.185.1"
+  },
+  "devDependencies": {
+    "vite": "8.3.6",
+    "vite-plugin-pwa": "1.3.0"
+  },
+  "engines": {
+    "node": ">=22.12"
+  },
+  "license": "MIT"
+}

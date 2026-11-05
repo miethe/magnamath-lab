@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://magnamath.app/schema/net-workshop/v1",
+  "title": "MagnaMath Manual Net Workshop State v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema", "schemaVersion", "polyhedronId", "rootFace", "objective", "foldEdgeKeys", "lockedFoldEdgeKeys", "lockedCutEdgeKeys"],
+  "properties": {
+    "schema": { "const": "https://magnamath.app/schema/net-workshop/v1" },
+    "schemaVersion": { "const": 1 },
+    "polyhedronId": { "type": "string", "minLength": 1 },
+    "rootFace": { "type": "integer", "minimum": 0 },
+    "objective": { "enum": ["compact", "printable", "buildable", "classroom"] },
+    "foldEdgeKeys": { "type": "array", "items": { "type": "string", "pattern": "^[0-9]+:[0-9]+$" }, "uniqueItems": true },
+    "lockedFoldEdgeKeys": { "type": "array", "items": { "type": "string", "pattern": "^[0-9]+:[0-9]+$" }, "uniqueItems": true },
+    "lockedCutEdgeKeys": { "type": "array", "items": { "type": "string", "pattern": "^[0-9]+:[0-9]+$" }, "uniqueItems": true },
+    "selectedEdgeKey": { "type": ["string", "null"], "pattern": "^[0-9]+:[0-9]+$" },
+    "notes": { "type": "string" }
+  }
+}

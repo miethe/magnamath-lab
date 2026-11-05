@@ -1,0 +1,191 @@
+{
+  "release": "0.4.0",
+  "catalogEntries": 16,
+  "modes": [
+    "simultaneous",
+    "root-out",
+    "leaves-in",
+    "assembly"
+  ],
+  "progressSamples": [
+    0,
+    0.08,
+    0.25,
+    0.5,
+    0.75,
+    0.92,
+    1
+  ],
+  "sampledPoses": 448,
+  "maximumHingeGap": 5.043883840194739e-15,
+  "maximumRigidityError": 8.548717289613705e-15,
+  "maximumClosureAtTarget": 2.608905996363235e-14,
+  "maximumTargetError": 2.042810365310288e-14,
+  "collisionScreen": {
+    "samples": 192,
+    "collisionFreeSamples": 128,
+    "note": "Discrete zero-thickness sample results are diagnostic only and are not a continuous-path proof."
+  },
+  "rows": [
+    {
+      "id": "tetrahedron",
+      "faces": 4,
+      "hinges": 3,
+      "netValid": true,
+      "maximumHingeGap": 4.841339424497384e-16,
+      "maximumRigidityError": 7.771561172376096e-16,
+      "closureAtTarget": 4.379755957367587e-16,
+      "targetMatrixError": 6.661338147750939e-16
+    },
+    {
+      "id": "cube",
+      "faces": 6,
+      "hinges": 5,
+      "netValid": true,
+      "maximumHingeGap": 3.387999773988765e-16,
+      "maximumRigidityError": 4.440892098500626e-16,
+      "closureAtTarget": 3.376611507232129e-16,
+      "targetMatrixError": 2.220446049250313e-16
+    },
+    {
+      "id": "octahedron",
+      "faces": 8,
+      "hinges": 7,
+      "netValid": true,
+      "maximumHingeGap": 6.753362264387351e-16,
+      "maximumRigidityError": 6.661338147750939e-16,
+      "closureAtTarget": 1.164411731669092e-15,
+      "targetMatrixError": 1.0353259805550468e-15
+    },
+    {
+      "id": "dodecahedron",
+      "faces": 12,
+      "hinges": 11,
+      "netValid": true,
+      "maximumHingeGap": 2.5146000066436358e-15,
+      "maximumRigidityError": 6.8833827526759706e-15,
+      "closureAtTarget": 9.035878689445466e-15,
+      "targetMatrixError": 4.440892098500626e-15
+    },
+    {
+      "id": "icosahedron",
+      "faces": 20,
+      "hinges": 19,
+      "netValid": true,
+      "maximumHingeGap": 1.1957467920563633e-15,
+      "maximumRigidityError": 5.662137425588298e-15,
+      "closureAtTarget": 5.3854400208818836e-15,
+      "targetMatrixError": 3.774758283725532e-15
+    },
+    {
+      "id": "cuboctahedron",
+      "faces": 14,
+      "hinges": 13,
+      "netValid": true,
+      "maximumHingeGap": 1.093444245831096e-15,
+      "maximumRigidityError": 2.1094237467877974e-15,
+      "closureAtTarget": 2.8543745438774784e-15,
+      "targetMatrixError": 1.7763568394002505e-15
+    },
+    {
+      "id": "icosidodecahedron",
+      "faces": 32,
+      "hinges": 31,
+      "netValid": true,
+      "maximumHingeGap": 2.4126604949548913e-15,
+      "maximumRigidityError": 4.9960036108132044e-15,
+      "closureAtTarget": 1.0185653390343062e-14,
+      "targetMatrixError": 8.548717289613705e-15
+    },
+    {
+      "id": "truncated-tetrahedron",
+      "faces": 8,
+      "hinges": 7,
+      "netValid": true,
+      "maximumHingeGap": 1.3520875901586307e-15,
+      "maximumRigidityError": 1.7763568394002505e-15,
+      "closureAtTarget": 3.607797795906347e-15,
+      "targetMatrixError": 1.7763568394002505e-15
+    },
+    {
+      "id": "truncated-cube",
+      "faces": 14,
+      "hinges": 13,
+      "netValid": true,
+      "maximumHingeGap": 2.328823463338185e-15,
+      "maximumRigidityError": 2.6645352591003757e-15,
+      "closureAtTarget": 6.489821012001455e-15,
+      "targetMatrixError": 3.1086244689504383e-15
+    },
+    {
+      "id": "truncated-octahedron",
+      "faces": 14,
+      "hinges": 13,
+      "netValid": true,
+      "maximumHingeGap": 2.2232198742534223e-15,
+      "maximumRigidityError": 5.218048215738236e-15,
+      "closureAtTarget": 7.828646949650264e-15,
+      "targetMatrixError": 7.105427357601002e-15
+    },
+    {
+      "id": "truncated-dodecahedron",
+      "faces": 32,
+      "hinges": 31,
+      "netValid": true,
+      "maximumHingeGap": 5.043883840194739e-15,
+      "maximumRigidityError": 7.327471962526033e-15,
+      "closureAtTarget": 2.3366700237255086e-14,
+      "targetMatrixError": 1.8207657603852567e-14
+    },
+    {
+      "id": "truncated-icosahedron",
+      "faces": 32,
+      "hinges": 31,
+      "netValid": true,
+      "maximumHingeGap": 4.070144838902081e-15,
+      "maximumRigidityError": 8.548717289613705e-15,
+      "closureAtTarget": 2.608905996363235e-14,
+      "targetMatrixError": 2.042810365310288e-14
+    },
+    {
+      "id": "prism",
+      "faces": 7,
+      "hinges": 6,
+      "netValid": true,
+      "maximumHingeGap": 8.523125797596417e-16,
+      "maximumRigidityError": 5.551115123125783e-16,
+      "closureAtTarget": 9.305364597889227e-16,
+      "targetMatrixError": 6.106226635438361e-16
+    },
+    {
+      "id": "antiprism",
+      "faces": 12,
+      "hinges": 11,
+      "netValid": true,
+      "maximumHingeGap": 1.0053497077208614e-15,
+      "maximumRigidityError": 2.7755575615628914e-15,
+      "closureAtTarget": 1.965949188660863e-15,
+      "targetMatrixError": 2.3314683517128287e-15
+    },
+    {
+      "id": "pyramid",
+      "faces": 5,
+      "hinges": 4,
+      "netValid": true,
+      "maximumHingeGap": 4.965098610774053e-16,
+      "maximumRigidityError": 9.992007221626409e-16,
+      "closureAtTarget": 1.2950288782773939e-15,
+      "targetMatrixError": 4.440892098500626e-16
+    },
+    {
+      "id": "bipyramid",
+      "faces": 10,
+      "hinges": 9,
+      "netValid": true,
+      "maximumHingeGap": 8.568339948907339e-16,
+      "maximumRigidityError": 1.7763568394002505e-15,
+      "closureAtTarget": 1.4602703977091186e-15,
+      "targetMatrixError": 1.1657341758564144e-15
+    }
+  ]
+}

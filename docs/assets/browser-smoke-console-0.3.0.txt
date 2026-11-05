@@ -1,0 +1,39 @@
+{
+  "desktop": {
+    "title": "Truncated octahedron",
+    "version": true,
+    "candidates": 8,
+    "candidateSummary": "8 diverse non-dominated options",
+    "compound": "8 exact / unverified",
+    "ready": true,
+    "viewport": 1440,
+    "scrollWidth": 1425,
+    "overflow": false,
+    "workshopMessage": "Evaluated 1128 unique constrained trees; 1128 were overlap-free and 39 were non-dominated."
+  },
+  "print": {
+    "open": true,
+    "pages": 6,
+    "summary": "8 pages · US Letter landscape · 100% actual size · 23 tabs · 7 tab warnings. 7 glue tabs overlap existing geometry and are highlighted.",
+    "ruler": true,
+    "compoundSeams": 288
+  },
+  "mobile": {
+    "mode": true,
+    "width": 390,
+    "scrollWidth": 390,
+    "overflow": false,
+    "compound": "8 exact / unverified",
+    "clearance": "0/36 · insufficient data",
+    "bom": "Square\ncanonical\n6 required · 50 owned\nEquilateral triangle\ncanonical\n48 required · 20 owned\n\n28 more tiles needed at 74.93 mm per model unit. 8 faces use exact six-triangle panels whose mechanics remain unverified. 36 hinge relationships remain unverified by a measured stable-angle range. Thickness clearance is report"
+  },
+  "localProjects": {
+    "savedIdPresent": true,
+    "open": true,
+    "cards": 1,
+    "branchedProjectId": null
+  },
+  "exceptions": [],
+  "consoleErrors": [],
+  "logErrors": []
+}

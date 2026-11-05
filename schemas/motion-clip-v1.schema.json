@@ -1,0 +1,108 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://magnamath.app/schema/motion-clip/v1",
+  "title": "MagnaMath Spatial Motion Clip v1",
+  "description": "Renderer-independent keyframed motion combining global six-degree-of-freedom model pose, folding progress, optional per-hinge overrides, camera choreography, and semantic markers.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema", "id", "name", "durationSeconds", "loop", "rootPoseTrack",
+    "progressTrack", "hingeTracks", "cameraTrack", "markers", "metadata"
+  ],
+  "properties": {
+    "schema": { "const": "https://magnamath.app/schema/motion-clip/v1" },
+    "id": { "type": "string", "minLength": 1 },
+    "name": { "type": "string", "minLength": 1 },
+    "durationSeconds": { "type": "number", "exclusiveMinimum": 0 },
+    "loop": { "type": "boolean" },
+    "rootPoseTrack": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/rootPoseKeyframe" }
+    },
+    "progressTrack": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/progressKeyframe" }
+    },
+    "hingeTracks": {
+      "type": "object",
+      "propertyNames": { "$ref": "#/$defs/edgeKey" },
+      "additionalProperties": {
+        "type": "array",
+        "items": { "$ref": "#/$defs/hingeKeyframe" }
+      }
+    },
+    "cameraTrack": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/cameraKeyframe" }
+    },
+    "markers": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/marker" }
+    },
+    "metadata": { "type": "object" }
+  },
+  "$defs": {
+    "edgeKey": { "type": "string", "pattern": "^[0-9]+:[0-9]+$" },
+    "time": { "type": "number", "minimum": 0 },
+    "easing": { "enum": ["linear", "smoothstep", "smootherstep", "ease-in-out-cubic"] },
+    "vec3": {
+      "type": "array", "minItems": 3, "maxItems": 3,
+      "items": { "type": "number" }
+    },
+    "quaternion": {
+      "type": "array", "minItems": 4, "maxItems": 4,
+      "items": { "type": "number" }
+    },
+    "rootPoseKeyframe": {
+      "type": "object", "additionalProperties": false,
+      "required": ["time", "translation", "rotation", "easing"],
+      "properties": {
+        "time": { "$ref": "#/$defs/time" },
+        "translation": { "$ref": "#/$defs/vec3" },
+        "rotation": { "$ref": "#/$defs/quaternion" },
+        "easing": { "$ref": "#/$defs/easing" }
+      }
+    },
+    "progressKeyframe": {
+      "type": "object", "additionalProperties": false,
+      "required": ["time", "value", "easing"],
+      "properties": {
+        "time": { "$ref": "#/$defs/time" },
+        "value": { "type": "number", "minimum": 0, "maximum": 1 },
+        "easing": { "$ref": "#/$defs/easing" }
+      }
+    },
+    "hingeKeyframe": {
+      "type": "object", "additionalProperties": false,
+      "required": ["time", "value", "mode", "easing"],
+      "properties": {
+        "time": { "$ref": "#/$defs/time" },
+        "value": { "type": "number" },
+        "mode": { "enum": ["progress", "angle-radians"] },
+        "easing": { "$ref": "#/$defs/easing" }
+      }
+    },
+    "cameraKeyframe": {
+      "type": "object", "additionalProperties": false,
+      "required": ["time", "position", "target", "up", "fovDegrees", "easing"],
+      "properties": {
+        "time": { "$ref": "#/$defs/time" },
+        "position": { "$ref": "#/$defs/vec3" },
+        "target": { "$ref": "#/$defs/vec3" },
+        "up": { "$ref": "#/$defs/vec3" },
+        "fovDegrees": { "type": "number", "exclusiveMinimum": 1, "exclusiveMaximum": 179 },
+        "easing": { "$ref": "#/$defs/easing" }
+      }
+    },
+    "marker": {
+      "type": "object", "additionalProperties": false,
+      "required": ["time", "id", "label"],
+      "properties": {
+        "time": { "$ref": "#/$defs/time" },
+        "id": { "type": "string", "minLength": 1 },
+        "label": { "type": "string" },
+        "payload": {}
+      }
+    }
+  }
+}

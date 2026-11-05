@@ -1,0 +1,895 @@
+{
+  "schema": "https://magnamath.app/schema/snapshot/v4",
+  "schemaVersion": 4,
+  "appVersion": "0.4.0",
+  "coreVersion": "0.4.0",
+  "generatedAt": "2026-08-08T12:00:00.000Z",
+  "polyhedron": {
+    "id": "cube",
+    "name": "Cube",
+    "family": "Platonic solid",
+    "vertices": [
+      [
+        -0.5,
+        -0.5,
+        -0.5
+      ],
+      [
+        0.5,
+        -0.5,
+        -0.5
+      ],
+      [
+        0.5,
+        0.5,
+        -0.5
+      ],
+      [
+        -0.5,
+        0.5,
+        -0.5
+      ],
+      [
+        -0.5,
+        -0.5,
+        0.5
+      ],
+      [
+        0.5,
+        -0.5,
+        0.5
+      ],
+      [
+        0.5,
+        0.5,
+        0.5
+      ],
+      [
+        -0.5,
+        0.5,
+        0.5
+      ]
+    ],
+    "faces": [
+      [
+        0,
+        3,
+        2,
+        1
+      ],
+      [
+        4,
+        5,
+        6,
+        7
+      ],
+      [
+        0,
+        1,
+        5,
+        4
+      ],
+      [
+        1,
+        2,
+        6,
+        5
+      ],
+      [
+        2,
+        3,
+        7,
+        6
+      ],
+      [
+        3,
+        0,
+        4,
+        7
+      ]
+    ],
+    "metadata": {
+      "symbol": "{4,3}",
+      "description": "Six congruent squares meet three at every vertex.",
+      "lessonHooks": [
+        "nets",
+        "right angles",
+        "surface area and volume"
+      ],
+      "exactTopology": true
+    }
+  },
+  "analysis": {
+    "counts": {
+      "vertices": 8,
+      "edges": 12,
+      "faces": 6,
+      "byFaceKind": {
+        "square": 6
+      }
+    },
+    "eulerCharacteristic": 2,
+    "genus": 0,
+    "surfaceArea": 6,
+    "volume": 0.9999999999999999,
+    "edgeStats": {
+      "minimum": 1,
+      "maximum": 1,
+      "average": 1,
+      "relativeSpread": 0
+    },
+    "validation": {
+      "valid": true,
+      "issues": [],
+      "warnings": [],
+      "closed": true,
+      "connected": true,
+      "orientable": true,
+      "manifold": true
+    },
+    "faceKinds": [
+      {
+        "faceIndex": 0,
+        "kind": "square",
+        "label": "Square"
+      },
+      {
+        "faceIndex": 1,
+        "kind": "square",
+        "label": "Square"
+      },
+      {
+        "faceIndex": 2,
+        "kind": "square",
+        "label": "Square"
+      },
+      {
+        "faceIndex": 3,
+        "kind": "square",
+        "label": "Square"
+      },
+      {
+        "faceIndex": 4,
+        "kind": "square",
+        "label": "Square"
+      },
+      {
+        "faceIndex": 5,
+        "kind": "square",
+        "label": "Square"
+      }
+    ]
+  },
+  "net": {
+    "seed": 11,
+    "source": "search",
+    "objective": "compact",
+    "valid": true,
+    "overlapArea": 0,
+    "overlapPairs": [],
+    "score": 10.136488721956225,
+    "scoreBreakdown": {
+      "overlapArea": 0,
+      "overlapPairs": 0,
+      "boundingArea": 10,
+      "perimeter": 0.14,
+      "compactness": -0.06,
+      "aspect": 0.027488721956224652,
+      "depth": 0.045,
+      "leaves": -0.016
+    },
+    "rootFace": 5,
+    "parentByFace": [
+      5,
+      2,
+      0,
+      4,
+      5,
+      -1
+    ],
+    "transforms": [
+      [
+        -1,
+        1.2246467991473532e-16,
+        -1.2246467991473532e-16,
+        -1,
+        -1.1102230246251565e-16,
+        -0.5
+      ],
+      [
+        6.123233995736766e-17,
+        -1,
+        1,
+        6.123233995736766e-17,
+        2,
+        -0.5
+      ],
+      [
+        -1.6081226496766366e-16,
+        -1,
+        1,
+        -1.6081226496766366e-16,
+        1,
+        -0.5
+      ],
+      [
+        1,
+        0,
+        0,
+        1,
+        -2,
+        0.5
+      ],
+      [
+        1,
+        0,
+        0,
+        1,
+        -1,
+        0.5
+      ],
+      [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0.5
+      ]
+    ],
+    "foldEdgeKeys": [
+      "0:3",
+      "3:7",
+      "0:1",
+      "2:6",
+      "4:5"
+    ],
+    "cutEdgeKeys": [
+      "2:3",
+      "1:2",
+      "5:6",
+      "6:7",
+      "4:7",
+      "1:5",
+      "0:4"
+    ],
+    "lockedFoldEdgeKeys": [],
+    "lockedCutEdgeKeys": []
+  },
+  "physicalBuild": {
+    "modelUnitMm": 74.93,
+    "confidence": 1,
+    "confidenceLabel": "published/high",
+    "profileSchema": "https://magnamath.app/schema/tile-profile/v2",
+    "profileIds": [
+      "square"
+    ],
+    "required": {
+      "square": 6,
+      "large-square": 0,
+      "equilateral-triangle": 0,
+      "right-triangle": 0,
+      "isosceles-triangle": 0
+    },
+    "shortages": [],
+    "unsupportedFaces": [],
+    "compoundFaces": [],
+    "faceAssignments": [
+      {
+        "faceIndex": 0,
+        "assignmentKind": "direct",
+        "tileId": "square",
+        "recipeId": null,
+        "pieceCount": 1,
+        "scaleError": 0,
+        "sideError": 0,
+        "angleErrorDegrees": 0
+      },
+      {
+        "faceIndex": 1,
+        "assignmentKind": "direct",
+        "tileId": "square",
+        "recipeId": null,
+        "pieceCount": 1,
+        "scaleError": 0,
+        "sideError": 0,
+        "angleErrorDegrees": 0
+      },
+      {
+        "faceIndex": 2,
+        "assignmentKind": "direct",
+        "tileId": "square",
+        "recipeId": null,
+        "pieceCount": 1,
+        "scaleError": 0,
+        "sideError": 0,
+        "angleErrorDegrees": 0
+      },
+      {
+        "faceIndex": 3,
+        "assignmentKind": "direct",
+        "tileId": "square",
+        "recipeId": null,
+        "pieceCount": 1,
+        "scaleError": 0,
+        "sideError": 0,
+        "angleErrorDegrees": 0
+      },
+      {
+        "faceIndex": 4,
+        "assignmentKind": "direct",
+        "tileId": "square",
+        "recipeId": null,
+        "pieceCount": 1,
+        "scaleError": 0,
+        "sideError": 0,
+        "angleErrorDegrees": 0
+      },
+      {
+        "faceIndex": 5,
+        "assignmentKind": "direct",
+        "tileId": "square",
+        "recipeId": null,
+        "pieceCount": 1,
+        "scaleError": 0,
+        "sideError": 0,
+        "angleErrorDegrees": 0
+      }
+    ],
+    "hingeCounts": {
+      "unverified": 12
+    },
+    "thicknessClearance": {
+      "model": "finite-slab-cross-section-v1",
+      "assumption": "measured-only",
+      "entries": [
+        {
+          "edgeKey": "0:3",
+          "faces": [
+            0,
+            5
+          ],
+          "angleDegrees": 90,
+          "status": "unmodeled",
+          "reason": "One or both tile profiles lack measured thickness.",
+          "intersectionAreaMm2": null,
+          "model": null
+        },
+        {
+          "edgeKey": "2:3",
+          "faces": [
+            0,
+            4
+          ],
+          "angleDegrees": 90,
+          "status": "unmodeled",
+          "reason": "One or both tile profiles lack measured thickness.",
+          "intersectionAreaMm2": null,
+          "model": null
+        },
+        {
+          "edgeKey": "1:2",
+          "faces": [
+            0,
+            3
+          ],
+          "angleDegrees": 90,
+          "status": "unmodeled",
+          "reason": "One or both tile profiles lack measured thickness.",
+          "intersectionAreaMm2": null,
+          "model": null
+        },
+        {
+          "edgeKey": "0:1",
+          "faces": [
+            0,
+            2
+          ],
+          "angleDegrees": 90,
+          "status": "unmodeled",
+          "reason": "One or both tile profiles lack measured thickness.",
+          "intersectionAreaMm2": null,
+          "model": null
+        },
+        {
+          "edgeKey": "4:5",
+          "faces": [
+            1,
+            2
+          ],
+          "angleDegrees": 90,
+          "status": "unmodeled",
+          "reason": "One or both tile profiles lack measured thickness.",
+          "intersectionAreaMm2": null,
+          "model": null
+        },
+        {
+          "edgeKey": "5:6",
+          "faces": [
+            1,
+            3
+          ],
+          "angleDegrees": 90,
+          "status": "unmodeled",
+          "reason": "One or both tile profiles lack measured thickness.",
+          "intersectionAreaMm2": null,
+          "model": null
+        },
+        {
+          "edgeKey": "6:7",
+          "faces": [
+            1,
+            4
+          ],
+          "angleDegrees": 90,
+          "status": "unmodeled",
+          "reason": "One or both tile profiles lack measured thickness.",
+          "intersectionAreaMm2": null,
+          "model": null
+        },
+        {
+          "edgeKey": "4:7",
+          "faces": [
+            1,
+            5
+          ],
+          "angleDegrees": 90,
+          "status": "unmodeled",
+          "reason": "One or both tile profiles lack measured thickness.",
+          "intersectionAreaMm2": null,
+          "model": null
+        },
+        {
+          "edgeKey": "1:5",
+          "faces": [
+            2,
+            3
+          ],
+          "angleDegrees": 90,
+          "status": "unmodeled",
+          "reason": "One or both tile profiles lack measured thickness.",
+          "intersectionAreaMm2": null,
+          "model": null
+        },
+        {
+          "edgeKey": "0:4",
+          "faces": [
+            2,
+            5
+          ],
+          "angleDegrees": 90,
+          "status": "unmodeled",
+          "reason": "One or both tile profiles lack measured thickness.",
+          "intersectionAreaMm2": null,
+          "model": null
+        },
+        {
+          "edgeKey": "2:6",
+          "faces": [
+            3,
+            4
+          ],
+          "angleDegrees": 90,
+          "status": "unmodeled",
+          "reason": "One or both tile profiles lack measured thickness.",
+          "intersectionAreaMm2": null,
+          "model": null
+        },
+        {
+          "edgeKey": "3:7",
+          "faces": [
+            4,
+            5
+          ],
+          "angleDegrees": 90,
+          "status": "unmodeled",
+          "reason": "One or both tile profiles lack measured thickness.",
+          "intersectionAreaMm2": null,
+          "model": null
+        }
+      ],
+      "byEdgeKey": {
+        "0:3": {
+          "edgeKey": "0:3",
+          "faces": [
+            0,
+            5
+          ],
+          "angleDegrees": 90,
+          "status": "unmodeled",
+          "reason": "One or both tile profiles lack measured thickness.",
+          "intersectionAreaMm2": null,
+          "model": null
+        },
+        "2:3": {
+          "edgeKey": "2:3",
+          "faces": [
+            0,
+            4
+          ],
+          "angleDegrees": 90,
+          "status": "unmodeled",
+          "reason": "One or both tile profiles lack measured thickness.",
+          "intersectionAreaMm2": null,
+          "model": null
+        },
+        "1:2": {
+          "edgeKey": "1:2",
+          "faces": [
+            0,
+            3
+          ],
+          "angleDegrees": 90,
+          "status": "unmodeled",
+          "reason": "One or both tile profiles lack measured thickness.",
+          "intersectionAreaMm2": null,
+          "model": null
+        },
+        "0:1": {
+          "edgeKey": "0:1",
+          "faces": [
+            0,
+            2
+          ],
+          "angleDegrees": 90,
+          "status": "unmodeled",
+          "reason": "One or both tile profiles lack measured thickness.",
+          "intersectionAreaMm2": null,
+          "model": null
+        },
+        "4:5": {
+          "edgeKey": "4:5",
+          "faces": [
+            1,
+            2
+          ],
+          "angleDegrees": 90,
+          "status": "unmodeled",
+          "reason": "One or both tile profiles lack measured thickness.",
+          "intersectionAreaMm2": null,
+          "model": null
+        },
+        "5:6": {
+          "edgeKey": "5:6",
+          "faces": [
+            1,
+            3
+          ],
+          "angleDegrees": 90,
+          "status": "unmodeled",
+          "reason": "One or both tile profiles lack measured thickness.",
+          "intersectionAreaMm2": null,
+          "model": null
+        },
+        "6:7": {
+          "edgeKey": "6:7",
+          "faces": [
+            1,
+            4
+          ],
+          "angleDegrees": 90,
+          "status": "unmodeled",
+          "reason": "One or both tile profiles lack measured thickness.",
+          "intersectionAreaMm2": null,
+          "model": null
+        },
+        "4:7": {
+          "edgeKey": "4:7",
+          "faces": [
+            1,
+            5
+          ],
+          "angleDegrees": 90,
+          "status": "unmodeled",
+          "reason": "One or both tile profiles lack measured thickness.",
+          "intersectionAreaMm2": null,
+          "model": null
+        },
+        "1:5": {
+          "edgeKey": "1:5",
+          "faces": [
+            2,
+            3
+          ],
+          "angleDegrees": 90,
+          "status": "unmodeled",
+          "reason": "One or both tile profiles lack measured thickness.",
+          "intersectionAreaMm2": null,
+          "model": null
+        },
+        "0:4": {
+          "edgeKey": "0:4",
+          "faces": [
+            2,
+            5
+          ],
+          "angleDegrees": 90,
+          "status": "unmodeled",
+          "reason": "One or both tile profiles lack measured thickness.",
+          "intersectionAreaMm2": null,
+          "model": null
+        },
+        "2:6": {
+          "edgeKey": "2:6",
+          "faces": [
+            3,
+            4
+          ],
+          "angleDegrees": 90,
+          "status": "unmodeled",
+          "reason": "One or both tile profiles lack measured thickness.",
+          "intersectionAreaMm2": null,
+          "model": null
+        },
+        "3:7": {
+          "edgeKey": "3:7",
+          "faces": [
+            4,
+            5
+          ],
+          "angleDegrees": 90,
+          "status": "unmodeled",
+          "reason": "One or both tile profiles lack measured thickness.",
+          "intersectionAreaMm2": null,
+          "model": null
+        }
+      },
+      "counts": {
+        "unmodeled": 12
+      },
+      "modeledRatio": 0,
+      "collisionCount": 0,
+      "caveat": "This is a local two-panel thickness screen only. It excludes connector deformation, bevels unless encoded in the hinge-axis offset, whole-model collisions, gravity, and magnetic forces."
+    },
+    "summary": "Your inventory can represent this solid at 74.93 mm per model unit."
+  },
+  "project": {
+    "title": "Cube workshop",
+    "notes": "",
+    "parameter": null,
+    "inventoryPreset": "classic37",
+    "inventory": {
+      "square": 18,
+      "large-square": 2,
+      "equilateral-triangle": 7,
+      "right-triangle": 6,
+      "isosceles-triangle": 4,
+      "micro-square": 0,
+      "micro-equilateral-triangle": 0,
+      "micro-right-triangle": 0,
+      "micro-isosceles-triangle": 0
+    },
+    "tileFamilies": [
+      "standard"
+    ],
+    "scaleMode": "standard",
+    "customScale": null,
+    "calibrationProfileIds": [],
+    "calibrationProfiles": [],
+    "calibrationSessions": [],
+    "compoundMode": "exact",
+    "clearanceAssumption": "measured-only",
+    "printSettings": null,
+    "localProjectId": null,
+    "folding": {
+      "schema": "https://magnamath.app/schema/folding-plan/v1",
+      "netSignature": "0:1|0:3|2:6|3:7|4:5",
+      "rootFace": 5,
+      "progress": 0.56,
+      "sequenceMode": "root-out",
+      "hingeDuration": 0.58,
+      "schedule": [
+        {
+          "edgeKey": "0:3",
+          "start": 0,
+          "end": 0.58,
+          "easing": "ease-in-out-cubic"
+        },
+        {
+          "edgeKey": "3:7",
+          "start": 0,
+          "end": 0.58,
+          "easing": "ease-in-out-cubic"
+        },
+        {
+          "edgeKey": "0:1",
+          "start": 0.21000000000000002,
+          "end": 0.79,
+          "easing": "ease-in-out-cubic"
+        },
+        {
+          "edgeKey": "2:6",
+          "start": 0.21000000000000002,
+          "end": 0.79,
+          "easing": "ease-in-out-cubic"
+        },
+        {
+          "edgeKey": "4:5",
+          "start": 0.42000000000000004,
+          "end": 1,
+          "easing": "ease-in-out-cubic"
+        }
+      ],
+      "hingeOverrides": [],
+      "selectedHingeEdgeKey": "0:3",
+      "showHinges": true,
+      "collisionScreen": true,
+      "rootPose": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    "motionClips": [
+      {
+        "schema": "https://magnamath.app/schema/motion-clip/v1",
+        "id": "cube-fold-and-fly",
+        "name": "Cube: fold, lift, and orbit",
+        "durationSeconds": 8,
+        "loop": false,
+        "rootPoseTrack": [
+          {
+            "time": 0,
+            "translation": [
+              0,
+              0,
+              0
+            ],
+            "rotation": [
+              0,
+              0,
+              0,
+              1
+            ],
+            "easing": "smoothstep"
+          },
+          {
+            "time": 4,
+            "translation": [
+              0,
+              0,
+              0
+            ],
+            "rotation": [
+              0,
+              0,
+              0,
+              1
+            ],
+            "easing": "smoothstep"
+          },
+          {
+            "time": 8,
+            "translation": [
+              1.6,
+              1.1,
+              0.8
+            ],
+            "rotation": [
+              0,
+              0.9238795325112867,
+              0,
+              0.3826834323650898
+            ],
+            "easing": "ease-in-out-cubic"
+          }
+        ],
+        "progressTrack": [
+          {
+            "time": 0,
+            "value": 0,
+            "easing": "smoothstep"
+          },
+          {
+            "time": 4,
+            "value": 1,
+            "easing": "smoothstep"
+          },
+          {
+            "time": 8,
+            "value": 1,
+            "easing": "linear"
+          }
+        ],
+        "hingeTracks": {},
+        "cameraTrack": [
+          {
+            "time": 0,
+            "position": [
+              0,
+              -5.8,
+              7.2
+            ],
+            "target": [
+              0,
+              0,
+              0
+            ],
+            "up": [
+              0,
+              0,
+              1
+            ],
+            "fovDegrees": 42,
+            "easing": "smoothstep"
+          },
+          {
+            "time": 4,
+            "position": [
+              5.7,
+              -4.2,
+              4.8
+            ],
+            "target": [
+              0,
+              0,
+              0.8
+            ],
+            "up": [
+              0,
+              0,
+              1
+            ],
+            "fovDegrees": 45,
+            "easing": "ease-in-out-cubic"
+          },
+          {
+            "time": 8,
+            "position": [
+              -4.8,
+              -3.4,
+              5.6
+            ],
+            "target": [
+              1.6,
+              1.1,
+              0.8
+            ],
+            "up": [
+              0,
+              0,
+              1
+            ],
+            "fovDegrees": 48,
+            "easing": "ease-in-out-cubic"
+          }
+        ],
+        "markers": [
+          {
+            "time": 0,
+            "id": "flat",
+            "label": "Exact 2D net"
+          },
+          {
+            "time": 4,
+            "id": "closed",
+            "label": "Closed target solid"
+          },
+          {
+            "time": 8,
+            "id": "spatial",
+            "label": "Spatial inspection pose"
+          }
+        ],
+        "metadata": {
+          "purpose": "handoff example",
+          "caveat": "Camera and root-pose tracks are implemented at the schema/core layer; renderer playback integration is a subsequent increment."
+        }
+      }
+    ],
+    "activeMotionClipId": "cube-fold-and-fly"
+  }
+}

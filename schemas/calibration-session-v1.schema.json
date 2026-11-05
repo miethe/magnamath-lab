@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://magnamath.app/schema/calibration-session/v1",
+  "title": "MagnaMath Physical Calibration Session v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema", "schemaVersion", "baseProfileId", "method", "device", "measuredAt", "samples"],
+  "properties": {
+    "schema": { "const": "https://magnamath.app/schema/calibration-session/v1" },
+    "schemaVersion": { "const": 1 },
+    "baseProfileId": { "type": "string", "minLength": 1 },
+    "label": { "type": "string" },
+    "method": { "enum": ["calipers", "manual", "scan", "other"] },
+    "device": { "type": "string" },
+    "measuredAt": { "type": "string", "format": "date-time" },
+    "samples": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["edgeLengthsMm"],
+        "properties": {
+          "edgeLengthsMm": { "type": "array", "minItems": 3, "items": { "type": "number", "exclusiveMinimum": 0 } },
+          "anglesDegrees": { "type": ["array", "null"], "items": { "type": "number", "exclusiveMinimum": 0, "exclusiveMaximum": 180 } },
+          "thicknessMm": { "type": ["number", "null"], "exclusiveMinimum": 0 },
+          "cornerRadiusMm": { "type": ["number", "null"], "minimum": 0 }
+        }
+      }
+    },
+    "minStableInteriorDegrees": { "type": ["number", "null"], "exclusiveMinimum": 0, "exclusiveMaximum": 180 },
+    "maxStableInteriorDegrees": { "type": ["number", "null"], "exclusiveMinimum": 0, "exclusiveMaximum": 180 },
+    "notes": { "type": "string" }
+  }
+}

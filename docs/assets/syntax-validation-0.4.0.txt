@@ -1,0 +1,45 @@
+MagnaMath Rebuilt 0.4.0 JavaScript syntax sweep
+Generated: 2026-08-10
+
+PASS scripts/generate-examples.mjs
+PASS scripts/serve.mjs
+PASS scripts/validate-advanced.mjs
+PASS scripts/validate-catalog.mjs
+PASS scripts/validate-example-reproducibility.mjs
+PASS scripts/validate-folding.mjs
+PASS scripts/validate-json.mjs
+PASS scripts/validate-nets.mjs
+PASS scripts/validate-tiles.mjs
+PASS scripts/validate-workshop.mjs
+PASS src/core/calibration.js
+PASS src/core/catalog.js
+PASS src/core/compound.js
+PASS src/core/export.js
+PASS src/core/feasibility.js
+PASS src/core/folding-collision.js
+PASS src/core/folding-diagnostics.js
+PASS src/core/folding.js
+PASS src/core/math.js
+PASS src/core/motion.js
+PASS src/core/net-optimizer-client.js
+PASS src/core/net.js
+PASS src/core/polyhedron.js
+PASS src/core/print.js
+PASS src/core/project-store.js
+PASS src/core/rigid.js
+PASS src/core/tiles.js
+PASS src/core/transforms.js
+PASS src/core/version.js
+PASS src/core/zip.js
+PASS src/main.js
+PASS src/render/canvas-renderer.js
+PASS src/render/three-renderer.js
+PASS src/workers/net-optimizer.worker.js
+PASS test/advanced.test.js
+PASS test/folding.test.js
+PASS test/geometry.test.js
+PASS test/motion.test.js
+PASS test/tiles.test.js
+PASS test/workshop.test.js
+
+Passed: 40 files

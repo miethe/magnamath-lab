@@ -1,0 +1,23 @@
+{
+  "release": "0.4.0",
+  "generated": "2026-08-10",
+  "archiveName": "MagnaMath-Rebuilt-0.4.0-Full-Handoff.zip",
+  "archiveRoot": "MagnaMath-Rebuilt/",
+  "expectedArchiveEntries": 173,
+  "manifestedSourceFiles": 172,
+  "packaging": {
+    "script": "scripts/package-release.py",
+    "compression": "ZIP DEFLATE level 9",
+    "fixedTimestamp": "2026-08-10T00:00:00",
+    "sourceManifest": "MANIFEST.sha256",
+    "externalArchiveChecksum": "MagnaMath-Rebuilt-0.4.0-Full-Handoff.zip.sha256"
+  },
+  "integrityProcedure": [
+    "Regenerate MANIFEST.sha256 from every distributed source file except the manifest itself.",
+    "Create one stable MagnaMath-Rebuilt archive root.",
+    "Run Python zipfile.testzip against every member.",
+    "Run unzip -t as an independent archive-integrity check.",
+    "Write the final archive SHA-256 beside the ZIP to avoid a circular embedded checksum."
+  ],
+  "status": "Expected archive structure and integrity procedure defined; final checksum is intentionally external."
+}

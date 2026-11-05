@@ -1,0 +1,21 @@
+{
+  "url": "in-memory routed application",
+  "checks": {
+    "title": "Cube",
+    "foldPanelActive": true,
+    "renderer": "CANVAS PREVIEW MODE",
+    "progressOutput": "50% folded",
+    "hingeGap": "2.5e-16",
+    "hingeSelected": true,
+    "hingeKey": "1:2",
+    "hingePercent": "40%",
+    "sequence": "assembly",
+    "mobileProgress": "68% folded",
+    "mobileScrollWidth": 390,
+    "mobileClientWidth": 390,
+    "noHorizontalOverflow": true,
+    "consoleErrors": []
+  },
+  "console": [],
+  "pageErrors": []
+}

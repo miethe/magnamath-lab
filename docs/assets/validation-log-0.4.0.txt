@@ -1,0 +1,782 @@
+MagnaMath Rebuilt 0.4.0 — consolidated validation evidence
+Generated: 2026-08-10
+
+================================================================================================
+Complete validation run
+================================================================================================
+
+> magnamath-rebuilt@0.4.0 validate:all
+> npm test && npm run validate && npm run validate:nets && npm run validate:workshop && npm run validate:tiles && npm run validate:advanced && npm run validate:folding && npm run validate:json && npm run validate:examples
+
+
+> magnamath-rebuilt@0.4.0 test
+> node --test
+
+TAP version 13
+# Subtest: exact compound matching resolves regular hexagons without coercing pentagons
+ok 1 - exact compound matching resolves regular hexagons without coercing pentagons
+  ---
+  duration_ms: 19.635913
+  type: 'test'
+  ...
+# Subtest: portfolio search returns diverse valid spanning trees and honors locks
+ok 2 - portfolio search returns diverse valid spanning trees and honors locks
+  ---
+  duration_ms: 151.994094
+  type: 'test'
+  ...
+# Subtest: print packages paginate at actual size and add one tab per cut edge
+ok 3 - print packages paginate at actual size and add one tab per cut edge
+  ---
+  duration_ms: 11.940037
+  type: 'test'
+  ...
+# Subtest: raw calibration sessions preserve samples and re-derive profiles
+ok 4 - raw calibration sessions preserve samples and re-derive profiles
+  ---
+  duration_ms: 2.043233
+  type: 'test'
+  ...
+# Subtest: print ZIP packages pass an independent unzip integrity check
+ok 5 - print ZIP packages pass an independent unzip integrity check
+  ---
+  duration_ms: 25.104543
+  type: 'test'
+  ...
+# Subtest: thickness clearance stays unmodeled without hinge-axis evidence and models explicit scenarios
+ok 6 - thickness clearance stays unmodeled without hinge-axis evidence and models explicit scenarios
+  ---
+  duration_ms: 2.079537
+  type: 'test'
+  ...
+# Subtest: compound panel seams are preserved in SVG and paginated print output
+ok 7 - compound panel seams are preserved in SVG and paginated print output
+  ---
+  duration_ms: 36.974716
+  type: 'test'
+  ...
+# Subtest: snapshot v4 includes compound profile IDs and bounded clearance provenance
+ok 8 - snapshot v4 includes compound profile IDs and bounded clearance provenance
+  ---
+  duration_ms: 19.440153
+  type: 'test'
+  ...
+# Subtest: SVG and print exports XML-escape imported display metadata
+ok 9 - SVG and print exports XML-escape imported display metadata
+  ---
+  duration_ms: 4.036653
+  type: 'test'
+  ...
+# Subtest: generated examples can pin export timestamps for reproducible artifacts
+ok 10 - generated examples can pin export timestamps for reproducible artifacts
+  ---
+  duration_ms: 4.928797
+  type: 'test'
+  ...
+# Subtest: every starter-catalog net produces an exact tree-hinge target
+ok 11 - every starter-catalog net produces an exact tree-hinge target
+  ---
+  duration_ms: 4.397198
+  type: 'test'
+  ...
+# Subtest: flat sampled polygons reproduce the exact selected net coordinates
+ok 12 - flat sampled polygons reproduce the exact selected net coordinates
+  ---
+  duration_ms: 2.205195
+  type: 'test'
+  ...
+# Subtest: hinges stay continuous and faces stay rigid throughout multiple timeline modes
+ok 13 - hinges stay continuous and faces stay rigid throughout multiple timeline modes
+  ---
+  duration_ms: 42.297739
+  type: 'test'
+  ...
+# Subtest: all cut-edge copies close at the exact folded target
+ok 14 - all cut-edge copies close at the exact folded target
+  ---
+  duration_ms: 2.230942
+  type: 'test'
+  ...
+# Subtest: signed hinge magnitudes agree with measured exterior dihedral angles
+ok 15 - signed hinge magnitudes agree with measured exterior dihedral angles
+  ---
+  duration_ms: 0.389939
+  type: 'test'
+  ...
+# Subtest: timeline schedules are normalized, ordered, and sample exact endpoints
+ok 16 - timeline schedules are normalized, ordered, and sample exact endpoints
+  ---
+  duration_ms: 0.558269
+  type: 'test'
+  ...
+# Subtest: one manual hinge override remains exact at its shared edge and serializes safely
+ok 17 - one manual hinge override remains exact at its shared edge and serializes safely
+  ---
+  duration_ms: 0.980195
+  type: 'test'
+  ...
+# Subtest: discrete collision plumbing returns a bounded, explicit result contract
+ok 18 - discrete collision plumbing returns a bounded, explicit result contract
+  ---
+  duration_ms: 1.305548
+  type: 'test'
+  ...
+# Subtest: Platonic solids have their canonical topology
+ok 19 - Platonic solids have their canonical topology
+  ---
+  duration_ms: 9.804928
+  type: 'test'
+  ...
+# Subtest: every starter catalog entry is a valid closed sphere-like manifold
+ok 20 - every starter catalog entry is a valid closed sphere-like manifold
+  ---
+  duration_ms: 18.598257
+  type: 'test'
+  ...
+# Subtest: uniform transforms produce canonical Archimedean counts
+ok 21 - uniform transforms produce canonical Archimedean counts
+  ---
+  duration_ms: 2.248008
+  type: 'test'
+  ...
+# Subtest: net planner finds overlap-free layouts for simple and complex solids
+ok 22 - net planner finds overlap-free layouts for simple and complex solids
+  ---
+  duration_ms: 217.896925
+  type: 'test'
+  ...
+# Subtest: physical tile matching uses dimensions, angles, and inventory counts
+ok 23 - physical tile matching uses dimensions, angles, and inventory counts
+  ---
+  duration_ms: 13.686125
+  type: 'test'
+  ...
+# Subtest: SVG and JSON exports preserve scale and structure
+ok 24 - SVG and JSON exports preserve scale and structure
+  ---
+  duration_ms: 5.148935
+  type: 'test'
+  ...
+# Subtest: rigid transform quaternion decomposition round-trips
+ok 25 - rigid transform quaternion decomposition round-trips
+  ---
+  duration_ms: 1.950485
+  type: 'test'
+  ...
+# Subtest: motion clips interpolate folding progress and 6DOF root pose
+ok 26 - motion clips interpolate folding progress and 6DOF root pose
+  ---
+  duration_ms: 31.153944
+  type: 'test'
+  ...
+# Subtest: per-hinge progress tracks become exact angle overrides
+ok 27 - per-hinge progress tracks become exact angle overrides
+  ---
+  duration_ms: 15.442107
+  type: 'test'
+  ...
+# Subtest: camera tracks, markers, and stable serialization are supported
+ok 28 - camera tracks, markers, and stable serialization are supported
+  ---
+  duration_ms: 0.66689
+  type: 'test'
+  ...
+# Subtest: motion clip keyframes can be immutably upserted
+ok 29 - motion clip keyframes can be immutably upserted
+  ---
+  duration_ms: 0.44511
+  type: 'test'
+  ...
+# Subtest: invalid and unknown hinge tracks are rejected
+ok 30 - invalid and unknown hinge tracks are rejected
+  ---
+  duration_ms: 9.131748
+  type: 'test'
+  ...
+# Subtest: one global physical scale prevents mixed-size face assignments
+ok 31 - one global physical scale prevents mixed-size face assignments
+  ---
+  duration_ms: 21.690989
+  type: 'test'
+  ...
+# Subtest: repeat-sample calibration computes means, repeatability, and hinge verification
+ok 32 - repeat-sample calibration computes means, repeatability, and hinge verification
+  ---
+  duration_ms: 5.325777
+  type: 'test'
+  ...
+# Subtest: unsupported polygons remain explicit rather than being coerced to a tile
+ok 33 - unsupported polygons remain explicit rather than being coerced to a tile
+  ---
+  duration_ms: 2.986104
+  type: 'test'
+  ...
+# Subtest: calibrated profile collections round-trip through the v2 contract
+ok 34 - calibrated profile collections round-trip through the v2 contract
+  ---
+  duration_ms: 0.698036
+  type: 'test'
+  ...
+# Subtest: inventory presets preserve published totals while flagging unmodeled pieces
+ok 35 - inventory presets preserve published totals while flagging unmodeled pieces
+  ---
+  duration_ms: 0.242219
+  type: 'test'
+  ...
+# Subtest: manual edge surgery preserves one connected acyclic hinge tree
+ok 36 - manual edge surgery preserves one connected acyclic hinge tree
+  ---
+  duration_ms: 22.087814
+  type: 'test'
+  ...
+# Subtest: locked constraints survive automatic optimization and block illegal edits
+ok 37 - locked constraints survive automatic optimization and block illegal edits
+  ---
+  duration_ms: 56.847131
+  type: 'test'
+  ...
+# Subtest: re-rooting changes assembly order without changing physical cuts
+ok 38 - re-rooting changes assembly order without changing physical cuts
+  ---
+  duration_ms: 14.208681
+  type: 'test'
+  ...
+# Subtest: serialized manual fold-edge sets reconstruct deterministically
+ok 39 - serialized manual fold-edge sets reconstruct deterministically
+  ---
+  duration_ms: 3.564662
+  type: 'test'
+  ...
+1..39
+# tests 39
+# suites 0
+# pass 39
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 623.556198
+
+> magnamath-rebuilt@0.4.0 validate
+> node scripts/validate-catalog.mjs
+
+┌─────────┬──────────────────────────┬────┬────┬────┬─────┬────────────┬────────────────┬────────┐
+│ (index) │ shape                    │ V  │ E  │ F  │ chi │ edgeSpread │ net            │ status │
+├─────────┼──────────────────────────┼────┼────┼────┼─────┼────────────┼────────────────┼────────┤
+│ 0       │ 'Tetrahedron'            │ 4  │ 6  │ 4  │ 2   │ '0.00e+0'  │ 'overlap-free' │ 'PASS' │
+│ 1       │ 'Cube'                   │ 8  │ 12 │ 6  │ 2   │ '0.00e+0'  │ 'overlap-free' │ 'PASS' │
+│ 2       │ 'Octahedron'             │ 6  │ 12 │ 8  │ 2   │ '0.00e+0'  │ 'overlap-free' │ 'PASS' │
+│ 3       │ 'Dodecahedron'           │ 20 │ 30 │ 12 │ 2   │ '4.44e-16' │ 'overlap-free' │ 'PASS' │
+│ 4       │ 'Icosahedron'            │ 12 │ 30 │ 20 │ 2   │ '1.11e-16' │ 'overlap-free' │ 'PASS' │
+│ 5       │ 'Cuboctahedron'          │ 12 │ 24 │ 14 │ 2   │ '0.00e+0'  │ 'overlap-free' │ 'PASS' │
+│ 6       │ 'Icosidodecahedron'      │ 30 │ 60 │ 32 │ 2   │ '5.55e-16' │ 'overlap-free' │ 'PASS' │
+│ 7       │ 'Truncated tetrahedron'  │ 12 │ 18 │ 8  │ 2   │ '4.44e-16' │ 'overlap-free' │ 'PASS' │
+│ 8       │ 'Truncated cube'         │ 24 │ 36 │ 14 │ 2   │ '4.44e-16' │ 'overlap-free' │ 'PASS' │
+│ 9       │ 'Truncated octahedron'   │ 24 │ 36 │ 14 │ 2   │ '0.00e+0'  │ 'overlap-free' │ 'PASS' │
+│ 10      │ 'Truncated dodecahedron' │ 60 │ 90 │ 32 │ 2   │ '7.77e-16' │ 'overlap-free' │ 'PASS' │
+│ 11      │ 'Truncated icosahedron'  │ 60 │ 90 │ 32 │ 2   │ '6.66e-16' │ 'overlap-free' │ 'PASS' │
+│ 12      │ 'Pentagonal prism'       │ 10 │ 15 │ 7  │ 2   │ '4.44e-16' │ 'overlap-free' │ 'PASS' │
+│ 13      │ '5-antiprism'            │ 10 │ 20 │ 12 │ 2   │ '4.44e-16' │ 'overlap-free' │ 'PASS' │
+│ 14      │ 'Square pyramid'         │ 5  │ 8  │ 5  │ 2   │ '2.22e-16' │ 'overlap-free' │ 'PASS' │
+│ 15      │ 'Pentagonal bipyramid'   │ 7  │ 15 │ 10 │ 2   │ '4.44e-16' │ 'overlap-free' │ 'PASS' │
+└─────────┴──────────────────────────┴────┴────┴────┴─────┴────────────┴────────────────┴────────┘
+Validated 16 exact catalog entries.
+
+> magnamath-rebuilt@0.4.0 validate:nets
+> node scripts/validate-nets.mjs 20
+
+┌─────────┬──────────────────────────┬──────────┬─────────────────┬──────────────┐
+│ (index) │ shape                    │ variants │ maximumOverlaps │ milliseconds │
+├─────────┼──────────────────────────┼──────────┼─────────────────┼──────────────┤
+│ 0       │ 'Tetrahedron'            │ '20/20'  │ 0               │ 25.8         │
+│ 1       │ 'Cube'                   │ '20/20'  │ 0               │ 52.8         │
+│ 2       │ 'Octahedron'             │ '20/20'  │ 0               │ 41.9         │
+│ 3       │ 'Dodecahedron'           │ '20/20'  │ 0               │ 132.9        │
+│ 4       │ 'Icosahedron'            │ '20/20'  │ 0               │ 255.4        │
+│ 5       │ 'Cuboctahedron'          │ '20/20'  │ 0               │ 123.2        │
+│ 6       │ 'Icosidodecahedron'      │ '20/20'  │ 0               │ 874.7        │
+│ 7       │ 'Truncated tetrahedron'  │ '20/20'  │ 0               │ 43.5         │
+│ 8       │ 'Truncated cube'         │ '20/20'  │ 0               │ 163.6        │
+│ 9       │ 'Truncated octahedron'   │ '20/20'  │ 0               │ 164.1        │
+│ 10      │ 'Truncated dodecahedron' │ '20/20'  │ 0               │ 1225.7       │
+│ 11      │ 'Truncated icosahedron'  │ '20/20'  │ 0               │ 1165.7       │
+│ 12      │ 'Pentagonal prism'       │ '20/20'  │ 0               │ 40.5         │
+│ 13      │ '5-antiprism'            │ '20/20'  │ 0               │ 93           │
+│ 14      │ 'Square pyramid'         │ '20/20'  │ 0               │ 13.5         │
+│ 15      │ 'Pentagonal bipyramid'   │ '20/20'  │ 0               │ 54.9         │
+└─────────┴──────────────────────────┴──────────┴─────────────────┴──────────────┘
+320/320 overlap-free nets in 4494.6 ms.
+
+> magnamath-rebuilt@0.4.0 validate:workshop
+> node scripts/validate-workshop.mjs
+
+┌─────────┬──────────────────────────┬───────┬───────────────┬──────────────────┬────────────────┐
+│ (index) │ shape                    │ faces │ editableEdges │ overlapFreeEdits │ constrainedNet │
+├─────────┼──────────────────────────┼───────┼───────────────┼──────────────────┼────────────────┤
+│ 0       │ 'Tetrahedron'            │ 4     │ 6             │ '6/6'            │ 'overlap-free' │
+│ 1       │ 'Cube'                   │ 6     │ 12            │ '12/12'          │ 'overlap-free' │
+│ 2       │ 'Octahedron'             │ 8     │ 12            │ '12/12'          │ 'overlap-free' │
+│ 3       │ 'Dodecahedron'           │ 12    │ 30            │ '30/30'          │ 'overlap-free' │
+│ 4       │ 'Icosahedron'            │ 20    │ 30            │ '30/30'          │ 'overlap-free' │
+│ 5       │ 'Cuboctahedron'          │ 14    │ 24            │ '24/24'          │ 'overlap-free' │
+│ 6       │ 'Icosidodecahedron'      │ 32    │ 60            │ '60/60'          │ 'overlap-free' │
+│ 7       │ 'Truncated tetrahedron'  │ 8     │ 18            │ '18/18'          │ 'overlap-free' │
+│ 8       │ 'Truncated cube'         │ 14    │ 36            │ '36/36'          │ 'overlap-free' │
+│ 9       │ 'Truncated octahedron'   │ 14    │ 36            │ '36/36'          │ 'overlap-free' │
+│ 10      │ 'Truncated dodecahedron' │ 32    │ 90            │ '80/90'          │ 'overlap-free' │
+│ 11      │ 'Truncated icosahedron'  │ 32    │ 90            │ '90/90'          │ 'overlap-free' │
+│ 12      │ 'Pentagonal prism'       │ 7     │ 15            │ '15/15'          │ 'overlap-free' │
+│ 13      │ '5-antiprism'            │ 12    │ 20            │ '20/20'          │ 'overlap-free' │
+│ 14      │ 'Square pyramid'         │ 5     │ 8             │ '8/8'            │ 'overlap-free' │
+│ 15      │ 'Pentagonal bipyramid'   │ 10    │ 15            │ '15/15'          │ 'overlap-free' │
+└─────────┴──────────────────────────┴───────┴───────────────┴──────────────────┴────────────────┘
+502 manual edge exchanges preserved the spanning-tree invariant; 492/502 were also overlap-free.
+Workshop validation completed in 947.2 ms.
+
+> magnamath-rebuilt@0.4.0 validate:tiles
+> node scripts/validate-tiles.mjs
+
+┌─────────┬───────────────────────┬───────────────────┬───────┬───────────────────┐
+│ (index) │ scenario              │ scaleMmPerUnit    │ ready │ confidence        │
+├─────────┼───────────────────────┼───────────────────┼───────┼───────────────────┤
+│ 0       │ 'Classic cube'        │ 74.93             │ true  │ 'published/high'  │
+│ 1       │ 'microMAGS cube'      │ 37.465            │ true  │ 'published/high'  │
+│ 2       │ 'Classic tetrahedron' │ 74.92999999999999 │ true  │ 'published/high'  │
+│ 3       │ 'Calibrated cube'     │ 74.90333333333334 │ true  │ 'user-calibrated' │
+└─────────┴───────────────────────┴───────────────────┴───────┴───────────────────┘
+9 profiles, 5 published inventories, global scale fitting, and hinge calibration validated in 15.4 ms.
+
+> magnamath-rebuilt@0.4.0 validate:advanced
+> node scripts/validate-advanced.mjs
+
+┌─────────┬──────────────────────────┬────────────┬────────────────┬────────┬─────────────┐
+│ (index) │ shape                    │ candidates │ uniqueExplored │ pareto │ overlapFree │
+├─────────┼──────────────────────────┼────────────┼────────────────┼────────┼─────────────┤
+│ 0       │ 'Tetrahedron'            │ 1          │ 5              │ 1      │ 5           │
+│ 1       │ 'Cube'                   │ 4          │ 55             │ 4      │ 55          │
+│ 2       │ 'Octahedron'             │ 1          │ 47             │ 1      │ 47          │
+│ 3       │ 'Dodecahedron'           │ 5          │ 244            │ 25     │ 244         │
+│ 4       │ 'Icosahedron'            │ 5          │ 245            │ 11     │ 245         │
+│ 5       │ 'Cuboctahedron'          │ 5          │ 203            │ 28     │ 203         │
+│ 6       │ 'Icosidodecahedron'      │ 5          │ 410            │ 62     │ 410         │
+│ 7       │ 'Truncated tetrahedron'  │ 5          │ 83             │ 6      │ 83          │
+│ 8       │ 'Truncated cube'         │ 5          │ 274            │ 20     │ 274         │
+│ 9       │ 'Truncated octahedron'   │ 5          │ 294            │ 36     │ 294         │
+│ 10      │ 'Truncated dodecahedron' │ 5          │ 414            │ 21     │ 305         │
+│ 11      │ 'Truncated icosahedron'  │ 5          │ 415            │ 42     │ 415         │
+│ 12      │ 'Pentagonal prism'       │ 5          │ 97             │ 18     │ 97          │
+│ 13      │ '5-antiprism'            │ 5          │ 148            │ 19     │ 148         │
+│ 14      │ 'Square pyramid'         │ 5          │ 12             │ 5      │ 12          │
+│ 15      │ 'Pentagonal bipyramid'   │ 5          │ 101            │ 8      │ 101         │
+└─────────┴──────────────────────────┴────────────┴────────────────┴────────┴─────────────┘
+┌─────────┬──────────────────────────────────┬─────────────────────────────────────┐
+│ (index) │ gate                             │ result                              │
+├─────────┼──────────────────────────────────┼─────────────────────────────────────┤
+│ 0       │ 'Exact compound panels'          │ '8 faces / 48 triangles'            │
+│ 1       │ 'Calibration session round-trip' │ '3 samples / 4 edge estimates'      │
+│ 2       │ 'Thickness screen'               │ '12 hinges / 100% modeled scenario' │
+│ 3       │ 'Print package'                  │ '2 pages / 7 tabs / 33490 bytes'    │
+│ 4       │ 'Schema documents'               │ '15 parsed / unique IDs'            │
+└─────────┴──────────────────────────────────┴─────────────────────────────────────┘
+Advanced workflow validation passed in 796.3 ms.
+
+> magnamath-rebuilt@0.4.0 validate:folding
+> node scripts/validate-folding.mjs
+
+{
+  "release": "0.4.0",
+  "catalogEntries": 16,
+  "modes": [
+    "simultaneous",
+    "root-out",
+    "leaves-in",
+    "assembly"
+  ],
+  "progressSamples": [
+    0,
+    0.08,
+    0.25,
+    0.5,
+    0.75,
+    0.92,
+    1
+  ],
+  "sampledPoses": 448,
+  "maximumHingeGap": 5.043883840194739e-15,
+  "maximumRigidityError": 8.548717289613705e-15,
+  "maximumClosureAtTarget": 2.608905996363235e-14,
+  "maximumTargetError": 2.042810365310288e-14,
+  "collisionScreen": {
+    "samples": 192,
+    "collisionFreeSamples": 128,
+    "note": "Discrete zero-thickness sample results are diagnostic only and are not a continuous-path proof."
+  },
+  "rows": [
+    {
+      "id": "tetrahedron",
+      "faces": 4,
+      "hinges": 3,
+      "netValid": true,
+      "maximumHingeGap": 4.841339424497384e-16,
+      "maximumRigidityError": 7.771561172376096e-16,
+      "closureAtTarget": 4.379755957367587e-16,
+      "targetMatrixError": 6.661338147750939e-16
+    },
+    {
+      "id": "cube",
+      "faces": 6,
+      "hinges": 5,
+      "netValid": true,
+      "maximumHingeGap": 3.387999773988765e-16,
+      "maximumRigidityError": 4.440892098500626e-16,
+      "closureAtTarget": 3.376611507232129e-16,
+      "targetMatrixError": 2.220446049250313e-16
+    },
+    {
+      "id": "octahedron",
+      "faces": 8,
+      "hinges": 7,
+      "netValid": true,
+      "maximumHingeGap": 6.753362264387351e-16,
+      "maximumRigidityError": 6.661338147750939e-16,
+      "closureAtTarget": 1.164411731669092e-15,
+      "targetMatrixError": 1.0353259805550468e-15
+    },
+    {
+      "id": "dodecahedron",
+      "faces": 12,
+      "hinges": 11,
+      "netValid": true,
+      "maximumHingeGap": 2.5146000066436358e-15,
+      "maximumRigidityError": 6.8833827526759706e-15,
+      "closureAtTarget": 9.035878689445466e-15,
+      "targetMatrixError": 4.440892098500626e-15
+    },
+    {
+      "id": "icosahedron",
+      "faces": 20,
+      "hinges": 19,
+      "netValid": true,
+      "maximumHingeGap": 1.1957467920563633e-15,
+      "maximumRigidityError": 5.662137425588298e-15,
+      "closureAtTarget": 5.3854400208818836e-15,
+      "targetMatrixError": 3.774758283725532e-15
+    },
+    {
+      "id": "cuboctahedron",
+      "faces": 14,
+      "hinges": 13,
+      "netValid": true,
+      "maximumHingeGap": 1.093444245831096e-15,
+      "maximumRigidityError": 2.1094237467877974e-15,
+      "closureAtTarget": 2.8543745438774784e-15,
+      "targetMatrixError": 1.7763568394002505e-15
+    },
+    {
+      "id": "icosidodecahedron",
+      "faces": 32,
+      "hinges": 31,
+      "netValid": true,
+      "maximumHingeGap": 2.4126604949548913e-15,
+      "maximumRigidityError": 4.9960036108132044e-15,
+      "closureAtTarget": 1.0185653390343062e-14,
+      "targetMatrixError": 8.548717289613705e-15
+    },
+    {
+      "id": "truncated-tetrahedron",
+      "faces": 8,
+      "hinges": 7,
+      "netValid": true,
+      "maximumHingeGap": 1.3520875901586307e-15,
+      "maximumRigidityError": 1.7763568394002505e-15,
+      "closureAtTarget": 3.607797795906347e-15,
+      "targetMatrixError": 1.7763568394002505e-15
+    },
+    {
+      "id": "truncated-cube",
+      "faces": 14,
+      "hinges": 13,
+      "netValid": true,
+      "maximumHingeGap": 2.328823463338185e-15,
+      "maximumRigidityError": 2.6645352591003757e-15,
+      "closureAtTarget": 6.489821012001455e-15,
+      "targetMatrixError": 3.1086244689504383e-15
+    },
+    {
+      "id": "truncated-octahedron",
+      "faces": 14,
+      "hinges": 13,
+      "netValid": true,
+      "maximumHingeGap": 2.2232198742534223e-15,
+      "maximumRigidityError": 5.218048215738236e-15,
+      "closureAtTarget": 7.828646949650264e-15,
+      "targetMatrixError": 7.105427357601002e-15
+    },
+    {
+      "id": "truncated-dodecahedron",
+      "faces": 32,
+      "hinges": 31,
+      "netValid": true,
+      "maximumHingeGap": 5.043883840194739e-15,
+      "maximumRigidityError": 7.327471962526033e-15,
+      "closureAtTarget": 2.3366700237255086e-14,
+      "targetMatrixError": 1.8207657603852567e-14
+    },
+    {
+      "id": "truncated-icosahedron",
+      "faces": 32,
+      "hinges": 31,
+      "netValid": true,
+      "maximumHingeGap": 4.070144838902081e-15,
+      "maximumRigidityError": 8.548717289613705e-15,
+      "closureAtTarget": 2.608905996363235e-14,
+      "targetMatrixError": 2.042810365310288e-14
+    },
+    {
+      "id": "prism",
+      "faces": 7,
+      "hinges": 6,
+      "netValid": true,
+      "maximumHingeGap": 8.523125797596417e-16,
+      "maximumRigidityError": 5.551115123125783e-16,
+      "closureAtTarget": 9.305364597889227e-16,
+      "targetMatrixError": 6.106226635438361e-16
+    },
+    {
+      "id": "antiprism",
+      "faces": 12,
+      "hinges": 11,
+      "netValid": true,
+      "maximumHingeGap": 1.0053497077208614e-15,
+      "maximumRigidityError": 2.7755575615628914e-15,
+      "closureAtTarget": 1.965949188660863e-15,
+      "targetMatrixError": 2.3314683517128287e-15
+    },
+    {
+      "id": "pyramid",
+      "faces": 5,
+      "hinges": 4,
+      "netValid": true,
+      "maximumHingeGap": 4.965098610774053e-16,
+      "maximumRigidityError": 9.992007221626409e-16,
+      "closureAtTarget": 1.2950288782773939e-15,
+      "targetMatrixError": 4.440892098500626e-16
+    },
+    {
+      "id": "bipyramid",
+      "faces": 10,
+      "hinges": 9,
+      "netValid": true,
+      "maximumHingeGap": 8.568339948907339e-16,
+      "maximumRigidityError": 1.7763568394002505e-15,
+      "closureAtTarget": 1.4602703977091186e-15,
+      "targetMatrixError": 1.1657341758564144e-15
+    }
+  ]
+}
+
+> magnamath-rebuilt@0.4.0 validate:json
+> node scripts/validate-json.mjs
+
+Parsed 22 JSON documents, 15 unique schema IDs, and 90 resolvable internal references.
+
+> magnamath-rebuilt@0.4.0 validate:examples
+> node scripts/validate-example-reproducibility.mjs
+
+Reproduced 15 example files byte-for-byte across two generation runs.
+
+================================================================================================
+Python JSON Schema validation
+================================================================================================
+
+> magnamath-rebuilt@0.4.0 validate:schemas:python
+> python3 scripts/validate-schemas.py
+
+Compiled 15 schemas and validated 7 example artifacts.
+
+================================================================================================
+JavaScript syntax sweep
+================================================================================================
+MagnaMath Rebuilt 0.4.0 JavaScript syntax sweep
+Generated: 2026-08-10
+
+PASS scripts/generate-examples.mjs
+PASS scripts/serve.mjs
+PASS scripts/validate-advanced.mjs
+PASS scripts/validate-catalog.mjs
+PASS scripts/validate-example-reproducibility.mjs
+PASS scripts/validate-folding.mjs
+PASS scripts/validate-json.mjs
+PASS scripts/validate-nets.mjs
+PASS scripts/validate-tiles.mjs
+PASS scripts/validate-workshop.mjs
+PASS src/core/calibration.js
+PASS src/core/catalog.js
+PASS src/core/compound.js
+PASS src/core/export.js
+PASS src/core/feasibility.js
+PASS src/core/folding-collision.js
+PASS src/core/folding-diagnostics.js
+PASS src/core/folding.js
+PASS src/core/math.js
+PASS src/core/motion.js
+PASS src/core/net-optimizer-client.js
+PASS src/core/net.js
+PASS src/core/polyhedron.js
+PASS src/core/print.js
+PASS src/core/project-store.js
+PASS src/core/rigid.js
+PASS src/core/tiles.js
+PASS src/core/transforms.js
+PASS src/core/version.js
+PASS src/core/zip.js
+PASS src/main.js
+PASS src/render/canvas-renderer.js
+PASS src/render/three-renderer.js
+PASS src/workers/net-optimizer.worker.js
+PASS test/advanced.test.js
+PASS test/folding.test.js
+PASS test/geometry.test.js
+PASS test/motion.test.js
+PASS test/tiles.test.js
+PASS test/workshop.test.js
+
+Passed: 40 files
+
+================================================================================================
+Python syntax sweep
+================================================================================================
+MagnaMath Rebuilt 0.4.0 Python syntax sweep
+Generated: 2026-08-10
+
+PASS scripts/package-release.py
+PASS scripts/render-mockups.py
+PASS scripts/validate-schemas.py
+
+Passed: 3 files
+
+================================================================================================
+Canvas browser smoke
+================================================================================================
+{
+  "url": "in-memory routed application",
+  "checks": {
+    "title": "Cube",
+    "foldPanelActive": true,
+    "renderer": "CANVAS PREVIEW MODE",
+    "progressOutput": "50% folded",
+    "hingeGap": "2.5e-16",
+    "hingeSelected": true,
+    "hingeKey": "1:2",
+    "hingePercent": "40%",
+    "sequence": "assembly",
+    "mobileProgress": "68% folded",
+    "mobileScrollWidth": 390,
+    "mobileClientWidth": 390,
+    "noHorizontalOverflow": true,
+    "consoleErrors": []
+  },
+  "console": [],
+  "pageErrors": []
+}
+
+================================================================================================
+Mockup render validation
+================================================================================================
+{
+  "release": "0.4.0",
+  "generated": "2026-08-10",
+  "renderer": "Playwright Chromium for seven local dependency-free HTML/CSS views; PIL contact sheet assembled from those renders",
+  "viewMockupCount": 7,
+  "overviewCount": 1,
+  "assetCount": 8,
+  "assets": [
+    {
+      "file": "design/mockups/png/00-ui-atlas-overview.png",
+      "width": 2200,
+      "height": 1660,
+      "mode": "RGB",
+      "sha256": "b0b2084862676b40c2a31925a51bdc622540ff8c380e23381cc0459c9dd76cc7",
+      "bytes": 1050362,
+      "role": "overview"
+    },
+    {
+      "file": "design/mockups/png/01-fold-studio.png",
+      "width": 1440,
+      "height": 900,
+      "mode": "RGB",
+      "sha256": "6033caeb735fc68459bb76873eba13b735fa1c5c110ad249eff2f0b6deab2d3d",
+      "bytes": 509824,
+      "role": "view-mockup"
+    },
+    {
+      "file": "design/mockups/png/02-explorer.png",
+      "width": 1440,
+      "height": 900,
+      "mode": "RGB",
+      "sha256": "d8d5d6aa43ecb9694f86c918b5ce2f079fbd56ec6f166beba1740bd88fa5156e",
+      "bytes": 481286,
+      "role": "view-mockup"
+    },
+    {
+      "file": "design/mockups/png/03-net-workshop.png",
+      "width": 1440,
+      "height": 900,
+      "mode": "RGB",
+      "sha256": "7b96b6a221a759ef2b1c66c8e75762934aba73f86ceb0be513fbff474c64035a",
+      "bytes": 453191,
+      "role": "view-mockup"
+    },
+    {
+      "file": "design/mockups/png/04-build-along.png",
+      "width": 1440,
+      "height": 900,
+      "mode": "RGB",
+      "sha256": "7b3b41b81d91de965ec91a2098f14d89fd2103222065cfa7ffa2f1178dd92fe7",
+      "bytes": 365086,
+      "role": "view-mockup"
+    },
+    {
+      "file": "design/mockups/png/05-learning-lab.png",
+      "width": 1440,
+      "height": 900,
+      "mode": "RGB",
+      "sha256": "2015eca08406c92a3377dc6523f4e36ade63163a71f7e12a2cf459985a8dc700",
+      "bytes": 346656,
+      "role": "view-mockup"
+    },
+    {
+      "file": "design/mockups/png/06-spatial-motion-lab.png",
+      "width": 1440,
+      "height": 900,
+      "mode": "RGB",
+      "sha256": "53e2689ca3d1911c3b9cdab710a7a1f94d5df6a5e35c8b1ea07d450088841e99",
+      "bytes": 465831,
+      "role": "view-mockup"
+    },
+    {
+      "file": "design/mockups/png/07-mobile-build.png",
+      "width": 390,
+      "height": 844,
+      "mode": "RGB",
+      "sha256": "a7422ae6dc619e3758918688ad10f72dd72254bc2e1e4b190adc1eda3a180fab",
+      "bytes": 139105,
+      "role": "view-mockup"
+    }
+  ]
+}
+
+================================================================================================
+Registry installation gate
+================================================================================================
+npm error code E404
+npm error 404 Not Found - GET https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/three
+npm error 404
+npm error 404  'three@0.185.1' is not in this registry.
+npm error 404
+npm error 404 Note that you can also install from a
+npm error 404 tarball, folder, http url, or git url.
+npm error A complete log of this run can be found in: [original-build-home]/.npm/_logs/2026-08-10T05_50_05_054Z-debug-0.log
+
+Exit code: 1
+

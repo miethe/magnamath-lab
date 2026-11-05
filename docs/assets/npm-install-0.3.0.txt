@@ -1,0 +1,3 @@
+Registry-enabled clean-install gate: NOT EXECUTED SUCCESSFULLY in this sandbox.
+
+The configured sandbox npm mirror returned E404 for the pinned dependency `three@0.185.1`. No package lock or partially resolved dependency tree was committed or included. Run `npm install && npm run build` in a registry-enabled environment as the first external CI gate.

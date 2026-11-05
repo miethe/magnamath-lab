@@ -1,0 +1,89 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://magnamath.app/schema/print-package/v1",
+  "title": "MagnaMath Print Package Manifest v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema",
+    "schemaVersion",
+    "generatedAt",
+    "appVersion",
+    "coreVersion",
+    "polyhedron",
+    "layout",
+    "tabs",
+    "warnings",
+    "files"
+  ],
+  "properties": {
+    "schema": {
+      "const": "https://magnamath.app/schema/print-package/v1"
+    },
+    "schemaVersion": {
+      "const": 1
+    },
+    "generatedAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "appVersion": {
+      "type": "string"
+    },
+    "coreVersion": {
+      "type": "string"
+    },
+    "polyhedron": {
+      "type": "object",
+      "required": [
+        "id",
+        "name"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "layout": {
+      "type": "object"
+    },
+    "tabs": {
+      "type": "object",
+      "required": [
+        "count",
+        "collisions",
+        "omitted"
+      ],
+      "properties": {
+        "count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "collisions": {
+          "type": "array"
+        },
+        "omitted": {
+          "type": "array"
+        }
+      },
+      "additionalProperties": false
+    },
+    "warnings": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "files": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

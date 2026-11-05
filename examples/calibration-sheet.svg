@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="215.9mm" height="279.4mm" viewBox="0 0 215.9 279.4">
+  <title>MagnaMath physical tile calibration sheet</title>
+  <style>
+    text { fill:#111827; font-family:ui-sans-serif,system-ui,sans-serif; }
+    .title { font-size:7px; font-weight:700; } .copy { font-size:3.5px; } .label { font-size:3.2px; text-anchor:middle; }
+    .tiny { font-size:2.4px; text-anchor:middle; } .measure { stroke:#111827; stroke-width:.35; } .tick { stroke:#475569; stroke-width:.25; }
+    .guide { fill:none; stroke:#2563eb; stroke-width:.3; stroke-dasharray:1.5 1; }
+  </style>
+  <rect width="100%" height="100%" fill="white"/>
+  <text x="20" y="20" class="title">MagnaMath tile calibration sheet</text>
+  <text x="20" y="28" class="copy">Print at 100% / Actual Size. Disable Fit to Page. Verify the 100 mm ruler before measuring a tile.</text>
+  <line x1="25" y1="45" x2="125" y2="45" class="measure"/><text x="75" y="42" class="label">100 mm verification line</text><line x1="25" y1="45" x2="25" y2="52" class="tick"/><text x="25" y="58" class="tiny">0</text><line x1="35" y1="45" x2="35" y2="49" class="tick"/><text x="35" y="58" class="tiny">10</text><line x1="45" y1="45" x2="45" y2="49" class="tick"/><text x="45" y="58" class="tiny">20</text><line x1="55" y1="45" x2="55" y2="49" class="tick"/><text x="55" y="58" class="tiny">30</text><line x1="65" y1="45" x2="65" y2="49" class="tick"/><text x="65" y="58" class="tiny">40</text><line x1="75" y1="45" x2="75" y2="52" class="tick"/><text x="75" y="58" class="tiny">50</text><line x1="85" y1="45" x2="85" y2="49" class="tick"/><text x="85" y="58" class="tiny">60</text><line x1="95" y1="45" x2="95" y2="49" class="tick"/><text x="95" y="58" class="tiny">70</text><line x1="105" y1="45" x2="105" y2="49" class="tick"/><text x="105" y="58" class="tiny">80</text><line x1="115" y1="45" x2="115" y2="49" class="tick"/><text x="115" y="58" class="tiny">90</text><line x1="125" y1="45" x2="125" y2="52" class="tick"/><text x="125" y="58" class="tiny">100</text>
+  <rect x="25" y="75" width="74.93" height="74.93" class="guide"/>
+  <text x="62.465" y="156.93" class="label">Nominal standard square guide · 74.93 mm</text>
+  <rect x="125" y="75" width="37.465" height="37.465" class="guide"/>
+  <text x="143.73250000000002" y="119.465" class="label">Nominal micro guide · 37.465 mm</text>
+  <text x="20" y="178" class="copy">Record three or more samples with calipers when possible. Measure edge-to-edge, thickness, corner radius, and the stable interior-angle range separately.</text>
+  <text x="20" y="190" class="copy">Sample 1: ____________________   Sample 2: ____________________   Sample 3: ____________________</text>
+  <text x="20" y="202" class="copy">Thickness: ___________________   Corner radius: _______________   Tool/device: __________________</text>
+  <text x="20" y="214" class="copy">Stable hinge range: __________° to __________°   Notes: __________________________________________</text>
+</svg>

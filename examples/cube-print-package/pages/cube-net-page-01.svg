@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="215.9mm" height="279.4mm" viewBox="0 0 215.9 279.4" role="img" aria-labelledby="page-1-title">
+  <title id="page-1-title">Cube net · page 1 of 2</title>
+  <metadata>{&quot;generator&quot;:&quot;MagnaMath Rebuilt&quot;,&quot;appVersion&quot;:&quot;0.4.0&quot;,&quot;coreVersion&quot;:&quot;0.4.0&quot;,&quot;polyhedronId&quot;:&quot;cube&quot;,&quot;page&quot;:1,&quot;pageCount&quot;:2,&quot;printScale&quot;:1,&quot;trueScale&quot;:true,&quot;modelUnitMm&quot;:74.93,&quot;tabWarnings&quot;:0}</metadata>
+  <defs><clipPath id="page-1-clip"><rect x="10" y="10" width="195.9" height="259.4"/></clipPath></defs>
+  <style>
+    .page-bg{fill:#fff}.face{fill:#eef4fb;stroke:none}.face-label{font:600 3.2px ui-sans-serif,system-ui,sans-serif;text-anchor:middle;dominant-baseline:central;fill:#1f2937}
+    .cut,.tab-cut{stroke:#111827;stroke-width:.28;fill:none;stroke-linecap:round}.fold,.tab-fold{stroke:#64748b;stroke-width:.22;stroke-dasharray:1.7 1.25;fill:none}.compound-seam{stroke:#64748b;stroke-width:.18;stroke-dasharray:.8 .6;fill:none}
+    .tab-fill{fill:#f8fafc;stroke:none}.tab-warning-fill{fill:#fff1f2}.tab-warning{stroke:#be123c}.edge-label{font:500 2.3px ui-monospace,SFMono-Regular,monospace;text-anchor:middle;fill:#334155;paint-order:stroke;stroke:#fff;stroke-width:1.2}
+    .crop-mark,.registration{stroke:#475569;stroke-width:.18;fill:none}.page-label{font:500 2.5px ui-sans-serif,system-ui,sans-serif;fill:#64748b;text-anchor:middle}
+    .calibration-ruler{stroke:#111827;stroke-width:.2;fill:none}.ruler-number{font:500 1.65px ui-monospace,SFMono-Regular,monospace;text-anchor:middle;fill:#334155;stroke:none}.ruler-label{font:500 1.85px ui-sans-serif,system-ui,sans-serif;text-anchor:middle;fill:#334155;stroke:none}
+  </style>
+  <rect class="page-bg" width="100%" height="100%"/>
+  <g clip-path="url(#page-1-clip)" transform="translate(10 10)">
+    <polygon points="224.79,74.93 149.86,74.93 149.86,149.86 224.79,149.86" class="face face-square"/><text x="187.325" y="112.395" class="face-label">1</text>
+<polygon points="299.72,74.93 299.72,149.86 374.65,149.86 374.65,74.93" class="face face-square"/><text x="337.185" y="112.395" class="face-label">2</text>
+<polygon points="224.79,74.93 224.79,149.86 299.72,149.86 299.72,74.93" class="face face-square"/><text x="262.255" y="112.395" class="face-label">3</text>
+<polygon points="0,74.93 74.93,74.93 74.93,0 0,0" class="face face-square"/><text x="37.465" y="37.465" class="face-label">4</text>
+<polygon points="74.93,74.93 149.86,74.93 149.86,0 74.93,0" class="face face-square"/><text x="112.395" y="37.465" class="face-label">5</text>
+<polygon points="149.86,74.93 224.79,74.93 224.79,0 149.86,0" class="face face-square"/><text x="187.325" y="37.465" class="face-label">6</text>
+
+
+
+
+<polygon points="299.72,74.93 224.79,74.93 230.55,66.93 293.96,66.93" class="tab-fill"/><line x1="299.72" y1="74.93" x2="293.96" y2="66.93" class="tab-cut" /><line x1="293.96" y1="66.93" x2="230.55" y2="66.93" class="tab-cut" /><line x1="230.55" y1="66.93" x2="224.79" y2="74.93" class="tab-cut" /><line x1="299.72" y1="74.93" x2="224.79" y2="74.93" class="tab-fold" />
+<polygon points="149.86,149.86 224.79,149.86 219.03,157.86 155.62,157.86" class="tab-fill"/><line x1="149.86" y1="149.86" x2="155.62" y2="157.86" class="tab-cut" /><line x1="155.62" y1="157.86" x2="219.03" y2="157.86" class="tab-cut" /><line x1="219.03" y1="157.86" x2="224.79" y2="149.86" class="tab-cut" /><line x1="149.86" y1="149.86" x2="224.79" y2="149.86" class="tab-fold" />
+<polygon points="224.79,149.86 299.72,149.86 293.96,157.86 230.55,157.86" class="tab-fill"/><line x1="224.79" y1="149.86" x2="230.55" y2="157.86" class="tab-cut" /><line x1="230.55" y1="157.86" x2="293.96" y2="157.86" class="tab-cut" /><line x1="293.96" y1="157.86" x2="299.72" y2="149.86" class="tab-cut" /><line x1="224.79" y1="149.86" x2="299.72" y2="149.86" class="tab-fold" />
+<polygon points="149.86,74.93 149.86,149.86 141.86,144.1 141.86,80.69" class="tab-fill"/><line x1="149.86" y1="74.93" x2="141.86" y2="80.69" class="tab-cut" /><line x1="141.86" y1="80.69" x2="141.86" y2="144.1" class="tab-cut" /><line x1="141.86" y1="144.1" x2="149.86" y2="149.86" class="tab-cut" /><line x1="149.86" y1="74.93" x2="149.86" y2="149.86" class="tab-fold" />
+<polygon points="374.65,74.93 299.72,74.93 305.48,66.93 368.89,66.93" class="tab-fill"/><line x1="374.65" y1="74.93" x2="368.89" y2="66.93" class="tab-cut" /><line x1="368.89" y1="66.93" x2="305.48" y2="66.93" class="tab-cut" /><line x1="305.48" y1="66.93" x2="299.72" y2="74.93" class="tab-cut" /><line x1="374.65" y1="74.93" x2="299.72" y2="74.93" class="tab-fold" />
+<polygon points="299.72,149.86 374.65,149.86 368.89,157.86 305.48,157.86" class="tab-fill"/><line x1="299.72" y1="149.86" x2="305.48" y2="157.86" class="tab-cut" /><line x1="305.48" y1="157.86" x2="368.89" y2="157.86" class="tab-cut" /><line x1="368.89" y1="157.86" x2="374.65" y2="149.86" class="tab-cut" /><line x1="299.72" y1="149.86" x2="374.65" y2="149.86" class="tab-fold" />
+<polygon points="374.65,149.86 374.65,74.93 382.65,80.69 382.65,144.1" class="tab-fill"/><line x1="374.65" y1="149.86" x2="382.65" y2="144.1" class="tab-cut" /><line x1="382.65" y1="144.1" x2="382.65" y2="80.69" class="tab-cut" /><line x1="382.65" y1="80.69" x2="374.65" y2="74.93" class="tab-cut" /><line x1="374.65" y1="149.86" x2="374.65" y2="74.93" class="tab-fold" />
+
+
+
+
+
+
+<line x1="0" y1="74.93" x2="74.93" y2="74.93" class="cut" data-edge-key="1:2"/><text x="37.465" y="73.53" class="edge-label">C2</text>
+<line x1="74.93" y1="0" x2="0" y2="0" class="cut" data-edge-key="5:6"/><text x="37.465" y="-1.4" class="edge-label">C6</text>
+<line x1="0" y1="0" x2="0" y2="74.93" class="cut" data-edge-key="1:5"/><text x="0" y="36.065" class="edge-label">C3</text>
+<line x1="74.93" y1="74.93" x2="149.86" y2="74.93" class="cut" data-edge-key="2:3"/><text x="112.395" y="73.53" class="edge-label">C4</text>
+<line x1="149.86" y1="0" x2="74.93" y2="0" class="cut" data-edge-key="6:7"/><text x="112.395" y="-1.4" class="edge-label">C7</text>
+<line x1="224.79" y1="74.93" x2="224.79" y2="0" class="cut" data-edge-key="0:4"/><text x="224.79" y="36.065" class="edge-label">C1</text>
+<line x1="224.79" y1="0" x2="149.86" y2="0" class="cut" data-edge-key="4:7"/><text x="187.325" y="-1.4" class="edge-label">C5</text><line x1="224.79" y1="74.93" x2="149.86" y2="74.93" class="fold" data-edge-key="0:3"/>
+<line x1="224.79" y1="149.86" x2="224.79" y2="74.93" class="fold" data-edge-key="0:1"/>
+<line x1="299.72" y1="74.93" x2="299.72" y2="149.86" class="fold" data-edge-key="4:5"/>
+<line x1="74.93" y1="74.93" x2="74.93" y2="0" class="fold" data-edge-key="2:6"/>
+<line x1="149.86" y1="74.93" x2="149.86" y2="0" class="fold" data-edge-key="3:7"/>
+  </g>
+
+    <path class="crop-mark" d="M6,10h3 M10,6v3
+      M209.9,10h-3 M205.9,6v3
+      M6,269.4h3 M10,273.4v-3
+      M209.9,269.4h-3 M205.9,273.4v-3"/>
+    <g class="registration"><circle cx="14" cy="265.4" r="2"/><path d="M11,265.4h6M14,262.4v6"/></g><g class="calibration-ruler" aria-label="50 millimetre print verification ruler"><path d="M10,4.8h50"/><path d="M10,3.55v2.5"/><text x="10" y="3" class="ruler-number">0</text><path d="M20,3.55v2.5"/><text x="20" y="3" class="ruler-number">10</text><path d="M30,3.55v2.5"/><text x="30" y="3" class="ruler-number">20</text><path d="M40,3.55v2.5"/><text x="40" y="3" class="ruler-number">30</text><path d="M50,3.55v2.5"/><text x="50" y="3" class="ruler-number">40</text><path d="M60,3.55v2.5"/><text x="60" y="3" class="ruler-number">50</text><text x="35" y="8.1" class="ruler-label">50 mm print check</text></g>
+  <text x="107.95" y="275.9" class="page-label">Cube · 1/2 · 100% actual size</text>
+</svg>

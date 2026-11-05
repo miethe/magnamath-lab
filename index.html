@@ -1,0 +1,530 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#07111f" />
+  <meta name="description" content="Explore exact polyhedra, fold rigid nets from 2D to 3D, hand-edit overlap-aware nets, calibrate magnetic tiles, and build along physically." />
+  <title>MagnaMath — Shape Lab</title>
+  <link rel="icon" href="/icons/icon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="/src/style.css" />
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.185.1/build/three.module.js",
+        "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.185.1/examples/jsm/"
+      }
+    }
+  </script>
+</head>
+<body>
+  <div id="app" class="app-shell">
+    <header class="app-header">
+      <a class="brand" href="#" aria-label="MagnaMath home">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 48 48"><path d="M24 4 41 14v20L24 44 7 34V14Z"/><path d="m7 14 17 10 17-10M24 24v20"/></svg>
+        </span>
+        <span><strong>MagnaMath</strong><small>Shape Lab</small></span>
+      </a>
+
+      <nav class="mode-switcher" aria-label="Learning mode">
+        <button class="mode-button is-active" data-mode="explore" type="button"><span>Explore</span></button>
+        <button class="mode-button" data-mode="fold" type="button"><span>Fold</span></button>
+        <button class="mode-button" data-mode="workshop" type="button"><span>Workshop</span></button>
+        <button class="mode-button" data-mode="build" type="button"><span>Build</span></button>
+        <button class="mode-button" data-mode="learn" type="button"><span>Learn</span></button>
+      </nav>
+
+      <div class="header-status">
+        <button id="kids-toggle" class="icon-button kids-toggle" type="button" aria-pressed="false" title="Kids mode" aria-label="Kids mode">
+          <svg viewBox="0 0 24 24"><path d="M12 3 3 8l9 5 9-5Z"/><path d="M3 8v8l9 5 9-5V8"/></svg>
+          <span class="kids-toggle-text">Kids</span>
+        </button>
+        <span id="renderer-status" class="status-pill">Starting renderer…</span>
+        <button id="about-button" class="icon-button" type="button" aria-label="About this build" title="About">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7.5h.01"/></svg>
+        </button>
+      </div>
+    </header>
+
+    <main class="workspace">
+      <aside class="panel control-panel" aria-label="Shape controls">
+        <section class="panel-section panel-section--intro">
+          <p class="eyebrow">Exact geometry catalog</p>
+          <label class="field-label" for="shape-select">Solid</label>
+          <select id="shape-select" class="field-select"></select>
+          <div id="parameter-field" class="parameter-field" hidden>
+            <div class="field-row">
+              <label id="parameter-label" class="field-label" for="shape-parameter">Sides</label>
+              <output id="parameter-output" for="shape-parameter">5</output>
+            </div>
+            <input id="shape-parameter" class="range" type="range" min="3" max="12" value="5" step="1" />
+          </div>
+          <p id="shape-description" class="shape-description"></p>
+        </section>
+
+        <section class="panel-section">
+          <div class="section-heading">
+            <div><p class="eyebrow">Topology</p><h2>Measured, not guessed</h2></div>
+            <span id="validation-badge" class="validation-badge">Checking</span>
+          </div>
+          <div class="metric-grid">
+            <article><span>Vertices</span><strong id="metric-vertices">—</strong><small>V</small></article>
+            <article><span>Edges</span><strong id="metric-edges">—</strong><small>E</small></article>
+            <article><span>Faces</span><strong id="metric-faces">—</strong><small>F</small></article>
+            <article><span>Euler</span><strong id="metric-euler">—</strong><small>χ</small></article>
+          </div>
+          <dl class="measure-list">
+            <div><dt>Surface area</dt><dd id="metric-area">—</dd></div>
+            <div><dt>Volume</dt><dd id="metric-volume">—</dd></div>
+            <div><dt>Genus</dt><dd id="metric-genus">—</dd></div>
+            <div><dt>Edge spread</dt><dd id="metric-edge-spread">—</dd></div>
+          </dl>
+        </section>
+
+        <section class="panel-section">
+          <div class="section-heading section-heading--compact">
+            <div><p class="eyebrow">Face inventory</p><h2>What it is made from</h2></div>
+          </div>
+          <div id="face-kind-list" class="face-kind-list"></div>
+        </section>
+      </aside>
+
+      <section class="stage-panel" aria-label="Interactive shape viewport">
+        <div class="stage-topbar">
+          <div>
+            <p id="shape-family" class="eyebrow">Platonic solid</p>
+            <h1 id="shape-title">Cube</h1>
+          </div>
+          <div class="stage-badges">
+            <span id="net-validity" class="stage-badge">Overlap-free net</span>
+            <span id="build-status" class="stage-badge stage-badge--accent">Build-ready</span>
+          </div>
+        </div>
+
+        <!-- Kids mode surface. Hidden entirely unless <body> carries .is-kids. -->
+        <div id="kids-bar" class="kids-bar" hidden>
+          <p id="kids-shape-name" class="kids-shape-headline"></p>
+          <h2 class="kids-title">Pick a shape</h2>
+          <div id="kids-shapes" class="kids-shapes" role="group" aria-label="Pick a shape"></div>
+        </div>
+        <div id="kids-caption" class="kids-caption" hidden aria-live="polite"></div>
+
+        <div class="spatial-toolbar" role="toolbar" aria-label="3D interaction tools">
+          <button id="tool-inspect" class="spatial-tool is-active" type="button" aria-pressed="true" title="Inspect faces">Inspect</button>
+          <button id="tool-hinge" class="spatial-tool" type="button" aria-pressed="false" title="Select and pose hinges">Hinges</button>
+          <button id="tool-move" class="spatial-tool" type="button" aria-pressed="false" title="Move the complete model in 3D space">Move</button>
+          <span class="spatial-divider"></span>
+          <select id="transform-mode" class="spatial-select" aria-label="Transform mode" disabled>
+            <option value="translate">Translate</option>
+            <option value="rotate">Rotate</option>
+          </select>
+          <button id="reset-root" class="spatial-tool spatial-tool--icon" type="button" title="Reset model pose" aria-label="Reset model pose" disabled>↺</button>
+        </div>
+
+        <div id="viewport" class="viewport">
+          <div id="viewport-loader" class="viewport-loader"><span></span><p>Solving geometry…</p></div>
+          <div class="viewport-hint"><span>Drag to orbit</span><i></i><span>Scroll to zoom</span><i></i><span>Select a face or hinge</span></div>
+          <div id="kids-celebrate" class="kids-celebrate" hidden aria-live="polite"><span></span></div>
+        </div>
+
+        <!-- Kids mode hero control: one very large button that folds and unfolds. -->
+        <div id="kids-console" class="kids-console" hidden>
+          <button id="kids-fold" class="kids-fold" type="button">
+            <span class="kids-fold-label">Fold it up!</span>
+          </button>
+        </div>
+
+        <div class="fold-console">
+          <button id="fold-play" class="round-action" type="button" aria-label="Animate fold and unfold">
+            <svg class="play-icon" viewBox="0 0 24 24"><path d="m8 5 11 7-11 7Z"/></svg>
+            <svg class="pause-icon" viewBox="0 0 24 24"><path d="M8 5v14M16 5v14"/></svg>
+          </button>
+          <div class="fold-control">
+            <div class="fold-labels"><span>2D net</span><output id="fold-output">0% folded</output><span>3D solid</span></div>
+            <input id="fold-slider" class="range range--hero" type="range" min="0" max="100" value="0" step="1" aria-label="Progress from two-dimensional net to three-dimensional solid" />
+          </div>
+          <button id="reset-view" class="secondary-button secondary-button--icon" type="button" title="Reset view" aria-label="Reset view">
+            <svg viewBox="0 0 24 24"><path d="M4 7v5h5M20 17v-5h-5"/><path d="M6.2 17A8 8 0 0 0 19 12M17.8 7A8 8 0 0 0 5 12"/></svg>
+          </button>
+        </div>
+      </section>
+
+      <aside class="panel inspector-panel" aria-label="Net, workshop, and learning inspector">
+        <section class="panel-section net-section">
+          <div class="section-heading">
+            <div><p class="eyebrow">Living net</p><h2 id="net-heading">Cut, fold, understand</h2></div>
+            <button id="alternate-net" class="icon-button" type="button" title="Search another net with the current locks" aria-label="Search another net">
+              <svg viewBox="0 0 24 24"><path d="M20 7h-5V2M4 17h5v5"/><path d="M18.5 12a7 7 0 0 0-11.9-5L5 8.5M5.5 12a7 7 0 0 0 11.9 5l1.6-1.5"/></svg>
+            </button>
+          </div>
+          <div id="net-preview" class="net-preview" aria-label="Interactive two-dimensional net"></div>
+          <div class="net-legend">
+            <span><i class="legend-cut"></i>Cut</span>
+            <span><i class="legend-fold"></i>Fold</span>
+            <span><i class="legend-lock"></i>Locked</span>
+            <span id="net-score">Seed 1</span>
+          </div>
+          <div class="export-row">
+            <button id="export-svg" class="secondary-button" type="button">Quick SVG</button>
+            <button id="export-print" class="secondary-button" type="button">Print package</button>
+            <button id="export-json" class="secondary-button" type="button">Export project</button>
+            <button id="import-project" class="secondary-button" type="button">Import project</button>
+            <button id="save-project" class="secondary-button" type="button">Save local</button>
+            <button id="open-projects" class="secondary-button" type="button">Projects</button>
+            <input id="project-import-file" type="file" accept="application/json,.json" hidden />
+          </div>
+        </section>
+
+        <section id="explore-panel" class="mode-panel is-active" data-panel="explore">
+          <div class="section-heading section-heading--compact">
+            <div><p class="eyebrow">Face lens</p><h2>Inspect one polygon</h2></div>
+          </div>
+          <div id="face-empty" class="empty-state"><span>01</span><p>Select any face in 3D or on the net.</p></div>
+          <div id="face-details" class="face-details" hidden>
+            <div class="face-title-row"><span id="face-number">Face 1</span><strong id="face-name">Square</strong></div>
+            <dl class="measure-list measure-list--dense">
+              <div><dt>Sides</dt><dd id="face-sides">4</dd></div>
+              <div><dt>Area</dt><dd id="face-area">1.00 u²</dd></div>
+              <div><dt>Tile match</dt><dd id="face-tile">Square</dd></div>
+              <div><dt>Regular</dt><dd id="face-regular">Yes</dd></div>
+            </dl>
+            <p id="face-match-note" class="micro-note"></p>
+          </div>
+        </section>
+
+        <section id="fold-panel" class="mode-panel" data-panel="fold">
+          <div class="section-heading section-heading--compact">
+            <div><p class="eyebrow">Rigid folding studio</p><h2>Animate exact hinges</h2></div>
+            <span id="fold-engine-badge" class="validation-badge">Tree kinematics</span>
+          </div>
+          <p class="panel-copy">Every mathematical face stays rigid. The current net tree supplies one rotational degree of freedom per fold edge, while cut edges close only at the target solid.</p>
+
+          <div class="fold-settings-grid">
+            <label><span>Motion sequence</span><select id="fold-sequence" class="field-select field-select--compact">
+              <option value="simultaneous">Together</option>
+              <option value="root-out">Root outward</option>
+              <option value="leaves-in">Leaves inward</option>
+              <option value="assembly">Build order</option>
+            </select></label>
+            <label><span>Playback speed</span><select id="fold-speed" class="field-select field-select--compact">
+              <option value="0.5">0.5×</option><option value="1">1×</option><option value="1.5">1.5×</option><option value="2">2×</option>
+            </select></label>
+          </div>
+          <label class="field-label field-label--with-output" for="hinge-duration"><span>Sequence overlap</span><output id="hinge-duration-output">58%</output></label>
+          <input id="hinge-duration" class="range" type="range" min="10" max="100" value="58" step="1" />
+
+          <div class="fold-toggle-row">
+            <label class="switch-control"><input id="show-hinges" type="checkbox" checked /><span></span><em>Show hinge axes</em></label>
+            <label class="switch-control"><input id="collision-screen" type="checkbox" checked /><span></span><em>Sample collision screen</em></label>
+          </div>
+
+          <article id="hinge-empty" class="empty-state empty-state--compact"><span>↻</span><p>Choose the Hinges tool, then select an axis in 3D to inspect or manually pose it.</p></article>
+          <article id="hinge-details" class="hinge-card" hidden>
+            <div class="hinge-card__heading"><div><span>Selected hinge</span><strong id="hinge-key">0:1</strong></div><em id="hinge-direction">Positive fold</em></div>
+            <dl class="measure-list measure-list--dense">
+              <div><dt>Faces</dt><dd id="hinge-faces">1 → 2</dd></div>
+              <div><dt>Target rotation</dt><dd id="hinge-target-angle">90°</dd></div>
+              <div><dt>Current rotation</dt><dd id="hinge-current-angle">0°</dd></div>
+              <div><dt>Timeline window</dt><dd id="hinge-window">0–100%</dd></div>
+            </dl>
+            <label class="field-label field-label--with-output" for="hinge-angle"><span>Manual hinge pose</span><output id="hinge-angle-output">0%</output></label>
+            <input id="hinge-angle" class="range" type="range" min="0" max="100" value="0" step="1" />
+            <div class="hinge-actions"><button id="hinge-follow-timeline" class="secondary-button" type="button">Follow timeline</button><button id="hinge-target" class="primary-button" type="button">Set to target</button></div>
+          </article>
+
+          <div class="diagnostic-grid fold-diagnostic-grid">
+            <article><span>Hinge gap</span><strong id="fold-diagnostic-hinge">—</strong><small>must stay ≈0</small></article>
+            <article><span>Closure gap</span><strong id="fold-diagnostic-closure">—</strong><small>cut edges</small></article>
+            <article><span>Collisions</span><strong id="fold-diagnostic-collisions">—</strong><small>sample only</small></article>
+            <article><span>Target error</span><strong id="fold-diagnostic-target">—</strong><small>matrix fit</small></article>
+          </div>
+
+          <div class="fold-timeline-section">
+            <div class="candidate-heading"><div><p class="eyebrow">Motion map</p><h3>Hinge timeline</h3></div><small id="fold-timeline-summary">—</small></div>
+            <div id="fold-timeline" class="fold-timeline"></div>
+          </div>
+          <p class="micro-note">The current collision check is a discrete zero-thickness sample, not a proof of a continuous, thick-panel, collision-free folding path.</p>
+        </section>
+
+        <section id="workshop-panel" class="mode-panel" data-panel="workshop">
+          <div class="section-heading section-heading--compact">
+            <div><p class="eyebrow">Manual net workshop</p><h2>Perform edge surgery</h2></div>
+          </div>
+          <p class="panel-copy">Select an edge, then make it a cut or fold. MagnaMath automatically exchanges one other hinge so the face graph remains a connected spanning tree.</p>
+
+          <label class="field-label" for="net-objective">Optimization objective</label>
+          <select id="net-objective" class="field-select field-select--compact"></select>
+
+          <div class="workshop-actions workshop-actions--top">
+            <button id="workshop-undo" class="secondary-button" type="button">Undo</button>
+            <button id="workshop-redo" class="secondary-button" type="button">Redo</button>
+            <button id="workshop-optimize" class="primary-button" type="button">Explore options</button>
+          </div>
+
+          <div id="optimizer-status" class="optimizer-status" hidden aria-live="polite">
+            <div><span id="optimizer-phase">Searching trees…</span><strong id="optimizer-progress-label">0%</strong></div>
+            <div class="optimizer-progress"><i id="optimizer-progress"></i></div>
+            <button id="optimizer-cancel" class="secondary-button" type="button">Cancel</button>
+          </div>
+          <div id="net-candidate-section" class="candidate-section" hidden>
+            <div class="candidate-heading"><div><p class="eyebrow">Pareto workshop</p><h3>Alternative nets</h3></div><small id="candidate-summary"></small></div>
+            <div id="net-candidate-gallery" class="net-candidate-gallery"></div>
+          </div>
+
+          <div id="edge-empty" class="empty-state empty-state--compact"><span>↔</span><p>Tap a cut or fold line in the net to inspect and edit it.</p></div>
+          <article id="edge-details" class="edge-card" hidden>
+            <div class="edge-card__heading">
+              <div><span id="edge-state" class="edge-state">Fold edge</span><strong id="edge-key">0:1</strong></div>
+              <button id="edge-lock" class="icon-button" type="button" aria-label="Lock edge choice" title="Lock edge choice">
+                <svg viewBox="0 0 24 24"><rect x="5" y="10" width="14" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>
+              </button>
+            </div>
+            <dl class="measure-list measure-list--dense">
+              <div><dt>Adjacent faces</dt><dd id="edge-faces">1 ↔ 2</dd></div>
+              <div><dt>Target angle</dt><dd id="edge-angle">90°</dd></div>
+              <div><dt>Constraint</dt><dd id="edge-constraint">Unlocked</dd></div>
+            </dl>
+            <div class="workshop-actions">
+              <button id="edge-make-cut" class="secondary-button" type="button">Make cut</button>
+              <button id="edge-make-fold" class="primary-button" type="button">Make fold</button>
+            </div>
+          </article>
+
+          <button id="set-root-face" class="secondary-button full-button" type="button">Use selected face as build anchor</button>
+
+          <div class="diagnostic-grid">
+            <article><span>Overlaps</span><strong id="diagnostic-overlaps">0</strong></article>
+            <article><span>Overlap area</span><strong id="diagnostic-overlap-area">0</strong></article>
+            <article><span>Tree depth</span><strong id="diagnostic-depth">0</strong></article>
+            <article><span>Locked edges</span><strong id="diagnostic-locks">0</strong></article>
+          </div>
+          <p id="workshop-message" class="micro-note" aria-live="polite"></p>
+        </section>
+
+        <section id="build-panel" class="mode-panel" data-panel="build">
+          <div class="section-heading section-heading--compact">
+            <div><p class="eyebrow">Physical play</p><h2>Calibrated tile system</h2></div>
+            <button id="manage-profiles" class="icon-button" type="button" title="Manage physical profiles" aria-label="Manage physical profiles">
+              <svg viewBox="0 0 24 24"><path d="M12 3v3M12 18v3M3 12h3M18 12h3"/><circle cx="12" cy="12" r="4"/><path d="m5.6 5.6 2.1 2.1m8.6 8.6 2.1 2.1m0-12.8-2.1 2.1m-8.6 8.6-2.1 2.1"/></svg>
+            </button>
+          </div>
+
+          <div class="form-grid form-grid--two">
+            <div>
+              <label class="field-label" for="inventory-preset">Inventory</label>
+              <select id="inventory-preset" class="field-select field-select--compact"></select>
+            </div>
+            <div>
+              <label class="field-label" for="tile-family">Tile scale family</label>
+              <select id="tile-family" class="field-select field-select--compact">
+                <option value="standard">Classic</option>
+                <option value="micro">microMAGS</option>
+                <option value="both">Both</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-grid form-grid--scale">
+            <div>
+              <label class="field-label" for="scale-mode">Global model scale</label>
+              <select id="scale-mode" class="field-select field-select--compact">
+                <option value="auto">Auto-fit inventory</option>
+                <option value="standard">74.93 mm / unit</option>
+                <option value="micro">37.465 mm / unit</option>
+                <option value="custom">Custom</option>
+              </select>
+            </div>
+            <div id="custom-scale-field" hidden>
+              <label class="field-label" for="custom-scale">mm / unit</label>
+              <input id="custom-scale" class="field-input" type="number" min="1" max="1000" step="0.001" value="74.93" />
+            </div>
+          </div>
+
+          <div class="form-grid form-grid--two">
+            <div>
+              <label class="field-label" for="compound-mode">Compound faces</label>
+              <select id="compound-mode" class="field-select field-select--compact">
+                <option value="exact">Exact safe recipes</option>
+                <option value="off">Direct pieces only</option>
+              </select>
+            </div>
+            <div>
+              <label class="field-label" for="clearance-assumption">Thickness screen</label>
+              <select id="clearance-assumption" class="field-select field-select--compact">
+                <option value="measured-only">Measured hinge axes only</option>
+                <option value="surface-axis">Surface-axis scenario</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="physical-summary physical-summary--wide">
+            <article><span>Selected scale</span><strong id="physical-scale">—</strong></article>
+            <article><span>Profile confidence</span><strong id="physical-confidence">—</strong></article>
+            <article><span>Verified hinges</span><strong id="physical-hinges">—</strong></article>
+            <article><span>Compound panels</span><strong id="physical-compound">—</strong></article>
+            <article><span>Modeled clearances</span><strong id="physical-clearance">—</strong></article>
+          </div>
+
+          <button id="calibrate-tiles" class="primary-button full-button" type="button">Calibrate a physical tile</button>
+          <div id="inventory-grid" class="inventory-grid"></div>
+          <div id="bom" class="bom"></div>
+          <div class="build-step-card">
+            <div class="build-step-progress"><span id="step-count">Step 1 of 6</span><div><i id="step-progress"></i></div></div>
+            <p id="step-kicker" class="eyebrow">Anchor face</p>
+            <h3 id="step-title">Start with a square</h3>
+            <p id="step-instruction"></p>
+            <div class="step-actions">
+              <button id="step-previous" class="secondary-button" type="button">Previous</button>
+              <button id="step-next" class="primary-button" type="button">Next step</button>
+            </div>
+          </div>
+        </section>
+
+        <section id="learn-panel" class="mode-panel" data-panel="learn">
+          <div class="section-heading section-heading--compact">
+            <div><p class="eyebrow">Concept studio</p><h2>See the theorem move</h2></div>
+          </div>
+          <article class="lesson-card lesson-card--formula">
+            <span>Euler characteristic</span>
+            <strong><i id="lesson-v">8</i> − <i id="lesson-e">12</i> + <i id="lesson-f">6</i> = <b id="lesson-chi">2</b></strong>
+            <p id="lesson-euler-copy">For a closed, connected, sphere-like polyhedron, V − E + F equals 2.</p>
+          </article>
+          <article class="lesson-card">
+            <span>Why a net works</span>
+            <p>A net keeps a spanning tree of face-to-face hinges and cuts the remaining shared edges. The workshop lets you exchange tree edges without breaking that invariant.</p>
+          </article>
+          <article class="lesson-card lesson-card--challenge">
+            <span>Prediction check</span>
+            <p>Before changing the shape: what should χ be for another closed convex polyhedron?</p>
+            <div class="choice-row">
+              <button type="button" data-euler-answer="0">0</button>
+              <button type="button" data-euler-answer="1">1</button>
+              <button type="button" data-euler-answer="2">2</button>
+              <button type="button" data-euler-answer="varies">It varies</button>
+            </div>
+            <p id="challenge-feedback" class="challenge-feedback" aria-live="polite"></p>
+          </article>
+        </section>
+      </aside>
+    </main>
+  </div>
+
+  <dialog id="calibration-dialog" class="about-dialog calibration-dialog">
+    <form id="calibration-form">
+      <button class="dialog-close" type="button" data-close-dialog="calibration-dialog" aria-label="Close">×</button>
+      <p class="eyebrow">Physical calibration</p>
+      <h2>Measure the tile you actually own.</h2>
+      <p>Use calipers when available. Enter measurements in the same clockwise edge order for every sample. Three or more samples enable repeatability scoring.</p>
+
+      <div class="form-grid form-grid--two">
+        <div><label class="field-label" for="calibration-profile">Profile</label><select id="calibration-profile" class="field-select"></select></div>
+        <div><label class="field-label" for="calibration-label">Label</label><input id="calibration-label" class="field-input" type="text" /></div>
+        <div><label class="field-label" for="calibration-method">Method</label><select id="calibration-method" class="field-select field-select--compact"><option value="calipers">Digital calipers</option><option value="manual">Ruler / manual</option><option value="scan">Scan / metrology</option></select></div>
+        <div><label class="field-label" for="calibration-device">Tool / device</label><input id="calibration-device" class="field-input" type="text" placeholder="e.g., 0.01 mm digital calipers" /></div>
+        <div><label class="field-label" for="calibration-resolution">Instrument resolution, mm</label><input id="calibration-resolution" class="field-input" type="number" min="0" step="0.001" placeholder="e.g., 0.01" /></div>
+        <div><label class="field-label" for="calibration-batch">Set / SKU / batch</label><input id="calibration-batch" class="field-input" type="text" placeholder="Optional provenance" /></div>
+        <div><label class="field-label" for="calibration-temperature">Temperature, °C</label><input id="calibration-temperature" class="field-input" type="number" step="0.1" placeholder="Optional" /></div>
+        <div><label class="field-label" for="calibration-humidity">Humidity, %</label><input id="calibration-humidity" class="field-input" type="number" min="0" max="100" step="0.1" placeholder="Optional" /></div>
+      </div>
+
+      <label class="field-label" for="calibration-angles">Interior angles, clockwise (optional, comma-separated degrees)</label>
+      <input id="calibration-angles" class="field-input" type="text" placeholder="e.g., 90, 90, 90, 90" />
+
+      <div class="sample-heading"><div><p class="eyebrow">Repeat measurements</p><h3>Samples</h3></div><button id="add-calibration-sample" class="secondary-button" type="button">Add sample</button></div>
+      <div id="calibration-samples" class="calibration-samples"></div>
+
+      <div class="form-grid form-grid--two">
+        <div><label class="field-label" for="hinge-min">Minimum stable interior angle</label><input id="hinge-min" class="field-input" type="number" min="1" max="179" step="0.1" placeholder="Optional" /></div>
+        <div><label class="field-label" for="hinge-max">Maximum stable interior angle</label><input id="hinge-max" class="field-input" type="number" min="1" max="179" step="0.1" placeholder="Optional" /></div>
+      </div>
+      <label class="field-label" for="calibration-notes">Notes</label>
+      <textarea id="calibration-notes" class="field-input field-textarea" rows="3" placeholder="SKU, production generation, measurement conditions, observed hinge behavior…"></textarea>
+
+      <div id="calibration-stats" class="calibration-stats">Add measurements to calculate mean dimensions and repeatability.</div>
+      <div class="dialog-actions">
+        <button class="secondary-button" type="button" data-close-dialog="calibration-dialog">Cancel</button>
+        <button class="primary-button" type="submit">Save calibrated override</button>
+      </div>
+    </form>
+  </dialog>
+
+  <dialog id="profiles-dialog" class="about-dialog profiles-dialog">
+    <form method="dialog">
+      <button class="dialog-close" value="close" aria-label="Close">×</button>
+      <p class="eyebrow">Physical profile registry</p>
+      <h2>Sources, confidence, and local overrides</h2>
+      <div id="profile-list" class="profile-list"></div>
+      <input id="profile-import-file" type="file" accept="application/json,.json" hidden />
+      <input id="session-import-file" type="file" accept="application/json,.json" hidden />
+      <div class="profile-actions">
+        <button id="export-profiles" class="secondary-button" type="button">Export overrides</button>
+        <button id="import-profiles" class="secondary-button" type="button">Import profiles</button>
+        <button id="export-sessions" class="secondary-button" type="button">Export raw sessions</button>
+        <button id="import-sessions" class="secondary-button" type="button">Import sessions</button>
+        <button id="export-calibration-sheet" class="secondary-button" type="button">Calibration sheet</button>
+        <button class="primary-button" value="close">Done</button>
+      </div>
+    </form>
+  </dialog>
+
+  <dialog id="print-dialog" class="about-dialog print-dialog">
+    <form id="print-form">
+      <button class="dialog-close" type="button" data-close-dialog="print-dialog" aria-label="Close">×</button>
+      <p class="eyebrow">Print production</p>
+      <h2>Build a calibrated paper net package.</h2>
+      <p>Choose actual-size poster tiling or fit-to-page output. Glue tabs are generated on the less-colliding side of each cut and flagged when they still intersect geometry.</p>
+      <div class="form-grid form-grid--two">
+        <div><label class="field-label" for="print-page">Page</label><select id="print-page" class="field-select"><option value="letter">US Letter</option><option value="legal">US Legal</option><option value="tabloid">US Tabloid</option><option value="a4">A4</option><option value="a3">A3</option></select></div>
+        <div><label class="field-label" for="print-orientation">Orientation</label><select id="print-orientation" class="field-select"><option value="auto">Auto</option><option value="portrait">Portrait</option><option value="landscape">Landscape</option></select></div>
+        <div><label class="field-label" for="print-mode">Scale mode</label><select id="print-mode" class="field-select"><option value="actual">Actual size / poster</option><option value="fit">Fit to one page</option><option value="poster">Force poster tiling</option></select></div>
+        <div><label class="field-label" for="print-margin">Page margin, mm</label><input id="print-margin" class="field-input" type="number" min="0" max="40" step="0.5" value="10" /></div>
+        <div><label class="field-label" for="print-overlap">Poster overlap, mm</label><input id="print-overlap" class="field-input" type="number" min="0" max="30" step="0.5" value="8" /></div>
+        <div><label class="field-label" for="print-tab-depth">Glue-tab depth, mm</label><input id="print-tab-depth" class="field-input" type="number" min="2" max="30" step="0.5" value="8" /></div>
+      </div>
+      <div class="checkbox-grid">
+        <label><input id="print-tabs" type="checkbox" checked /> Glue tabs</label>
+        <label><input id="print-cut-labels" type="checkbox" checked /> Paired cut labels</label>
+        <label><input id="print-face-labels" type="checkbox" checked /> Face numbers</label>
+        <label><input id="print-crop-marks" type="checkbox" checked /> Crop / registration marks</label>
+      </div>
+      <div id="print-summary" class="print-summary">Configure output to calculate pages and diagnostics.</div>
+      <div id="print-preview" class="print-preview"></div>
+      <div class="dialog-actions">
+        <button class="secondary-button" type="button" data-close-dialog="print-dialog">Cancel</button>
+        <button id="export-print-html" class="secondary-button" type="button">Printable HTML</button>
+        <button id="download-print-package" class="primary-button" type="submit">Download ZIP package</button>
+      </div>
+    </form>
+  </dialog>
+
+  <dialog id="projects-dialog" class="about-dialog projects-dialog">
+    <form method="dialog">
+      <button class="dialog-close" value="close" aria-label="Close">×</button>
+      <p class="eyebrow">Local project library</p>
+      <h2>Saved in this browser.</h2>
+      <p>Projects retain geometry, cut/fold state, locks, inventory, calibration profiles, and raw measurement sessions in IndexedDB.</p>
+      <div id="project-list" class="project-list"></div>
+      <div class="profile-actions"><button class="primary-button" value="close">Done</button></div>
+    </form>
+  </dialog>
+
+  <dialog id="about-dialog" class="about-dialog">
+    <form method="dialog">
+      <button class="dialog-close" value="close" aria-label="Close">×</button>
+      <p class="eyebrow">MagnaMath rebuilt · 0.3.0</p>
+      <h2>Exact geometry, responsive optimization, print production, and empirical physical profiles.</h2>
+      <p>The geometry kernel owns topology and measurement. Net portfolios run in a cancellable worker, exact compound panels remain evidence-labeled, and every physical or fabrication claim carries its assumptions and diagnostics.</p>
+      <ul>
+        <li>Pareto net portfolio with local edge-exchange improvement</li>
+        <li>Actual-size multi-page print packages with glue-tab diagnostics</li>
+        <li>Exact regular-hexagon six-triangle panel recipes</li>
+        <li>Raw calibration sessions, uncertainty estimates, and local projects</li>
+      </ul>
+      <button class="primary-button" value="close">Back to the lab</button>
+    </form>
+  </dialog>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>

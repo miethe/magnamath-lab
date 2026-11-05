@@ -1,0 +1,689 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://magnamath.app/schema/snapshot/v3",
+  "title": "MagnaMath Snapshot v3",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema",
+    "schemaVersion",
+    "appVersion",
+    "coreVersion",
+    "generatedAt",
+    "polyhedron",
+    "analysis",
+    "net",
+    "physicalBuild",
+    "project"
+  ],
+  "properties": {
+    "schema": {
+      "const": "https://magnamath.app/schema/snapshot/v3"
+    },
+    "schemaVersion": {
+      "const": 3
+    },
+    "appVersion": {
+      "type": "string",
+      "minLength": 1
+    },
+    "coreVersion": {
+      "type": "string",
+      "minLength": 1
+    },
+    "generatedAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "polyhedron": {
+      "$ref": "#/$defs/polyhedron"
+    },
+    "analysis": {
+      "$ref": "#/$defs/analysis"
+    },
+    "net": {
+      "$ref": "#/$defs/net"
+    },
+    "physicalBuild": {
+      "$ref": "#/$defs/physicalBuild"
+    },
+    "project": {
+      "$ref": "#/$defs/project"
+    }
+  },
+  "$defs": {
+    "finiteNumber": {
+      "type": "number"
+    },
+    "nonNegativeNumber": {
+      "type": "number",
+      "minimum": 0
+    },
+    "edgeKey": {
+      "type": "string",
+      "pattern": "^[0-9]+:[0-9]+$"
+    },
+    "vec3": {
+      "type": "array",
+      "prefixItems": [
+        {
+          "$ref": "#/$defs/finiteNumber"
+        },
+        {
+          "$ref": "#/$defs/finiteNumber"
+        },
+        {
+          "$ref": "#/$defs/finiteNumber"
+        }
+      ],
+      "minItems": 3,
+      "maxItems": 3
+    },
+    "face": {
+      "type": "array",
+      "minItems": 3,
+      "items": {
+        "type": "integer",
+        "minimum": 0
+      },
+      "uniqueItems": true
+    },
+    "transform": {
+      "type": "array",
+      "minItems": 6,
+      "maxItems": 6,
+      "items": {
+        "$ref": "#/$defs/finiteNumber"
+      }
+    },
+    "polyhedron": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "name",
+        "family",
+        "vertices",
+        "faces"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "family": {
+          "type": "string",
+          "minLength": 1
+        },
+        "vertices": {
+          "type": "array",
+          "minItems": 4,
+          "items": {
+            "$ref": "#/$defs/vec3"
+          }
+        },
+        "faces": {
+          "type": "array",
+          "minItems": 4,
+          "items": {
+            "$ref": "#/$defs/face"
+          }
+        },
+        "metadata": {
+          "type": [
+            "object",
+            "null"
+          ]
+        }
+      }
+    },
+    "analysis": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "counts",
+        "eulerCharacteristic",
+        "genus",
+        "surfaceArea",
+        "volume",
+        "edgeStats",
+        "validation",
+        "faceKinds"
+      ],
+      "properties": {
+        "counts": {
+          "type": "object",
+          "required": [
+            "vertices",
+            "edges",
+            "faces"
+          ],
+          "properties": {
+            "vertices": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "edges": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "faces": {
+              "type": "integer",
+              "minimum": 0
+            }
+          },
+          "additionalProperties": true
+        },
+        "eulerCharacteristic": {
+          "type": "integer"
+        },
+        "genus": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "surfaceArea": {
+          "$ref": "#/$defs/nonNegativeNumber"
+        },
+        "volume": {
+          "$ref": "#/$defs/nonNegativeNumber"
+        },
+        "edgeStats": {
+          "type": "object"
+        },
+        "validation": {
+          "type": "object",
+          "required": [
+            "valid",
+            "issues",
+            "warnings",
+            "closed",
+            "connected",
+            "orientable",
+            "manifold"
+          ],
+          "properties": {
+            "valid": {
+              "type": "boolean"
+            },
+            "issues": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "warnings": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "closed": {
+              "type": "boolean"
+            },
+            "connected": {
+              "type": "boolean"
+            },
+            "orientable": {
+              "type": "boolean"
+            },
+            "manifold": {
+              "type": "boolean"
+            }
+          },
+          "additionalProperties": false
+        },
+        "faceKinds": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "faceIndex",
+              "kind",
+              "label"
+            ],
+            "properties": {
+              "faceIndex": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "kind": {
+                "type": "string"
+              },
+              "label": {
+                "type": "string"
+              }
+            },
+            "additionalProperties": false
+          }
+        }
+      }
+    },
+    "net": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "seed",
+        "source",
+        "objective",
+        "valid",
+        "overlapArea",
+        "overlapPairs",
+        "score",
+        "scoreBreakdown",
+        "rootFace",
+        "parentByFace",
+        "transforms",
+        "foldEdgeKeys",
+        "cutEdgeKeys",
+        "lockedFoldEdgeKeys",
+        "lockedCutEdgeKeys"
+      ],
+      "properties": {
+        "seed": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "source": {
+          "type": "string"
+        },
+        "objective": {
+          "enum": [
+            "compact",
+            "printable",
+            "buildable",
+            "classroom"
+          ]
+        },
+        "valid": {
+          "type": "boolean"
+        },
+        "overlapArea": {
+          "$ref": "#/$defs/nonNegativeNumber"
+        },
+        "overlapPairs": {
+          "type": "array",
+          "items": {
+            "type": "array",
+            "prefixItems": [
+              {
+                "type": "integer",
+                "minimum": 0
+              },
+              {
+                "type": "integer",
+                "minimum": 0
+              },
+              {
+                "$ref": "#/$defs/nonNegativeNumber"
+              }
+            ],
+            "minItems": 3,
+            "maxItems": 3
+          }
+        },
+        "score": {
+          "type": "number"
+        },
+        "scoreBreakdown": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "number"
+          }
+        },
+        "rootFace": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "parentByFace": {
+          "type": "array",
+          "items": {
+            "type": "integer",
+            "minimum": -1
+          }
+        },
+        "transforms": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/transform"
+          }
+        },
+        "foldEdgeKeys": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/edgeKey"
+          },
+          "uniqueItems": true
+        },
+        "cutEdgeKeys": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/edgeKey"
+          },
+          "uniqueItems": true
+        },
+        "lockedFoldEdgeKeys": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/edgeKey"
+          },
+          "uniqueItems": true
+        },
+        "lockedCutEdgeKeys": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/edgeKey"
+          },
+          "uniqueItems": true
+        }
+      }
+    },
+    "physicalBuild": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "modelUnitMm",
+        "confidence",
+        "confidenceLabel",
+        "profileSchema",
+        "profileIds",
+        "required",
+        "shortages",
+        "unsupportedFaces",
+        "compoundFaces",
+        "faceAssignments",
+        "hingeCounts",
+        "thicknessClearance",
+        "summary"
+      ],
+      "properties": {
+        "modelUnitMm": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "exclusiveMinimum": 0
+        },
+        "confidence": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "confidenceLabel": {
+          "type": "string"
+        },
+        "profileSchema": {
+          "const": "https://magnamath.app/schema/tile-profile/v2"
+        },
+        "profileIds": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "uniqueItems": true
+        },
+        "required": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "integer",
+            "minimum": 0
+          }
+        },
+        "shortages": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
+        },
+        "unsupportedFaces": {
+          "type": "array",
+          "items": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "uniqueItems": true
+        },
+        "faceAssignments": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
+        },
+        "hingeCounts": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "integer",
+            "minimum": 0
+          }
+        },
+        "summary": {
+          "type": "string"
+        },
+        "compoundFaces": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "faceIndex",
+              "recipeId",
+              "tileId",
+              "pieceCount",
+              "scaleError",
+              "mechanicalStatus"
+            ],
+            "properties": {
+              "faceIndex": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "recipeId": {
+                "type": "string",
+                "minLength": 1
+              },
+              "tileId": {
+                "type": "string",
+                "minLength": 1
+              },
+              "pieceCount": {
+                "type": "integer",
+                "minimum": 2
+              },
+              "scaleError": {
+                "type": "number",
+                "minimum": 0
+              },
+              "mechanicalStatus": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "thicknessClearance": {
+          "type": [
+            "object",
+            "null"
+          ],
+          "description": "A bounded local thickness screen. Null when no screen was exported.",
+          "properties": {
+            "model": {
+              "type": "string"
+            },
+            "assumption": {
+              "enum": [
+                "measured-only",
+                "surface-axis"
+              ]
+            },
+            "entries": {
+              "type": "array"
+            },
+            "byEdgeKey": {
+              "type": "object"
+            },
+            "counts": {
+              "type": "object"
+            },
+            "modeledRatio": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1
+            },
+            "collisionCount": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "caveat": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "model",
+            "assumption",
+            "entries",
+            "byEdgeKey",
+            "counts",
+            "modeledRatio",
+            "collisionCount",
+            "caveat"
+          ],
+          "additionalProperties": false
+        }
+      }
+    },
+    "project": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "title",
+        "notes",
+        "parameter",
+        "inventoryPreset",
+        "inventory",
+        "tileFamilies",
+        "scaleMode",
+        "customScale",
+        "calibrationProfileIds",
+        "calibrationProfiles",
+        "calibrationSessions",
+        "compoundMode",
+        "clearanceAssumption",
+        "printSettings",
+        "localProjectId"
+      ],
+      "properties": {
+        "title": {
+          "type": "string"
+        },
+        "notes": {
+          "type": "string"
+        },
+        "parameter": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "inventoryPreset": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "inventory": {
+          "type": [
+            "object",
+            "null"
+          ],
+          "additionalProperties": {
+            "type": "integer",
+            "minimum": 0
+          }
+        },
+        "tileFamilies": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "enum": [
+              "standard",
+              "micro"
+            ]
+          },
+          "uniqueItems": true
+        },
+        "scaleMode": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "enum": [
+            "auto",
+            "standard",
+            "micro",
+            "custom",
+            null
+          ]
+        },
+        "customScale": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "exclusiveMinimum": 0
+        },
+        "calibrationProfileIds": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "uniqueItems": true
+        },
+        "calibrationProfiles": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
+        },
+        "calibrationSessions": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
+        },
+        "compoundMode": {
+          "enum": [
+            "exact",
+            "off"
+          ]
+        },
+        "printSettings": {
+          "type": [
+            "object",
+            "null"
+          ]
+        },
+        "localProjectId": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "clearanceAssumption": {
+          "enum": [
+            "measured-only",
+            "surface-axis"
+          ]
+        }
+      }
+    }
+  }
+}

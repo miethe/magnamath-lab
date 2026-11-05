@@ -1,0 +1,76 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://magnamath.app/schema/tile-profile/v2",
+  "title": "MagnaMath Physical Tile Profile v2",
+  "type": "object",
+  "additionalProperties": true,
+  "required": ["schema", "schemaVersion", "id", "label", "systemId", "family", "sideRatios", "anglesDegrees", "dimensionsMm", "connector", "confidence", "scaleConfidence", "source", "builtin"],
+  "properties": {
+    "schema": { "const": "https://magnamath.app/schema/tile-profile/v2" },
+    "schemaVersion": { "const": 2 },
+    "id": { "type": "string", "minLength": 1 },
+    "label": { "type": "string", "minLength": 1 },
+    "systemId": { "type": "string", "minLength": 1 },
+    "family": { "type": "string", "minLength": 1 },
+    "sideRatios": { "type": "array", "minItems": 3, "items": { "type": "number", "exclusiveMinimum": 0 } },
+    "anglesDegrees": { "type": "array", "minItems": 3, "items": { "type": "number", "exclusiveMinimum": 0, "exclusiveMaximum": 180 } },
+    "dimensionsMm": { "type": ["array", "null"], "items": { "type": "number", "exclusiveMinimum": 0 } },
+    "thicknessMm": { "type": ["number", "null"], "exclusiveMinimum": 0 },
+    "cornerRadiusMm": { "type": ["number", "null"], "minimum": 0 },
+    "connector": {
+      "type": "object",
+      "required": ["type", "compatibilityGroup", "coverage"],
+      "properties": {
+        "type": { "type": "string" },
+        "compatibilityGroup": { "type": "string" },
+        "coverage": { "type": "string" }
+      },
+      "additionalProperties": true
+    },
+    "hingeRangeDegrees": {
+      "type": ["object", "null"],
+      "required": ["minInterior", "maxInterior"],
+      "properties": {
+        "minInterior": { "type": "number", "exclusiveMinimum": 0, "exclusiveMaximum": 180 },
+        "maxInterior": { "type": "number", "exclusiveMinimum": 0, "exclusiveMaximum": 180 }
+      },
+      "additionalProperties": false
+    },
+    "confidence": { "enum": ["canonical", "manufacturer", "calibrated", "measured", "derived", "nominal", "approximate", "unknown"] },
+    "scaleConfidence": { "enum": ["canonical", "manufacturer", "calibrated", "measured", "derived", "nominal", "approximate", "unknown"] },
+    "source": {
+      "type": "object",
+      "required": ["kind", "title"],
+      "properties": {
+        "kind": { "type": "string" },
+        "title": { "type": "string" },
+        "url": { "type": "string" },
+        "note": { "type": "string" },
+        "accessedAt": { "type": "string", "format": "date" },
+        "measuredAt": { "type": "string", "format": "date-time" },
+        "device": { "type": "string" }
+      },
+      "additionalProperties": true
+    },
+    "builtin": { "type": "boolean" },
+    "calibration": {
+      "type": "object",
+      "required": ["method", "sampleCount", "samples", "dimensionStats", "relativeRepeatability", "measuredAt"],
+      "properties": {
+        "method": { "type": "string" },
+        "sampleCount": { "type": "integer", "minimum": 1 },
+        "samples": { "type": "array", "minItems": 1, "items": { "type": "object" } },
+        "dimensionStats": { "type": "array", "minItems": 3, "items": { "type": "object" } },
+        "relativeRepeatability": { "type": "number", "minimum": 0 },
+        "measuredAt": { "type": "string", "format": "date-time" }
+      },
+      "additionalProperties": true
+    }
+  },
+  "allOf": [
+    {
+      "if": { "properties": { "builtin": { "const": false } }, "required": ["builtin"] },
+      "then": { "required": ["calibration"] }
+    }
+  ]
+}

@@ -1,0 +1,227 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://magnamath.app/schema/calibration-session/v2",
+  "title": "MagnaMath Physical Calibration Session v2",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema",
+    "schemaVersion",
+    "id",
+    "baseProfileId",
+    "outputProfileId",
+    "title",
+    "label",
+    "measuredAt",
+    "method",
+    "device",
+    "instrumentResolutionMm",
+    "setOrBatch",
+    "environment",
+    "anglesDegrees",
+    "samples",
+    "hingeRangeDegrees",
+    "notes",
+    "derived"
+  ],
+  "properties": {
+    "schema": {
+      "const": "https://magnamath.app/schema/calibration-session/v2"
+    },
+    "schemaVersion": {
+      "const": 2
+    },
+    "id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "baseProfileId": {
+      "type": "string",
+      "minLength": 1
+    },
+    "outputProfileId": {
+      "type": "string",
+      "minLength": 1
+    },
+    "title": {
+      "type": "string"
+    },
+    "label": {
+      "type": "string"
+    },
+    "measuredAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "method": {
+      "type": "string"
+    },
+    "device": {
+      "type": "string"
+    },
+    "instrumentResolutionMm": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "minimum": 0
+    },
+    "setOrBatch": {
+      "type": "string"
+    },
+    "environment": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "temperatureC",
+        "humidityPercent"
+      ],
+      "properties": {
+        "temperatureC": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "humidityPercent": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0,
+          "maximum": 100
+        }
+      }
+    },
+    "anglesDegrees": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": "number",
+        "exclusiveMinimum": 0,
+        "exclusiveMaximum": 180
+      }
+    },
+    "samples": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "edgeLengthsMm",
+          "anglesDegrees",
+          "thicknessMm",
+          "cornerRadiusMm"
+        ],
+        "properties": {
+          "edgeLengthsMm": {
+            "type": "array",
+            "minItems": 3,
+            "items": {
+              "type": "number",
+              "exclusiveMinimum": 0
+            }
+          },
+          "anglesDegrees": {
+            "type": [
+              "array",
+              "null"
+            ],
+            "items": {
+              "type": "number",
+              "exclusiveMinimum": 0,
+              "exclusiveMaximum": 180
+            }
+          },
+          "thicknessMm": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "exclusiveMinimum": 0
+          },
+          "cornerRadiusMm": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "minimum": 0
+          }
+        }
+      }
+    },
+    "hingeRangeDegrees": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "minInterior": {
+          "type": "number",
+          "exclusiveMinimum": 0,
+          "exclusiveMaximum": 180
+        },
+        "maxInterior": {
+          "type": "number",
+          "exclusiveMinimum": 0,
+          "exclusiveMaximum": 180
+        }
+      },
+      "required": [
+        "minInterior",
+        "maxInterior"
+      ],
+      "additionalProperties": false
+    },
+    "notes": {
+      "type": "string"
+    },
+    "derived": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "confidence",
+        "scaleConfidence",
+        "dimensionsMm",
+        "dimensionStats",
+        "relativeRepeatability",
+        "uncertainty"
+      ],
+      "properties": {
+        "confidence": {
+          "type": "string"
+        },
+        "scaleConfidence": {
+          "type": "string"
+        },
+        "dimensionsMm": {
+          "type": "array",
+          "minItems": 3,
+          "items": {
+            "type": "number",
+            "exclusiveMinimum": 0
+          }
+        },
+        "dimensionStats": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
+        },
+        "relativeRepeatability": {
+          "type": "number",
+          "minimum": 0
+        },
+        "uncertainty": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
+        }
+      }
+    }
+  }
+}
