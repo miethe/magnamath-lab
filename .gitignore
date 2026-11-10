@@ -4,4 +4,9 @@ dist/
 *.log
 coverage/
 **/.DS_Store
+**/*.skillmeat-lock
+**/..skillmeat-deployed.toml.skillmeat-lock
 
+hub-out/
+.cursor/
+.skillmeat-project.toml

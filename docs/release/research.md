@@ -20,10 +20,8 @@ On 2026-11-05 the requested USPTO and WIPO database searches for `MAGNA*` in Nic
 
 These are selections from case filings, not current-status searches. Classes 9 and 41 and WIPO remain unsearched; no clearance conclusion is offered. The older [miethe/MagnaMath](https://github.com/miethe/MagnaMath) repository is public; GitHub reports creation on 2026-02-22.
 
-`LICENSE-NOTICE.md` grants no open-source licence and calls for an owner-selected licence and review of dependencies and other third-party material before distribution, plus an archived dependency licence report. The MIT file is staged as a proposal; Nick must decide the licence.
+The repository is licensed under MIT; see `LICENSE` and `LICENSE-NOTICE.md`. Third-party materials may have separate terms.
 
 ## Evidence gaps
 
-The clean local clone installed and built with Node 22.20.0. The install reported 11 dependency advisories (3 low, 4 moderate, 4 high). Visual inspection and the requested screenshot remain outstanding: Chromium cannot start in this sandbox. No statement about overlap, clipping or empty/error states is supported by this run.
-
-Gitleaks 8.24.2 originally reported 14 findings in commit `92ddc495972af3e45f7c41c1b523241bec28a288`: all are a comment or illustrative placeholder, reviewed individually in `.gitleaksignore`. History was not rewritten. The tracked-tree path scrub replaced 102 specific home-path occurrences across 23 files; imported log paths are marked as original-build-home to preserve their provenance. Historical commits retain their original contents.
+On 2026-11-10, `npm audit` reported 6 affected packages (2 low, 4 moderate; no high). The clean local clone installed and built with Node 22.20.0.

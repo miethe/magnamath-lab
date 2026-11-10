@@ -38,4 +38,4 @@ This package is the consolidated source, specification, visual design, research,
 
 ## Licensing
 
-No open-source license has been selected for this experimental handoff. See `LICENSE-NOTICE.md` before distribution or third-party implementation.
+The repository is licensed under MIT; see `LICENSE` and `LICENSE-NOTICE.md` for third-party considerations.

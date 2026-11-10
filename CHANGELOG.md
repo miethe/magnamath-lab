@@ -1,5 +1,33 @@
 # Changelog
 
+## 0.4.1 — 2026-11-10
+
+### Fixed
+
+- Phone layout: the bottom mode dock spans the full width so every mode tab is reachable.
+
+### Changed
+
+- Licence stated as MIT throughout the documentation.
+- Release notes, README and `RELEASE.json` agree on the version; "release candidate" wording removed.
+- `MANIFEST.sha256` regenerated.
+- Known limitation restored: a folded solid with a large net renders off-centre.
+
+## 0.4.0 — 2026-11-05 — Fold Through Space
+
+- Added exact tree-hinge 2D-to-3D folding from the selected net.
+- Added multiple hinge timeline sequences, manual hinge posing, and exact target snapping.
+- Added hinge continuity, cut-edge closure, rigid-face, target-fit, and sampled collision diagnostics.
+- Replaced Canvas and Three.js face morphing with exact rigid transforms.
+- Added semantic Inspect/Hinge/Move/Rotate control modes.
+- Added Three.js root translate/rotate controls and selectable hinge handles.
+- Added rigid matrix/quaternion composition, decomposition, and interpolation.
+- Added renderer-independent motion clips with root, fold, hinge, camera, and marker tracks.
+- Added folding-plan, motion-clip, and snapshot-v4 schemas and examples.
+- Added final product UI mockup atlas and design specification.
+- Added six Deep Research briefs covering continuous collision, closed-loop kinematics, thick panels, spatial UX, learning science, and scaling.
+- Added complete implementation-handoff documentation and release validation.
+
 ## 0.3.0 — 2026-08-08
 
 ### Added
@@ -92,18 +120,3 @@
 - Versioned true-scale SVG/JSON export, checked JSON Schemas, examples, and PWA configuration.
 - Node tests, catalog validation, net-seed sweep, and browser smoke validation.
 - Product, architecture, API, UX, validation, and project-plan documentation.
-
-## 0.4.0 — Fold Through Space
-
-- Added exact tree-hinge 2D-to-3D folding from the selected net.
-- Added multiple hinge timeline sequences, manual hinge posing, and exact target snapping.
-- Added hinge continuity, cut-edge closure, rigid-face, target-fit, and sampled collision diagnostics.
-- Replaced Canvas and Three.js face morphing with exact rigid transforms.
-- Added semantic Inspect/Hinge/Move/Rotate control modes.
-- Added Three.js root translate/rotate controls and selectable hinge handles.
-- Added rigid matrix/quaternion composition, decomposition, and interpolation.
-- Added renderer-independent motion clips with root, fold, hinge, camera, and marker tracks.
-- Added folding-plan, motion-clip, and snapshot-v4 schemas and examples.
-- Added final product UI mockup atlas and design specification.
-- Added six Deep Research briefs covering continuous collision, closed-loop kinematics, thick panels, spatial UX, learning science, and scaling.
-- Added complete implementation-handoff documentation and release validation.

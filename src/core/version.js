@@ -1,4 +1,4 @@
-export const APP_VERSION = '0.4.0';
+export const APP_VERSION = '0.4.1';
 export const CORE_VERSION = '0.4.0';
 export const SNAPSHOT_SCHEMA = 'https://magnamath.app/schema/snapshot/v4';
 export const LEGACY_SNAPSHOT_SCHEMAS = Object.freeze([

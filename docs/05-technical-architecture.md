@@ -1,6 +1,6 @@
 # MagnaMath Technical Architecture
 
-**Current release:** 0.4.0
+**Current release:** 0.4.1
 
 ## Architectural objective
 

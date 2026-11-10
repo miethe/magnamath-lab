@@ -2,7 +2,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5.7 2.7" width="427.101mm" height="202.311mm" role="img" aria-labelledby="title description">
   <title id="title">Cube net</title>
   <description id="description">A two-dimensional net with solid cut lines, dashed fold lines, and overlap diagnostics.</description>
-  <metadata>{&quot;generator&quot;:&quot;MagnaMath Rebuilt&quot;,&quot;appVersion&quot;:&quot;0.4.0&quot;,&quot;coreVersion&quot;:&quot;0.4.0&quot;,&quot;shape&quot;:&quot;cube&quot;,&quot;netSeed&quot;:11,&quot;objective&quot;:&quot;compact&quot;,&quot;overlapFree&quot;:true,&quot;overlapArea&quot;:0,&quot;modelUnitMm&quot;:74.93,&quot;foldEdgeKeys&quot;:[&quot;0:3&quot;,&quot;3:7&quot;,&quot;0:1&quot;,&quot;2:6&quot;,&quot;4:5&quot;],&quot;compoundFaceCount&quot;:0}</metadata>
+  <metadata>{&quot;generator&quot;:&quot;MagnaMath Rebuilt&quot;,&quot;appVersion&quot;:&quot;0.4.1&quot;,&quot;coreVersion&quot;:&quot;0.4.0&quot;,&quot;shape&quot;:&quot;cube&quot;,&quot;netSeed&quot;:11,&quot;objective&quot;:&quot;compact&quot;,&quot;overlapFree&quot;:true,&quot;overlapArea&quot;:0,&quot;modelUnitMm&quot;:74.93,&quot;foldEdgeKeys&quot;:[&quot;0:3&quot;,&quot;3:7&quot;,&quot;0:1&quot;,&quot;2:6&quot;,&quot;4:5&quot;],&quot;compoundFaceCount&quot;:0}</metadata>
   <style>
     .cut { stroke: #13233a; stroke-width: 0.025; stroke-linecap: round; }
     .fold { stroke: #596b84; stroke-width: 0.018; stroke-dasharray: 0.09 0.07; stroke-linecap: round; }

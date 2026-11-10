@@ -1,6 +1,6 @@
 {
   "name": "magnamath-rebuilt",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "private": true,
   "type": "module",
   "description": "An exact interactive polyhedron laboratory with tree-hinge 2D-to-3D folding, net workshops, production print packages, and calibrated magnetic-tile guidance.",

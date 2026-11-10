@@ -711,6 +711,7 @@ body.is-kids .stage-topbar { display: none; }
   .mode-switcher {
     left: 0;
     right: 0;
+    width: 100%;
     bottom: 0;
     transform: none;
     height: calc(48px + env(safe-area-inset-bottom));
@@ -722,5 +723,5 @@ body.is-kids .stage-topbar { display: none; }
     background: #0d1a2c;
   }
   /* Keep the following controls clear of the dock on the initial phone view. */
-  .stage-panel { margin-bottom: calc(48px + env(safe-area-inset-bottom)); }
+  .stage-panel { margin-bottom: calc(96px + env(safe-area-inset-bottom)); }
 }

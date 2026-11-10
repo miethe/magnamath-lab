@@ -1,18 +1,9 @@
 # MagnaMath Rebuilt
 
-**Release:** `0.4.0` — *Fold Through Space*  
-**Status:** 0.4.0 release candidate; known visual and physical-evidence limitations remain.
+**Release:** `0.4.1` — *Fold Through Space* (patch release on 0.4.0)  
+**Status:** public release; known visual and physical-evidence limitations remain (see [0.4.1 release notes](docs/release/RELEASE-NOTES-0.4.1.md)).
 
-**Demo:** https://miethe.github.io/magnamath-lab/ (available after Pages is enabled).
-
-Requires Node.js 22.12 or newer. To install, run, build, and test:
-
-```sh
-npm ci
-npm run dev
-npm run build
-npm test
-```
+**Demo:** https://nick.miethe.dev/magnamath-lab/
 
 MagnaMath is a web-first interactive geometry laboratory that connects exact mathematics to visual exploration, printable nets, and physical magnetic-tile play.
 
@@ -111,7 +102,7 @@ npm ci
 npm run dev
 ```
 
-Open the address printed by Vite (normally `http://localhost:4173/`). The repository is private; cloning requires access.
+Open the address printed by Vite (normally `http://localhost:4173/`).
 
 ### Dependency-free Canvas path
 
@@ -233,6 +224,7 @@ Begin with [`FULL-HANDOFF-INDEX.md`](FULL-HANDOFF-INDEX.md), then follow the rec
 - [Final Application Design Specification](docs/24-final-app-design-spec.md)
 - [UI Mockup Atlas](docs/25-ui-mockup-atlas.md)
 - [Full Implementation Handoff](docs/26-full-implementation-handoff.md)
+- [0.4.1 Release Notes](docs/release/RELEASE-NOTES-0.4.1.md)
 - [0.4.0 Release Notes](docs/27-release-notes-0.4.0.md)
 - [Future Motion and Physics Roadmap](docs/28-future-motion-physics-roadmap.md)
 - [Manual Net Workshop](docs/11-manual-net-workshop.md)
@@ -249,4 +241,5 @@ Begin with [`FULL-HANDOFF-INDEX.md`](FULL-HANDOFF-INDEX.md), then follow the rec
 - Imported concave/nonmanifold models are not a supported production path.
 - Net search is bounded heuristic optimization, not a universal optimality proof.
 - Camera/AR build verification is not implemented.
+- The 3D view frames the flat net and the folded solid together, so a folded solid with a large net (for example the truncated icosahedron at 1440 px) sits right of and below the viewport centre.
 - Source code is licensed under MIT; see `LICENSE` and `LICENSE-NOTICE.md` for third-party considerations.

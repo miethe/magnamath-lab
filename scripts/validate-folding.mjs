@@ -77,7 +77,7 @@ for (const entry of SHAPE_CATALOG) {
 }
 
 console.log(JSON.stringify({
-  release: '0.4.0',
+  release: '0.4.1',
   catalogEntries: rows.length,
   modes: MODES,
   progressSamples: PROGRESS,

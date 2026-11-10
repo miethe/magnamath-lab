@@ -1,9 +1,9 @@
 {
   "$schema": "https://magnamath.app/schema/release/v1",
   "product": "MagnaMath Rebuilt",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "codename": "Fold Through Space",
-  "releaseDate": "2026-08-10",
+  "releaseDate": "2026-11-10",
   "handoffType": "complete-source-specification-design-research-validation",
   "capabilities": {
     "exactTreeHingeFolding": true,
@@ -34,6 +34,10 @@
     "browserConsoleErrors": 0,
     "mobileHorizontalOverflow": false
   },
-  "knownExternalGate": "Run npm install, npm run build, and the Three.js browser matrix in a registry-enabled environment; the sandbox mirror returned 404 for three@0.185.1.",
-  "entryPoint": "FULL-HANDOFF-INDEX.md"
+  "knownExternalGate": "None at release: npm ci, npm test, validate:all, schema validation and vite build passed on Node 22 with the public npm registry on 2026-11-10.",
+  "entryPoint": "FULL-HANDOFF-INDEX.md",
+  "previousRelease": {
+    "version": "0.4.0",
+    "releaseDate": "2026-11-05"
+  }
 }

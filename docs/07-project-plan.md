@@ -1,6 +1,6 @@
 # MagnaMath Project Plan
 
-## Current baseline — 0.4.0
+## Current baseline — 0.4.1
 
 Completed foundations:
 
