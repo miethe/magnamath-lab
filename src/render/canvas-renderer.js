@@ -97,8 +97,7 @@ export function createCanvasRenderer(container, { onFaceSelect, onHingeSelect } 
     dpr = Math.min(window.devicePixelRatio || 1, 2);
     canvas.width = Math.round(width * dpr);
     canvas.height = Math.round(height * dpr);
-    canvas.style.width = `${width}px`;
-    canvas.style.height = `${height}px`;
+    // Match Three.js setSize(width, height, false): CSS owns the display size.
   }
 
   function rotate([x, y, z]) {
