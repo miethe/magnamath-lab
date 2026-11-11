@@ -3,6 +3,7 @@ import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 import { TransformControls } from 'three/addons/controls/TransformControls.js';
 import { clamp } from '../core/math.js';
 import { createFoldingModel, sampleFoldingPose } from '../core/folding.js';
+import { centreFoldingPose } from './fold-framing.js';
 
 const FACE_COLORS = {
   square: 0x43dfc1,
@@ -144,8 +145,8 @@ export function createThreeRenderer(container, {
   scene.add(floor);
 
   // viewPivot -> rootControlGroup -> faceRoot/hingeRoot. The pivot carries the
-  // once-per-model recentring offset so the fold stays framed AND the Move gizmo,
-  // which attaches to rootControlGroup, stays in a static frame.
+  // per-pose recentring offset. User-authored transforms and the Move gizmo remain
+  // attached to rootControlGroup, independent of this display-only translation.
   const viewPivot = new THREE.Group();
   scene.add(viewPivot);
   let rootControlGroup = new THREE.Group();
@@ -268,13 +269,12 @@ export function createThreeRenderer(container, {
     }
   }
 
-  // View-only recentring. The flat net and the folded solid do not share a centre —
+  // Stable camera distance. The flat net and folded solid do not share a centre.
   // Compute the UNION bounds of every pose along the fold trajectory, once per model.
-  // Framing on this union means the shape stays the same size and stays centred for
-  // the entire animation instead of being re-dollied every frame — a per-pose radius
+  // Use the union radius to keep a constant scale instead of re-dollying every frame — a per-pose radius
   // fit shrinks the cube 3.1x during a 1.85s animation and steals the user's zoom on
-  // every rAF tick. Offset is applied to viewPivot (parent of rootControlGroup) so
-  // the Move gizmo sees a static frame.
+  // every rAF tick. The union CENTRE is not a pose centre; refreshPose independently
+  // recentres each visible pose. Its bounding radius cannot exceed the union radius.
   const TRAJECTORY_SAMPLES = 17;
   function unionBounds() {
     if (!foldingModel) return null;
@@ -325,9 +325,7 @@ export function createThreeRenderer(container, {
     if (!autoFrame) { viewPivot.position.set(0, 0, 0); return; }
     const bounds = unionBounds();
     if (!bounds) return;
-    // Offset the pivot so the union centre is at world origin; target the origin;
-    // fit once. No further camera moves during the fold — the user keeps their zoom.
-    viewPivot.position.set(-bounds.centre.x, -bounds.centre.y, -bounds.centre.z);
+    if (foldingPose) centreFoldingPose(viewPivot, analysis, foldingPose);
     controls.target.set(0, 0, 0);
     frameRadius(bounds.radius);
   }
@@ -343,6 +341,7 @@ export function createThreeRenderer(container, {
       updateCylinder(hingeObjects[index].visible, hinge.pivotWorld, hinge.endWorld);
       updateCylinder(hingeObjects[index].hit, hinge.pivotWorld, hinge.endWorld);
     });
+    if (autoFrame) centreFoldingPose(viewPivot, analysis, foldingPose);
     floor.material.opacity = 0.24 * clamp(foldingOptions.progress, 0, 1);
   }
 
@@ -428,7 +427,7 @@ export function createThreeRenderer(container, {
     if (interactionMode === 'move') transformControls.attach(rootControlGroup);
     fitCamera(polyhedron, net);
     refreshPose();
-    // Union-frame runs after refreshPose so foldingModel exists. Fits once; no camera
+    // Trajectory fit runs after refreshPose so foldingModel exists. Fits once; no camera
     // moves during the fold. When autoFrame is off (default), viewPivot stays at the
     // origin so the expert view is byte-identical to the pre-change path.
     applyAutoFrame();
